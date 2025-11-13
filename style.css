@@ -1,0 +1,60 @@
+Body {}
+# header {}
+nav {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 25px;
+    padding: 10px;
+}
+nav a {
+    background-color: transparent;
+    color: #9AFEFF;
+    text-decoration: none;
+    padding: 2px;
+    text-align-last: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+nav a:hover {
+    background-color: transparent;
+    color: #DC381F;
+    width: 25%;
+}
+a:link {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+}
+a:link {
+    color: #9AFEFF;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #9AFEFF;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #d6a1c3;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #d6a1c3;
+    background-color: transparent;
+    text-decoration: underline;
+}
+footer {
+    background-color: transparent;
+    color: ;
+    padding: 25px;
+    width: auto;
+    margin: 40px;
+    text-align:center;
+    position:static;
+}
