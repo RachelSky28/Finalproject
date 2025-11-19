@@ -1,4 +1,8 @@
-Body {}
+Body {
+    background-color: #EFE7D3;
+    display: flex;
+    justify-content: space-evenly;
+}
 # header {}
 nav {
     background-color: transparent;
