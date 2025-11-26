@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>The Art - Like A New Yorker</title>
+    <meta name="description" content="Discover NYC's hidden art gems">
+    <meta name="keywords" content="NYC art, galleries, museums, public art">
+    <meta name="author" content="Chloe Dahan, Kathy Baik, Rachel S. Khmelnitsky, and Sabrina Guzman">
+    <script src="scripts/art.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Pinyon+Script&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/art.css">
+</head>
+
+<body>
+    <header id="header">
+        <div id="logo-container">
+            <div id="logo">
+                <a href="index.html">
+                    <img src="./images/ny_logo.jpg" alt="Like A New Yorker">
+                </a>
+            </div>
+        </div>
+        <div id="header-container">
+            <nav id="nav">
+                <ul>
+                    <li><a class="blog" href="blog.html">The Blog</a></li>
+                    <li><a class="meetnyc" href="meetnyc.html">Meet NYC</a></li>
+                    <li><a class="art active-page" href="art.html">The Art</a></li>
+                    <li><a class="food" href="food.html">What's Good?</a></li>
+                    <li><a class="life" href="life.html">Day & Nightlife</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="art-body">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Experience New York City Art</h1>
+                <p>[TETX]</p>
+                <a href="#recommendations" class="scroll-arrow">↓</a>
+            </div>
+            <div class="hero-image">
+                <img src="./images/moma_ps1.png"
+                    alt="Imagef from MoMA PS1 gallery with colorful art installation of many framed art peices hanging on the walls.">
+            </div>
+        </section>
+
+        <section class="author-note-section">
+            <div class="section-container">
+                <h2>A Note From Chloe</h2>
+                <p>[note]</p>
+            </div>
+        </section>
+
+        <section class="recommendations-section" id="recommendations">
+            <div class="section-container">
+                <h2>Explore Art Spaces</h2>
+
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="museum">Museum</button>
+                    <button class="filter-btn" data-filter="gallery">Gallery</button>
+                    <button class="filter-btn" data-filter="public">Public Art</button>
+                    <button class="filter-btn" data-filter="architecture">Architecture</button>
+                </div>
+
+                <div class="art-cards-container" id="cardsContainer">
+                </div>
+            </div>
+        </section>
+
+        <section class="favorite-museum-section">
+            <div class="museum-content">
+                <div class="museum-image">
+                    <img src="https://via.placeholder.com/500x400?text=The+Met" alt="The Metropolitan Museum">
+                </div>
+                <div class="museum-text">
+                    <h2>My Favorite Museum Experience</h2>
+                    <p>[TETX]</p>
+
+                    <div class="museum-carousel">
+                        <div class="carousel-main">
+                            <img id="carouselMain" src="https://via.placeholder.com/400x300?text=Gallery+1"
+                                alt="Gallery view">
+                        </div>
+                        <div class="carousel-thumbnails">
+                            <img class="carousel-thumb" src="https://via.placeholder.com/80x80?text=1"
+                                onclick="changeCarouselImage(this)">
+                            <img class="carousel-thumb" src="https://via.placeholder.com/80x80?text=2"
+                                onclick="changeCarouselImage(this)">
+                            <img class="carousel-thumb" src="https://via.placeholder.com/80x80?text=3"
+                                onclick="changeCarouselImage(this)">
+                            <img class="carousel-thumb" src="https://via.placeholder.com/80x80?text=4"
+                                onclick="changeCarouselImage(this)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tips-section">
+            <div class="section-container">
+                <h2>Pro Tips for Experiencing NYC Art Like a Local</h2>
+
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h3>Free Hours</h3>
+                        <p>[TETX]</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h3>Off-Peak Visits</h3>
+                        <p>[TETX]</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h3>Gallery Walks</h3>
+                        <p>[TETX]</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h3>Street Art Tours</h3>
+                        <p>[TETX]</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h3>Public Spaces</h3>
+                        <p>[TETX]</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h3>Follow the Locals</h3>
+                        <p>[TETX]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <p>&copy; 2025 Like A New Yorker</p>
+        <p>Curated by Chloe Dahan, Kathy Baik, Rachel S. Khmelnitsky, and Sabrina Guzman</p>
+    </footer>
+</body>
+
+</html>
