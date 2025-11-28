@@ -11,12 +11,6 @@
 </head>
 <body>
 <button onclick="myFunction()">Toggle dark mode</button>
-<script>
-function myFunction() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-}
-</script>
 <header>
 <p>logo here</p>
 <div id=header>
@@ -24,33 +18,57 @@ function myFunction() {
 <div id=nav>
   <nav> 
     <ul>
-    <li><a class="home" href="index.html">The Blog</a></li>
+    <li><a class="blog" href="index.html">The Blog</a></li>
     <li><a class="meetnyc" href="meetnyc.html">Meet NYC</a></li>
     <li><a class="art" href="art.html">The Art</a></li>
    <li> <a class="food" href="food.html">What's Good?</a></li>
-	<li><a class="life" href="life.html">Day and Nightlife</a></li>
+	<li><a class="life" href="life.html">Day & Nightlife</a></li>
   </ul>
   </nav>
+  <hr>
 </div>
     </div>
 </header>
 <div id=body1>
   <h2> Daytime Activities</h2>
-  <p>parks, afternoon tea, free shows</p>
+  <p>What to do in the daytime in NYC?
+</p>
   </div>
 <div id=body2>
   <h1>favorite spots</h1>
-
+  <div class="carousel-thumbnails">
+    <img class="carousel-thumb" src="https://via.placeholder.com/80x80?text=1"
+        onclick="changeCarouselImage(this)">
+   <img class="carousel-thumb" src="https://via.placeholder.com/80x80?text=2"
+        onclick="changeCarouselImage(this)">
+   <img class="carousel-thumb" src="https://via.placeholder.com/80x80?text=3"
+      onclick="changeCarouselImage(this)">
+    <img class="carousel-thumb" src="https://via.placeholder.com/80x80?text=4"
+        onclick="changeCarouselImage(this)">
+  </div>
 </div>
 <div id=body3>
   <h2> Night time activities</h2>
 </div>
 <div id=body4>
   <h1>favorite spots</h1>
-      <div class="image-container">
-  <img src="images/wineceller.jpg" alt="photo of wine glasses from 8th street wine celler">
-  </div> 
+    <div class="carousel-thumbnails">
+    <img class="carousel-thumb" src="https://via.placeholder.com/80x80?text=1"
+        onclick="changeCarouselImage(this)">
+   <img class="carousel-thumb" src="https://via.placeholder.com/80x80?text=2"
+        onclick="changeCarouselImage(this)">
+   <img class="carousel-thumb" src="https://via.placeholder.com/80x80?text=3"
+      onclick="changeCarouselImage(this)">
+   <img src="images/wineceller.jpg" alt="photo of wine glasses from 8th street wine celler"
+        onclick="changeCarouselImage(this)">
 </div>
+</div>
+    <footer id="footer">
+        <p>&copy; 2025 Like A New Yorker</p>
+        <p>Curated by Chloe Dahan, Kathy Baik, Rachel S. Khmelnitsky, and Sabrina Guzman</p>
+    </footer>
+</body>
+</html>
 </body>
 </html>
 <footer> Chloe Dahan, Kathy Baik, Rachel S. Khmelnitsky, and Sabrina Guzman 2025</footer>
