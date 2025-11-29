@@ -1,0 +1,601 @@
+#myhdr {
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  background: rgb(241, 246, 179);
+  color: rgb(7, 7, 7);
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+#subhdr {
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  background: rgb(124, 157, 210);
+  color: rgb(7, 7, 7);
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(239, 231, 211);
+  color: rgb(4, 4, 4);
+}
+
+
+.restaurant-info {
+  text-align: center;     /* centers all text */
+  margin-bottom: 15px;
+  color: rgb(4, 4, 4)          /* adjust if you want */
+}
+
+.restaurant-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.address {
+  font-size: 18px;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.section-header {
+  font-size: 22px;
+  margin: 14px 0 6px;
+  font-weight: bold;
+  text-decoration: underline; /* optional */
+}
+
+.train-info,
+.review {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.heart-card {
+  width: 500px;
+  /* bigger size */
+  height: 470px;
+  /* maintain heart proportions */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* stack elements vertically */
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(247, 160, 203);
+  margin: 150px auto 0 auto; 
+  border-radius: 20px;
+  cursor: pointer; /* shows pointer on hover */
+  transition: transform 0.2s, box-shadow 0.2s; /* smooth hover effect */
+}
+
+/* Hover effect */
+.heart-card:hover {
+  transform: scale(1.05); /* slightly bigger */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* adds depth */
+}
+
+/* heart shape using pseudo-elements */
+.heart-card::before,
+.heart-card::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 270px;
+  background: inherit;
+  border-radius: 150px 150px 0 0;
+  top: 0;
+  z-index: 1;
+}
+
+.heart-card::before {
+  left: 75px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart-card::after {
+  left: 75px;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+/* image inside heart */
+.heart-card img {
+  width: 340px;
+  height: 310px;
+  object-fit: cover;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+/* text */
+.card-title {
+  font-size: 45px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: 20px 0 0 0;
+  z-index: 2;
+}
+
+/* Borough label below image */
+#boroughLabel {
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin: 10px 0 0 0;
+  z-index: 2;
+}
+
+#boroughLabel.visible {
+  opacity: 1;
+}
+
+.color-section {
+  width: 300px;
+  border-radius: 15px;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.color-section:hover {
+  transform: scale(1.05);
+}
+
+.color-section.whitechocolate {
+  background-color: rgb(239, 231, 211);
+}
+
+.color-section.broccoli {
+  background-color: rgb(2, 68, 41);
+}
+
+.color-section.blueberry {
+  background-color: rgb(23, 77, 164)
+}
+
+.color-section.ketchup {
+  background-color: rgb(210, 77, 25);
+}
+
+.color-section.strawberrymilkshake {
+  background-color: rgb(247, 160, 203);
+}
+
+.color-section.brownie {
+  background-color: rgb(92, 64, 51);
+}
+
+.color-section.mango {
+  background-color: rgb(255, 165, 0);
+}
+
+.color-section img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.color-section p {
+  font-size: 18px;
+}
+
+.image-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: left;
+  gap: 40px;
+  margin: 20px 0;
+}
+
+.pineapple,
+.passion,
+.bread {
+  width: 200%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.image-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.imagecontainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.imagecontainer img {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.barfood {
+  width: 520px;
+  height: 530px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 90px;
+  font-family: 'Fredericka the Great', cursive;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.p,
+.p2 {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.color-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 50px;
+  justify-content: center;
+  /* margin: 0 auto;
+  max-width: 1000px; */
+  /* padding: 20px; */
+}
+
+.card-wrapper {
+  display: block;
+  /* flex-direction: column;
+  align-items: center; */
+}
+
+.album {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.album-content {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  max-width: 1400px;
+  margin: 5% auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+/* Single images in slides (big images) */
+.album-content .slide img {
+  width: 80%;
+  /* fills most of the slide */
+  max-width: 700px;
+  /* won’t get too wide on large screens */
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  /* center the image */
+}
+
+.album-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.album-text p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/* //collage imaghes side by side   */
+.album-content .slide .collage {
+  display: flex;
+  flex-wrap: wrap;
+  /* wrap to new lines if needed */
+  gap: 10px;
+  justify-content: center;
+  /* center the collage */
+}
+
+.album-content .slide .collage img {
+  width: calc(33% - 10px);
+  /* 3 images per row */
+  max-width: 250px;
+  /* prevent images from being too big */
+  height: auto;
+  /* keep aspect ratio */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#queens-album .large-collage {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  /* center the collage */
+}
+
+#queens-album .large-collage img {
+  width: 48%;
+  /* makes each image bigger than the default 33% */
+  max-width: 500px;
+  /* increase max size */
+  height: auto;
+  border-radius: 10px;
+}
+
+#brooklyn-album .large-collage {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+#brooklyn-album .large-collage img {
+  width: 30%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+#bronx-album .large-collage {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+#bronx-album .large-collage img {
+  width: 30%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+#manhattan-album .large-collage {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  /* center the collage */
+}
+
+#manhattan-album .large-collage img {
+  width: 48%;
+  /* makes each image bigger than the default 33% */
+  max-width: 500px;
+  /* increase max size */
+  height: auto;
+  border-radius: 10px;
+}
+
+#staten-album .large-collage {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  /* center the collage */
+}
+
+#staten-album .large-collage img {
+  width: 48%;
+  /* makes each image bigger than the default 33% */
+  max-width: 500px;
+  /* increase max size */
+  height: auto;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: #f0eeee;
+  cursor: pointer;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+}
+
+.slider img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  color: #333;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.insta {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 600%;
+   box-shadow: 0 12px 25px rgba(0,0,0,0.3); /* horizontal, vertical, blur, color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.insta :hover {
+  transform: scale(1.05);
+   transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); 
+}
+
+.myart {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 600%;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3); /* horizontal, vertical, blur, color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.myart:hover {
+  transform: scale(1.05);
+   transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); 
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+footer {
+  background-color: rgb(241, 246, 179);
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+}
+
+#bottom-section {
+  width: 100%;
+  background-color: rgb(124, 157, 210); /* same as #subhdr */
+  color: white; /* or whatever text color you want */
+  text-align: center;
+  padding: 200px;
+  box-sizing: border-box;
+}
+
+#footer-top {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(241, 246, 179); /* like #myhdr */
+  color: rgb(7, 7, 7);
+  padding: 20px 15px;
+  font-weight: bold;
+}
+
+#footer-bottom {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(124, 157, 210); /* like #subhdr */
+  color: rgb(7, 7, 7);
+  padding: 15px 15px;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a:link {
+  color: #2f00ff
+}
+
+a:visited {
+  color: #00FF00;
+}
+
+a:hover {
+  color: #FF00FF;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
+.link-block {
+  text-align: center;
+  max-width: 200px;
+}
+
+.link-block img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.link-block img:hover {
+  transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.link-block h5,
+.link-block h6 {
+  margin-top: 15px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #333;
+}
