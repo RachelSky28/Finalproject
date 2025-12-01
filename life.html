@@ -10,22 +10,7 @@
 <link rel="stylesheet" href="styles/life.css">
 </head>
 <body>
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-</script>
 <header>
 <p>logo here</p>
 <div id=header>
@@ -153,20 +138,28 @@ for (i = 0; i < acc.length; i++) {
     </div>
 </div>
 </div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
     <footer id="footer">
         <p>&copy; 2025 Like A New Yorker</p>
         <p>Curated by Chloe Dahan, Kathy Baik, Rachel S. Khmelnitsky, and Sabrina Guzman</p>
     </footer>
 </body>
 </html>
-<p> Key: For activities that are especially kid-friendly, I have included &#x1F46A, for 21+ activities I have included &#x1F377;, and for activities with a cost I have included &#x1F4B2 </p>
-<hr>
-<div id=body1>
-  <h1>NYC Daylife</h1>
- <div class="accordion">
-  <button class="accordion-header">Year Round</button>
-<div class="accordion-content">
-<ul>
 <li>Walk around the parks </li>
 <li>Tour some of the city’s architecture</li>
 <li>Do a statue tour</li>
