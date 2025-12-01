@@ -16,10 +16,6 @@ Body {
     font-style:normal; 
     transition: background-color 0.3s, color 0.3s; 
 }
-body.dark.mode{
-    background-color: #250F12;
-    color: #FFFEF2;
-}
 h1{
     font-family:"Pinyon Script", cursive;
     font-weight: 100;
@@ -61,6 +57,183 @@ nav a {
     text-decoration: none;
     color: #250F12;
     padding: 8px 16px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+nav a.blog:hover {
+    background-color: #eeb570;
+    color: #250F12;
+}
+
+nav a.meetnyc:hover {
+    background-color: #7C9DD2;
+    color: #250F12;
+}
+
+nav a.food:hover {
+    background-color: #D14C18;
+    color: #250F12;
+}
+nav a.art:hover {
+    background-color:#DAE080;
+    color: #250F12; 
+}
+nav a.life:hover {
+    background-color:#f8e8fa;
+    color: #250F12;
+}
+
+/* Active page highlighting */
+nav a.active-page {
+    background-color:#f8e8fa;
+    color: #250F12;
+}
+
+#homebody {
+    background-color: transparent;
+    color: #250F12;
+    padding: 20px;
+    width: 100%;  
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+#body1{
+    opacity: 0.8;
+    background-image: radial-gradient(#a7162c 1px, #f8e8fa 1px);
+    background-size: 10px 10px;
+    color:#05372E;
+    padding:40px;
+    width: 100%; 
+    height: auto;
+    text-align: left;
+    overflow:auto;
+    position: relative;
+}
+#body2{
+    background-color: #05372E;
+    color:#f8e8fa;
+    padding:40px;
+    width: 100%; 
+    height: auto;
+    text-align: left;
+    overflow:auto;
+    position: relative; 
+}
+#body3{
+    background-color: #FFFEF2;
+    opacity: 0.8;
+    background-size: 20px 20px;
+    background-image:  repeating-linear-gradient(to right, #05372E, #05372E 1px, #FFFEF2 1px, #FFFEF2);
+    color: #a7162c;
+    padding:40px;
+    width: 100%; 
+    height: auto;
+    text-align: left;
+    overflow:clip;
+    position: relative; 
+
+}
+#body4{
+   background-color:#a7162c;
+    color: #f8e8fa;
+    padding:40px;
+    width: 100%; 
+    height: auto;
+    text-align: left;
+    overflow:hidden;
+    position: relative; 
+    float:left;
+}
+
+.accordion {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: oblique;
+    font-size: x-large;
+    background-color: #FFFEF2;
+    color: #250F12;
+    cursor: pointer;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    border:solid;
+    border-width:thin;
+    border-color: #250F12;
+    transition: 0.4s ease;
+}
+.active, .accordion:hover {
+  background-color: #EFAEE4;
+}
+.panel {
+    font-size: x-large;
+    background-color: #FFFEF2; 
+    color: #250F12;
+    padding: 0 18px;
+    width: 50%;
+    overflow:hidden;
+    display:none;
+    transition: max-height 0.2s ease-out;
+}
+
+
+.favspotscarousel {
+    margin-top: 30px;
+}
+
+.carousel-main {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.carousel-main img {
+    width: 20%;
+    height: 20%;
+    object-fit: cover;
+}
+
+.carousel-thumbnails {
+    display: flex;
+    gap: 10px;
+    background-color: transparent;
+    padding: 0;
+}
+
+.carousel-thumb {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.carousel-thumb:hover {
+    border-color: var(--verdant);
+}
+
+footer{
+    color: black;
+    padding: 25px;
+    width: auto;
+    margin: 40px;
+    text-align:left;
+    position:static;
+}
+@font-face{
+    font-family:"easyskyline";
+    src: url("fonts/easyskyline.ttf");  
+}
+skyline{
+    font-family: easyskyline, sans-serif;
+}
     border-radius: 6px;
     display: inline-block;
     transition: background-color 0.3s ease;
