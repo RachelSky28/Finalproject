@@ -1,3 +1,13 @@
+:root {
+    --gossamer: #fef2ff;
+    --verdant: #dae080;
+    --lilac: #efaee4;
+    --sunbeam: #eeb570;
+    --moss: #4b4e01;
+    --dusk: #250f12;
+}
+
+
 body {
     background-color: #FFFEF2;
     color: #250f12;
@@ -61,6 +71,272 @@ body {
 #nav li {
     width: auto;
     height: auto;
+    padding: 0;
+}
+
+nav a {
+    font-family: "Libre Baskerville", serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #250f12;
+    padding: 8px 16px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+nav a.blog:hover {
+    background-color: #eeb570;
+    color: #250f12;
+}
+
+nav a.meetnyc:hover {
+    background-color: #7C9DD2;
+    color: #250f12;
+}
+
+nav a.art:hover {
+    background-color: #dae080;
+    color: #250f12;
+}
+
+nav a.food:hover {
+    background-color: #D14C18;
+    color: #250f12;
+}
+
+nav a.life:hover {
+    background-color: #f8e8fa;
+    color: #250f12;
+}
+/* Active page highlighting */
+nav a.active-page {
+    background-color:#eeb570;
+    color: #250F12;
+}
+
+
+h1 {
+    font-family: "Pinyon Script", cursive;
+    font-size: 64px;
+    font-weight: 400;
+    color: #250F12;
+    margin: 0 0 20px 0;
+}
+
+h2, h3, h4 {
+    font-family: "Libre Baskerville", serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #250F12;
+    margin-top: 0;
+}
+
+p {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #250F12;
+    line-height: 1.8;
+    max-width: 900px;
+}
+
+
+/* Footer */
+#footer {
+    width: 100%;
+    background-color: #250f12;
+    color: #fef2ff;
+    padding: 30px 40px;
+    border-top: 2px solid #250f12;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#footer p {
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 5px 0;
+}
+
+#footer p:first-child {
+    font-weight: 500;
+}
+
+/*
+Body {
+    background-size: cover;
+    background-color: #FFFEF2;
+    color: #250F12;
+    position: relative;
+    padding-top: 20px;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0;
+    justify-content: space-evenly;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+body.dark-mode {
+    background-color: #250F12;
+    color: #FFFEF2;
+}
+
+h1 {
+    font-family: "Pinyon Script", cursive;
+    font-weight: 100;
+    font-size: 59px;
+    font-style: oblique;
+}
+
+h2 {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#header {
+    background-color: transparent;
+    color: #250F12;
+    text-align: left;
+}
+
+#nav ul {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: 110px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-size: large;
+    font-style: normal;
+}
+
+#nav li {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: #250F12;
+    padding: 20px;
+    text-align-last: center;
+    border-radius: 20%;
+    display: block;
+    transition: background-color 0.5s, color 0.2s;
+}
+
+nav a.home:hover {
+    background-color: #1A0089;
+    color: #E1D1E4;
+}
+
+nav a.meetnyc:hover {
+    background-color: #7C9DD2;
+    color: #1A0089;
+}
+
+nav a.art:hover {
+    background-color: #DAE080;
+    color: #3d557c;
+}
+
+nav a.food:hover {
+    background-color: #D14C18;
+    color: #e4ea89;
+}
+
+nav a.life:hover {
+    background-color: #f8e8fa;
+    color: #b64316;
+}
+
+#homebody {
+    background-color: transparent;
+    color: black;
+    padding: 20px 40px;
+    width: 100%;  
+    margin-top: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+footer {
+    color: black;
+    width: 100%;
+    margin: 40px 0;
+    text-align: left;
+    position: static;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: easyskyline;
+    src: url("fonts/easyskyline.ttf");  
+}
+
+skyline {
+    font-family: easyskyline;
+}
+*/
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #header-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    #nav ul {
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #logo-container {
+        padding: 12px;
+    }
+
+    #logo img {
+        height: 50px;
+    }
+
+    #header-container {
+        padding: 12px 0;
+        gap: 12px;
+    }
+
+    #nav ul {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}    height: auto;
     padding: 0;
 }
 
