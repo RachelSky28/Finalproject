@@ -177,7 +177,6 @@ nav a.active-page {
     display: block;
     mix-blend-mode:color-dodgel;
 }
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active .accordion-header:hover {
   background-color: #EFAEE4;
 }
