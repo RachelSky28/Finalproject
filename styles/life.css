@@ -177,7 +177,7 @@ nav a.active-page {
     display: block;
     mix-blend-mode:color-dodgel;
 }
-.active .accordion-header:hover {
+.active, .accordion-header:hover {
   background-color: #EFAEE4;
 }
 /* Style the accordion. */
