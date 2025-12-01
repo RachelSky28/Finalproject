@@ -1,3 +1,62 @@
+/* Navigation */
+#nav ul {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: auto;
+    height: auto;
+    justify-content: center
+}
+
+#nav li {
+    width: auto;
+    height: auto;
+    padding: 0;
+}
+
+nav a {
+    font-family: "Libre Baskerville", serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #250F12;
+    padding: 8px 16px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+nav a.blog:hover {
+    background-color: #eeb570;
+    color: #250F12;
+}
+nav a.meetnyc:hover {
+    background-color: #7C9DD2;
+    color: #250F12;
+}
+
+nav a.food:hover {
+    background-color: #D14C18;
+    color: #250F12;
+}
+nav a.art:hover {
+    background-color:#DAE080;
+    color: #250F12; 
+}
+nav a.life:hover {
+    background-color: var(#f8e8fa);
+    color: #250F12;
+}
+
+/* Active page highlighting */
+nav a.active-page {
+    background-color:  #D14C18;
+    color: #250F12;
+}
+
+
 #myhdr {
   width: 100%;
   text-align: center;
