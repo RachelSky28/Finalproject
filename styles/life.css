@@ -1,3 +1,4 @@
+/* Life page style */
 Body {
     background-size: cover;
     background-color: #FFFEF2;
@@ -33,33 +34,230 @@ h2{
     color: #250F12;
     text-align: left;
 }
+/* Navigation */
 #nav ul {
-    display:flex;
-    text-align: center;
-    width: 100%;
-    height:110px;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: auto;
+    height: auto;
+    justify-content: center
+}
+
+#nav li {
+    width: auto;
+    height: auto;
+    padding: 0;
+}
+
+nav a {
+    font-family: "Libre Baskerville", serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--dusk);
+    padding: 8px 16px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+nav a.blog:hover {
+    background-color: var(--sunbeam);
+    color: var(--dusk);
+}
+
+nav a.meetnyc:hover {
+    background-color: #7C9DD2;
+    color: var(--dusk);
+}
+
+nav a.art:hover {
+    background-color: var(--verdant);
+    color: var(--dusk);
+}
+
+nav a.food:hover {
+    background-color: #D14C18;
+    color: var(--dusk);
+}
+nav a.art {
+    background-color:#DAE080;
+    color: var(--dusk); 
+}
+
+/* Active page highlighting */
+nav a.active-page {
+    background-color: var(--verdant);
+    color: var(--dusk);
+}
+
+#homebody {
+    background-color: transparent;
+    color: black;
+    padding: 20px;
+    width: 100%;  
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+#body1{
+    opacity: 0.8;
+    background-image: radial-gradient(#a7162c 1px, #f8e8fa 1px);
+    background-size: 10px 10px;
+    color:#05372E;
+    padding:40px;
+    width: 100%; 
+    height: auto;
+    text-align: left;
+    overflow:auto;
+    position: relative;
+}
+#body2{
+    background-color: #05372E;
+    color:#f8e8fa;
+    padding:40px;
+    width: 100%; 
+    height: auto;
+    text-align: left;
+    overflow:auto;
+    position: relative; 
+}
+#body3{
+    background-color: #FFFEF2;
+    opacity: 0.8;
+    background-size: 20px 20px;
+    background-image:  repeating-linear-gradient(to right, #05372E, #05372E 1px, #FFFEF2 1px, #FFFEF2);
+    color: #a7162c;
+    padding:40px;
+    width: 100%; 
+    height: auto;
+    text-align: left;
+    overflow:clip;
+    position: relative; 
+
+}
+#body4{
+   background-color:#a7162c;
+    color: #f8e8fa;
+    padding:40px;
+    width: 100%; 
+    height: auto;
+    text-align: left;
+    overflow:hidden;
+    position: relative; 
+    float:left;
+}
+.accordion {
+    background-color: transparent;
+    width: 60%;
+    padding: 10;
+    
+}
+.accordion-header {
+    float:initial;
     font-family: "Libre Baskerville", serif;
     font-weight: 400;
-    font-size:large;
-    font-style: normal;
-}
-#nav li {
-    text-decoration:none;
-    display: inline-block;
-    padding: 10px;
-    text-align: center;
-    width: 50%;
-    height: 100%;
-}
-nav a {
-    text-decoration:none;
-    color:#250F12;
+    font-style: oblique;
+    background-color: #FFFEF2;
+    color: #250F12;
+    cursor: pointer;
     padding: 20px;
-    text-align-last: center;
-    border-radius: 20%;
+    width: 100%;
+    text-align: center;
+    border:solid;
+    border-width:thin;
+    border-color: #250F12;
+    outline: none;
+    transition: 0.4s ease;
     display: block;
-    outline-color: #250F12;
-    transition: background-color 0.5s, color 0.2s;
+    mix-blend-mode:color-dodgel;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active .accordion-header:hover {
+  background-color: #EFAEE4;
+}
+/* Style the accordion. */
+.accordion-content {
+    padding: 0 18px;
+    background-color: #FFFEF2; 
+    color: #250F12;
+    overflow:hidden;
+    display:none;
+    transition: max-height 0.2s ease-out;
+}
+.accordion-content.show  {
+    display:block;
+    max-height:500px;
+    max-width: 100%;
+    padding: 18px 18px;
+}
+.image-container {
+    width: 25%;
+    height: auto;
+    margin-top: 2px;
+    margin-bottom: 64px;
+    margin-left: 20px;
+    margin-right: 20px;
+    object-fit:fill;  
+}
+.image-container img {
+  width: 70%;
+  height: 50%;
+  object-fit:cover;
+}
+.carousel-main {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.carousel-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-thumbnails {
+    display: flex;
+    gap: 10px;
+    background-color: transparent;
+    padding: 0;
+}
+
+.carousel-thumb {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.carousel-thumb:hover {
+    border-color: var(--verdant);
+}
+footer{
+    color: black;
+    padding: 25px;
+    width: auto;
+    margin: 40px;
+    text-align:left;
+    position:static;
+}
+@font-face{
+    font-family:"easyskyline";
+    src: url("fonts/easyskyline.ttf");  
+}
+skyline{
+    font-family: easyskyline, sans-serif;
+}
 }
 nav a.blog:hover {
     background-color:#1A0089;
