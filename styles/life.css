@@ -9,6 +9,7 @@ Body {
     padding-right: 20px;
     padding-left: 20px;
     padding-top: 20px;
+    margin: 0px;
     justify-content: space-evenly;
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
