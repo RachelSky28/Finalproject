@@ -194,7 +194,7 @@ nav a.life:hover {
     align-self: stretch;
     background-color: var(--verdant);
     padding: 16px 24px;
-    margin: 16px 24px;
+    margin: 16px 40px;
     align-items: left;
 }
 
@@ -346,6 +346,7 @@ max-width: 248px;
 }
 .volunteer-card-container {
   display: inline-flex;
+  max-width: 600px;
   align-items: flex-start;
   justify-content: space-around;
   flex-wrap: wrap;
