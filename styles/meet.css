@@ -395,6 +395,7 @@ nav a.life:hover {
     font-weight: 400;
     color: var(--dusk);
     margin-top: 0;
+    margin-bottom: 16px;
     max-width: 100%;
     line-height: 180%;
 }
