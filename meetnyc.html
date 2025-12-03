@@ -50,63 +50,173 @@
             <div class="section-container">
                 <h2>Kathy's Personal Menu</h2>
                 <p>Some of my favorite cafes + drinks to work, study, and chat!</p>
+            </div>       
+            <div class="menu-item">
+              <p class="drink">Coconut Americano from <a href="https://www.rhythmzeronyc.com/">Rhythm Zero</a>
+              <p class="description">iced. espresso cold foam. coconut water.</p>
             </div>
-
-        <div class="menu-item">
-          <p class="drink">Coconut Americano from <a href="https://www.rhythmzeronyc.com/">Rhythm Zero</a></p>
-          <p class="description">iced. espresso cold foam. coconut water.</p>
-        </div>
-
-        <div class="menu-item">
-          <p class="drink">Cafe Con Panna from <a href="https://www.abraconyc.com/">abraço</a></p>
-          <p class="description">double shot espresso. italian sweet cream.</p>
-        </div>
-
-
-        <div class="menu-item">
-          <p class="drink">Salted Honey Latte from <a href="https://landtoseanyc.com/">Land to Sea</a></p>
-          <p class="description">wildflower honey. vanilla. pink salt. espresso.</p>
-        </div>
-
-
-        <div class="menu-item">
-          <p class="drink">cà phê sữa đá from <a href="https://www.legaz.cafe/">Le Gaz</a></p>
-          <p class="description">vietnamese iced coffee. condensed milk.</p>
-        </div>
-
-
-        <div class="menu-item">
-          <p class="drink">Matcha Cortado from <a href="https://themandarinnyc.com/">The Mandarin</a></p>
-          <p class="description">matcha shot. 2 oz milk.</p>
-        </div>
-
-
-        <div class="menu-item">
-          <p class="drink">Black Sesame Latte from <a href="https://www.yelp.com/biz/le-phin-new-york-2">Le Phin</a></p>
-          <p class="description">black sesame syrup. double shot espresso. </p>
-        </div>
-
+            <div class="menu-item">
+              <p class="drink">Cafe Con Panna from <a href="https://www.abraconyc.com/">abraço</a></p>
+              <p class="description">double shot espresso. italian sweet cream.</p>
+            </div>
+            <div class="menu-item">
+              <p class="drink">Salted Honey Latte from <a href="https://landtoseanyc.com/">Land to Sea</a></p>
+              <p class="description">wildflower honey. vanilla. pink salt. espresso.</p>
+            </div>
+            <div class="menu-item">
+              <p class="drink">cà phê sữa đá from <a href="https://www.legaz.cafe/">Le Gaz</a></p>
+              <p class="description">vietnamese iced coffee. condensed milk.</p>
+            </div>
+            <div class="menu-item">
+              <p class="drink">Matcha Cortado from <a href="https://themandarinnyc.com/">The Mandarin</a></p>
+              <p class="description">matcha shot. 2 oz milk.</p>
+            </div>
+            <div class="menu-item">
+               <p class="drink">Black Sesame Latte from <a href="https://www.yelp.com/biz/le-phin-new-york-2">Le Phin</a></p>
+               <p class="description">black sesame syrup. double shot espresso. </p>
+            </div>
         </section>
 
-        <section class="community-events" id="community-events">
-            <div class="section-container">
-                <h2>Community Events</h2>
+        <section class="community-events">
+          <div class="section-container">
+            <h2>Community Events</h2>
 
-                <div class="filter">
-                    <button class="filter-btn active" data-filter="run">Run Clubs</button>
-                    <button class="filter-btn" data-filter="book">Book Clubs</button>
-                    <button class="filter-btn" data-filter="trivia">Trivia Nights</button>
+            <div class="filter">
+              <button class="filter-btn active" onclick="filterSelection('all')">All</button>
+              <button class="filter-btn" onclick="filterSelection('run')">Run Clubs</button>
+              <button class="filter-btn" onclick="filterSelection('books')">Book Clubs</button>
+              <button class="filter-btn" onclick="filterSelection('trivia')">Trivia Nights</button>
             </div>
 
+            <script>
+              function filterSelection(category) {
+                let cards = document.getElementsByClassName("card");
 
+                if (category === "all") category = "";
+
+                for (let i = 0; i < cards.length; i++) {
+                  cards[i].style.display = cards[i].classList.contains(category) || category === ""
+                    ? "block"
+                    : "none";
+                }
+
+                // Active Button
+                let btns = document.getElementsByClassName("filter-btn");
+                for (let b of btns) b.classList.remove("active");
+                event.target.classList.add("active");
+              }
+            </script>
+
+            <div class="card-container">
+
+              <!-- Run Clubs -->
+              <div class="card run">
+                <img src="../images/noname.jpeg" style="width:100%">
+                <h2><b>Noname Run Club</b></h2>
+                <p>sponsored by LuluLemon</p>
+              </div>
+
+              <div class="card run">
+                <img src="../images/endorphins.jpeg" style="width:100%">
+                <h2><b>Endorphins Run Club</b></h2>
+                <p>sponsored by New Balance</p>
+              </div>
+
+              <div class="card run">
+                <img src="../images/omrc.jpeg" style="width:100%">
+                <h2><b>Old Man Run Club</b></h2>
+                <p>Independent Club</p>
+              </div>
+
+              <div class="card run">
+                <img src="../images/midnightrunners.jpeg" style="width:100%">
+                <h2><b>Midnight Runners</b></h2>
+                <p>Sponsored by Mizuno</p>
+              </div>
+
+              <!-- Book Clubs -->
+              <div class="card books">
+                <img src="../images/ll.jpeg" style="width:100%">
+                <h2><b>Literary League</b></h2>
+                <p>New York, NY</p>
+              </div>
+
+              <div class="card books">
+                <img src="../images/obsessed.jpeg" style="width:100%">
+                <h2><b>Obsessed</b></h2>
+                <p>Brooklyn, NY</p>
+              </div>
+
+              <div class="card books">
+                <img src="../images/curiousminds.jpeg" style="width:100%">
+                <h2><b>Curious Minds</b></h2>
+                <p>Queens, NY</p>
+              </div>
+
+              <div class="card books">
+                <img src="../images/simplylit.jpeg" style="width:100%">
+                <h2><b>Simply Lit</b></h2>
+                <p>Bronx, NY</p>
+              </div>
+
+              <!-- Trivia Nights -->
+              <div class="card trivia">
+                <img src="../images/juke.jpeg" style="width:100%">
+                <h2><b>Juke Bar, East Village</b></h2>
+                <p>Mondays at 7pm</p>
+              </div>
+
+              <div class="card trivia">
+                <img src="../images/cousin.jpeg" style="width:100%">
+                <h2><b>Cousin Larry's, Sunnyside</b></h2>
+                <p>Tuesdays at 8pm</p>
+              </div>
+
+              <div class="card trivia">
+                <img src="../images/gaf.jpeg" style="width:100%">
+                <h2><b>The Gaf East, Upper East Side</b></h2>
+                <p>Wednesdays at 8:30pm</p>
+              </div>
+
+              <div class="card trivia">
+                <img src="../images/roses.jpeg" style="width:100%">
+                <h2><b>Rose's R&R Bar, Williamsburg</b></h2>
+                <p>Thursdays at 7pm</p>
+              </div>
+
+            </div>
+          </div>
         </section>
+        
 
-        <section class="volunteer" id="community-events">
+        <section class="volunteer">
             <div class="section-container">
                 <h2>Volunteer Opportunities</h2>
                 <p>Get involved and give back to our beautiful city!</p>
                 <div class="art-cards-container" id="cardsContainer">
                 </div>
+
+            <div class="volunteer-card">
+              <img src="../images/heartofdinner.jpeg" style="width:100%">
+              <h2>Heart of Dinner</h2>
+              <p>Delivering food to the underserved elderly community in Chinatown and Flushing.</br>
+              <a href="https://www.heartofdinner.org/">Check them out!</a></p>
+            </div>
+
+            <div class="volunteer-card">
+              <img src="../images/bowery.jpeg" style="width:100%">
+              <h2>The Bowery Mission</h2>
+              <p>Serving food and necessities to those experiencing houselessness in the Lower East Side.</br>
+              <a href="https://www.bowery.org/">Check them out!</a></p>
+            </div>
+
+            <div class="volunteer-card">
+              <img src="../images/paws.jpeg" style="width:100%">
+              <h2>Paws NY</h2>
+              <p>Provides services to vulnerable New Yorkers who need support caring for their pets due to physical and financial obstacles they face.</br>
+              <a href="https://pawsny.org/">Check them out!</a></p>
+            </div>
+
             </div>
         </section>
 
