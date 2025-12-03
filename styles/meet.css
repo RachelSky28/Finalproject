@@ -171,7 +171,7 @@ nav a.life:hover {
     color: var(--sunshine);
     margin-top: 0;
     margin-bottom: 20px;
-    max-width: 1200px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -188,21 +188,24 @@ nav a.life:hover {
 
 .menu-item {
     max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
     background-color: var(--verdant);
-    padding: 24px 32px;
-    margin: 24px 32px;
+    padding: 16px 24px;
+    margin: 16px 24px;
     align-items: left;
 }
 
 .menu-item p {
     font-family: "Raleway", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     color: var(--ketchup);
-    line-height: 100%;
+    line-height: 120%;
     max-width: 100%;
     margin: 8px 0px;
-
 }
 
 /* Community */
@@ -223,6 +226,16 @@ nav a.life:hover {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.filterDiv {
+max-width: 248px;
+  padding: 16px;
+  margin-top: 32px;
+  margin-right: 24px;
+  background-color: #e1d1e4;
+  box-shadow: 0 4px 8px 0 rgba(46, 54, 112, 0.186);
+  transition: 0.3s;  
 }
 
 .filter-buttons {
@@ -258,6 +271,48 @@ nav a.life:hover {
         border-bottom: 2px solid var(--whitechoco);
 }
 
+.card-container {
+  display: inline-flex;
+  overflow: hidden;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 248px;
+  height: 328px;
+  padding: 16px;
+  margin-top: 32px;
+  margin-right: 24px;
+  background-color: #e1d1e4;
+  box-shadow: 0 4px 8px 0 rgba(46, 54, 112, 0.186);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(22, 26, 54, 0.186);
+}
+
+.card h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--ketchup);
+    margin-top: 16px;
+    margin-bottom: 8px;
+    max-width: 100%;
+}
+
+.card p {
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--dusk);
+    margin-top: 0;
+    max-width: 100%;
+}
 
 
 /* Volunteer */
@@ -289,6 +344,42 @@ nav a.life:hover {
     max-width: 100%;
     margin: 0 auto;
 }
+.volunteer-card-container {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.volunteer-card {
+  width: 100%;
+  padding: 16px;
+  margin-top: 32px;
+  margin-right: 48px;
+  margin-left: 48px;
+  background-color: var(--whitechoco);
+}
+
+.volunteer-card h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--sky);
+    margin-top: 16px;
+    margin-bottom: 8px;
+    max-width: 100%;
+}
+
+.volunteer-card p {
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--dusk);
+    margin-top: 0;
+    max-width: 100%;
+    line-height: 180%;
+}
+
 
 /* Footer */
 #footer {
