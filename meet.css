@@ -344,12 +344,19 @@ max-width: 248px;
     max-width: 100%;
     margin: 0 auto;
 }
+.volunteer-card-container {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
 .volunteer-card {
-  width: 400px;
+  width: 100%;
   padding: 16px;
   margin-top: 32px;
-  margin-right: 24px;
+  margin-right: 48px;
+  margin-left: 48px;
   background-color: var(--whitechoco);
 }
 
