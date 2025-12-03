@@ -1,5 +1,12 @@
 /* Life page style */
-
+:root {
+    --vanilla: #FFFEF2;
+    --raspberry: #a7162c;
+    --peppermint: #f8e8fa;
+    --sunbeam: #eeb570;
+    --navy: #052A37;
+    --dusk: #250f12;
+}
 
 Body {
     background-size: cover;
