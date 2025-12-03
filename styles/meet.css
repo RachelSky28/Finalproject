@@ -404,7 +404,7 @@ nav a.life:hover {
 
 /* Footer */
 #footer {
-    width: 100%;
+    width: fill-container;
     background-color: #250f12;
     color: #fef2ff;
     padding: 30px 40px;
