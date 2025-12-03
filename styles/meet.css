@@ -346,10 +346,10 @@ max-width: 248px;
 }
 .volunteer-card-container {
   display: inline-flex;
-  max-width: 600px;
-  align-items: flex-start;
+  align-items: flex-center;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin: 0px 72px;
 }
 
 .volunteer-card {
