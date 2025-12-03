@@ -371,6 +371,7 @@ nav a.life:hover {
     border: 0px;
     background-color: var(--verdant);
     color: var(--ketchup);
+    transition: 0.3s;
     box-shadow: 0 2px 4px rgba(144, 119, 64, 0.156);
 }
 
