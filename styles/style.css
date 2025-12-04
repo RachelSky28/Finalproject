@@ -547,16 +547,6 @@ footer {
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: easyskyline;
-    src: url("fonts/easyskyline.ttf");  
-}
-
-skyline {
-    font-family: easyskyline;
-}
-*/
-
 /* Responsive Design */
 @media (max-width: 768px) {
     #header-container {
