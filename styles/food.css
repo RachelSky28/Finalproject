@@ -73,7 +73,6 @@ nav a.active-page {
     color: #250F12;
 }
 
-
 #myhdr {
   width: 100%;
   text-align: center;
@@ -477,9 +476,9 @@ h2 {
 
 #manhattan-album .large-collage {
   display: flex;
+  flex-wrap: wrap;      /* wrap images to new line if needed */
   gap: 10px;
   justify-content: center;
-  /* center the collage */
 }
 
 #manhattan-album .large-collage img {
@@ -490,6 +489,7 @@ h2 {
   height: auto;
   border-radius: 10px;
 }
+
 
 #staten-album .large-collage {
   display: flex;
@@ -585,6 +585,17 @@ body {
   margin: 0;
 }
 
+.neighborhood {
+  width: 100%;       /* image fills container width */
+  max-width: 600px;  /* optional: prevent it from being too wide */
+  height: auto;      /* keep aspect ratio */
+  margin: 15px auto; /* space around it and center */
+  display: block;    /* center via margin auto */
+  border-radius: 10px; /* optional rounded corners */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3); /* optional shadow */
+}
+
+
 footer {
   background-color: rgb(241, 246, 179);
   padding: 40px 20px;
@@ -594,14 +605,95 @@ footer {
   margin-top: auto;
 }
 
-#bottom-section {
+ #bottom-section {
   width: 100%;
-  background-color: rgb(124, 157, 210); /* same as #subhdr */
-  color: white; /* or whatever text color you want */
-  text-align: center;
-  padding: 200px;
+  font-style: italic;
+  font-weight: bold;
+  background-color: rgb(124, 157, 210); /* blue background */
+  color: rgb(2, 2, 2);
+  padding: 20px;
   box-sizing: border-box;
 }
+
+#bottom-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bottom-flex {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* responsive wrapping on small screens */
+}
+
+/* Left Image */
+.bottom-left {
+  flex: 1 1 30%; /* takes up 30% of the width */
+}
+.bottom-left img.neighborhood {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Center Quiz */
+.bottom-center {
+  flex: 1 1 35%; /* takes up 35% of the width */
+  text-align: center;
+}
+
+/* Right Results */
+.bottom-right {
+  flex: 1 1 30%; /* takes up 30% of the width */
+  text-align: center;
+  font-size: 18px;
+}
+
+
+.quiz-question {
+  margin: 15px 0;
+}
+
+.quiz-question label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.quiz-question select {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+#quiz-submit {
+  padding: 12px 20px;
+  font-size: 16px;
+  margin-top: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #f7a0cb; /* contrast pink button */
+  color: black;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#quiz-submit:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+#quiz-result {
+  margin-top: 20px;
+  font-size: 20px;
+  color: white;
+}
+
 
 #footer-top {
   width: 100%;
@@ -650,7 +742,6 @@ footer {
 }
 
 .link-block img:hover {
-  transform: scale(1.05);
   transform: scale(1.05);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
