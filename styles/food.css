@@ -116,620 +116,684 @@ nav a.active-page {
     color: var(--dusk);
 }
 
-/* Hero Section */
-.hero-section {
-    display: flex;
-    min-height: 600px;
-    width: 100%;
-    background-color: #FFFEF2;
+#myhdr {
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  background: rgb(241, 246, 179);
+  color: rgb(7, 7, 7);
+  padding: 15px;
+  box-sizing: border-box;
 }
 
-.hero-content {
-    flex: 1;
-    padding: 60px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 50%;
+#subhdr {
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  background: rgb(124, 157, 210);
+  color: rgb(7, 7, 7);
+  padding: 15px;
+  box-sizing: border-box;
 }
 
-.hero-content h1 {
-    font-family: "Pinyon Script", cursive;
-    font-size: 64px;
-    font-weight: 400;
-    color: var(--dusk);
-    margin: 0 0 20px 0;
+body {
+  background-color: rgb(239, 231, 211);
+  color: rgb(4, 4, 4);
 }
 
-.hero-content p {
-    font-family: "Raleway", sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--dusk);
-    line-height: 1.8;
-    margin: 0 0 30px 0;
+
+.restaurant-info {
+  text-align: center;     /* centers all text */
+  margin-bottom: 15px;
+  color: rgb(4, 4, 4)          /* adjust if you want */
 }
 
-.scroll-arrow {
-    font-size: 32px;
-    color: var(--moss);
-    text-decoration: none;
-    display: inline-block;
-    width: 40px;
-    animation: bounce 2s infinite;
+.restaurant-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
-@keyframes bounce {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(10px);
-    }
+.address {
+  font-size: 18px;
+  margin-bottom: 16px;
+  line-height: 1.4;
 }
 
-.hero-image {
-    flex: 1;
-    overflow: hidden;
-    padding: 0;
-    display: block;
+.section-header {
+  font-size: 22px;
+  margin: 14px 0 6px;
+  font-weight: bold;
+  text-decoration: underline; /* optional */
 }
 
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+.train-info,
+.review {
+  font-size: 18px;
+  margin-bottom: 12px;
 }
 
-/* Section Container */
-.section-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
-    box-sizing: border-box;
+.heart-card {
+  width: 500px;
+  /* bigger size */
+  height: 470px;
+  /* maintain heart proportions */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* stack elements vertically */
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(247, 160, 203);
+  margin: 150px auto 0 auto; 
+  border-radius: 20px;
+  cursor: pointer; /* shows pointer on hover */
+  transition: transform 0.2s, box-shadow 0.2s; /* smooth hover effect */
 }
 
-/* Author Note Section */
-.author-note-section {
-    background-color: var(--verdant);
-    padding: 60px 40px;
-    width: 100%;
-    box-sizing: border-box;
+/* Hover effect */
+.heart-card:hover {
+  transform: scale(1.05); /* slightly bigger */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* adds depth */
 }
 
-.author-note-section h2 {
-    font-family: "Libre Baskerville", serif;
-    font-size: 32px;
-    font-weight: 400;
-    color: var(--dusk);
-    margin-top: 0;
-    margin-bottom: 20px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+/* heart shape using pseudo-elements */
+.heart-card::before,
+.heart-card::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 270px;
+  background: inherit;
+  border-radius: 150px 150px 0 0;
+  top: 0;
+  z-index: 1;
 }
 
-.author-note-section p {
-    font-family: "Raleway", sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--dusk);
-    line-height: 1.8;
-    max-width: 1200px;
-    margin: 0 auto;
+.heart-card::before {
+  left: 75px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
 }
 
-/* Recommendations Section */
-.recommendations-section {
-    background-color: var(--gossamer);
-    padding: 60px 40px;
-    width: 100%;
-    box-sizing: border-box;
+.heart-card::after {
+  left: 75px;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
 }
 
-.recommendations-section h2 {
-    font-family: "Libre Baskerville", serif;
-    font-size: 32px;
-    font-weight: 400;
-    color: var(--dusk);
-    margin-top: 0;
-    margin-bottom: 20px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+/* image inside heart */
+.heart-card img {
+  width: 340px;
+  height: 310px;
+  object-fit: cover;
+  z-index: 2;
+  border-radius: 10px;
 }
 
-.filter-buttons {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+/* text */
+.card-title {
+  font-size: 45px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: 20px 0 0 0;
+  z-index: 2;
 }
 
-.filter-btn {
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 10px 20px;
-    border: 2px solid var(--dusk);
-    background-color: transparent;
-    color: var(--dusk);
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+/* Borough label below image */
+#boroughLabel {
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin: 10px 0 0 0;
+  z-index: 2;
 }
 
-.filter-btn:hover {
-    background-color: var(--dusk);
-    color: var(--gossamer);
+#boroughLabel.visible {
+  opacity: 1;
 }
 
-.filter-btn.active {
-    background-color: var(--dusk);
-    color: var(--gossamer);
+.color-section {
+  width: 300px;
+  border-radius: 15px;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
 }
 
-/* Art Cards */
-.art-cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
-    box-sizing: border-box;
+.color-section:hover {
+  transform: scale(1.05);
 }
 
-.art-card {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
+.color-section.whitechocolate {
+  background-color: rgb(239, 231, 211);
 }
 
-.art-card:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+.color-section.broccoli {
+  background-color: rgb(2, 68, 41);
 }
 
-.card-image-section {
-    position: relative;
+.color-section.blueberry {
+  background-color: rgb(23, 77, 164)
 }
 
-.main-image {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    background-color: #e0e0e0;
+.color-section.ketchup {
+  background-color: rgb(210, 77, 25);
 }
 
-.main-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.color-section.strawberrymilkshake {
+  background-color: rgb(247, 160, 203);
 }
 
-.carousel-thumbnails {
-    display: flex;
-    gap: 8px;
-    padding: 12px;
-    background-color: #f5f5f5;
-    overflow-x: auto;
+.color-section.brownie {
+  background-color: rgb(92, 64, 51);
 }
 
-.thumbnail {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    cursor: pointer;
-    border-radius: 4px;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease;
-    flex-shrink: 0;
+.color-section.mango {
+  background-color: rgb(255, 165, 0);
 }
 
-.thumbnail:hover {
-    border-color: var(--verdant);
+.color-section img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
 }
 
-.card-content {
-    padding: 20px;
+.color-section p {
+  font-size: 18px;
 }
 
-.art-card h3 {
-    font-family: "Libre Baskerville", serif;
-    font-size: 22px;
-    font-weight: 400;
-    color: var(--dusk);
-    margin: 0 0 12px 0;
+.image-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: left;
+  gap: 40px;
+  margin: 20px 0;
 }
 
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 12px;
+.pineapple,
+.passion,
+.bread {
+  width: 200%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.tag {
-    font-family: "Raleway", sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    background-color: var(--moss);
-    color: var(--gossamer);
-    padding: 4px 10px;
-    border-radius: 12px;
+.image-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
 }
 
-.card-content p {
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--dusk);
-    line-height: 1.6;
-    margin: 0;
+.imagecontainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-/* Favorite Museum Section */
-.favorite-museum-section {
-    background-color: var(--sunbeam);
-    padding: 60px 40px;
-    width: 100%;
-    box-sizing: border-box;
+.imagecontainer img {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.museum-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
+.barfood {
+  width: 520px;
+  height: 530px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.museum-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+h1 {
+  text-align: center;
+  font-size: 90px;
+  font-family: 'Fredericka the Great', cursive;
+  font-weight: lighter;
+  margin-bottom: 20px;
 }
 
-.museum-text h2 {
-    font-family: "Libre Baskerville", serif;
-    font-size: 32px;
-    font-weight: 400;
-    color: var(--dusk);
-    margin-top: 0;
+h2 {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.museum-text p {
-    font-family: "Raleway", sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--dusk);
-    line-height: 1.8;
-    margin-bottom: 30px;
+.p,
+.p2 {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.museum-carousel {
-    margin-top: 30px;
+.color-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 50px;
+  justify-content: center;
+  /* margin: 0 auto;
+  max-width: 1000px; */
+  /* padding: 20px; */
 }
 
-.carousel-main {
-    width: 100%;
-    height: 300px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    overflow: hidden;
+.card-wrapper {
+  display: block;
+  /* flex-direction: column;
+  align-items: center; */
 }
 
-.carousel-main img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.album {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.carousel-thumbnails {
-    display: flex;
-    gap: 10px;
-    background-color: transparent;
-    padding: 0;
+.album-content {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  max-width: 1400px;
+  margin: 5% auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
 }
 
-.carousel-thumb {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    cursor: pointer;
-    border-radius: 6px;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease;
+/* Single images in slides (big images) */
+.album-content .slide img {
+  width: 80%;
+  /* fills most of the slide */
+  max-width: 700px;
+  /* won’t get too wide on large screens */
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  /* center the image */
 }
 
-.carousel-thumb:hover {
-    border-color: var(--verdant);
+.album-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Tips Section */
-.tips-section {
-    background-color: var(--moss);
-    padding: 60px 40px;
-    width: 100%;
-    box-sizing: border-box;
+.album-text p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  line-height: 1.4;
 }
 
-.tips-section h2 {
-    font-family: "Libre Baskerville", serif;
-    font-size: 32px;
-    font-weight: 400;
-    color: #FFFEF2;
-    text-align: left;
-    margin-top: 0;
-    margin-bottom: 40px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+/* //collage imaghes side by side   */
+.album-content .slide .collage {
+  display: flex;
+  flex-wrap: wrap;
+  /* wrap to new lines if needed */
+  gap: 10px;
+  justify-content: center;
+  /* center the collage */
 }
 
-.tips-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+.album-content .slide .collage img {
+  width: calc(33% - 10px);
+  /* 3 images per row */
+  max-width: 250px;
+  /* prevent images from being too big */
+  height: auto;
+  /* keep aspect ratio */
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.tip-card {
-    background-color: #FFFEF2;
-    padding: 30px;
-    border-radius: 8px;
-    border-left: 4px solid var(--lilac);
+#queens-album .large-collage {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  /* center the collage */
 }
 
-.tip-card h3 {
-    font-family: "Libre Baskerville", serif;
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--moss);
-    margin-top: 0;
-    margin-bottom: 12px;
+#queens-album .large-collage img {
+  width: 48%;
+  /* makes each image bigger than the default 33% */
+  max-width: 500px;
+  /* increase max size */
+  height: auto;
+  border-radius: 10px;
 }
 
-.tip-card p {
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--dusk);
-    line-height: 1.6;
-    margin: 0;
+#brooklyn-album .large-collage {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
 
-/* Footer */
-#footer {
-    width: 100%;
-    background-color: var(--dusk);
-    color: var(--gossamer);
-    padding: 30px 40px;
-    border-top: 2px solid var(--dusk);
-    margin-top: 0;
-    margin-bottom: 0;
-    box-sizing: border-box;
+#brooklyn-album .large-collage img {
+  width: 30%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
 }
 
-#footer p {
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    margin: 5px 0;
+#bronx-album .large-collage {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
 
-#footer p:first-child {
-    font-weight: 500;
+#bronx-album .large-collage img {
+  width: 30%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .museum-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        padding: 60px 40px;
-    }
-
-    .art-cards-container {
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    }
+#manhattan-album .large-collage {
+  display: flex;
+  flex-wrap: wrap;      /* wrap images to new line if needed */
+  gap: 10px;
+  justify-content: center;
 }
 
-@media (max-width: 768px) {
-    #header-container {
-        flex-direction: column;
-        gap: 20px;
-        padding: 15px 0;
-    }
-
-    #nav ul {
-        flex-direction: row;
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero-section {
-        flex-direction: column;
-        min-height: auto;
-        width: 100%;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        padding: 40px 20px;
-    }
-
-    .hero-content h1 {
-        font-size: 48px;
-    }
-
-    .hero-image {
-        height: 400px;
-        width: 100%;
-        display: block;
-    }
-
-    .hero-image img {
-        display: block;
-    }
-
-    .section-container {
-        padding: 0 20px;
-    }
-
-    .author-note-section {
-        padding: 40px 20px;
-    }
-
-    .author-note-section h2 {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .author-note-section p {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .recommendations-section {
-        padding: 40px 20px;
-    }
-
-    .recommendations-section h2 {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .filter-buttons {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .art-cards-container {
-        grid-template-columns: 1fr;
-        padding: 0 20px;
-    }
-
-    .favorite-museum-section {
-        padding: 40px 20px;
-    }
-
-    .museum-content {
-        padding: 0;
-    }
-
-    .tips-section {
-        padding: 40px 20px;
-    }
-
-    .tips-section h2 {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .tips-grid {
-        padding: 0;
-    }
-
-    #footer {
-        padding: 30px 20px;
-    }
+#manhattan-album .large-collage img {
+  width: 48%;
+  /* makes each image bigger than the default 33% */
+  max-width: 500px;
+  /* increase max size */
+  height: auto;
+  border-radius: 10px;
 }
 
-@media (max-width: 480px) {
-    #nav ul {
-        gap: 8px;
-    }
 
-    nav a {
-        padding: 6px 12px;
-        font-size: 14px;
-    }
+#staten-album .large-collage {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  /* center the collage */
+}
 
-    .hero-content {
-        padding: 30px 15px;
-    }
+#staten-album .large-collage img {
+  width: 48%;
+  /* makes each image bigger than the default 33% */
+  max-width: 500px;
+  /* increase max size */
+  height: auto;
+  border-radius: 10px;
+}
 
-    .hero-content h1 {
-        font-size: 36px;
-    }
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: #f0eeee;
+  cursor: pointer;
+}
 
-    .section-container {
-        padding: 0 15px;
-    }
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+}
 
-    .author-note-section {
-        padding: 30px 15px;
-    }
+.slider img {
+  width: 300px;
+  border-radius: 10px;
+}
 
-    .author-note-section h2 {
-        font-size: 28px;
-    }
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  color: #333;
+  z-index: 10;
+}
 
-    .recommendations-section {
-        padding: 30px 15px;
-    }
+.prev {
+  left: 10px;
+}
 
-    .recommendations-section h2 {
-        font-size: 28px;
-    }
+.next {
+  right: 10px;
+}
 
-    .filter-buttons {
-        margin-bottom: 30px;
-    }
+.insta {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 600%;
+   box-shadow: 0 12px 25px rgba(0,0,0,0.3); /* horizontal, vertical, blur, color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .art-cards-container {
-        padding: 0 15px;
-        gap: 20px;
-    }
+.insta :hover {
+  transform: scale(1.05);
+   transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); 
+}
 
-    .favorite-museum-section {
-        padding: 30px 15px;
-    }
+.myart {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 600%;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3); /* horizontal, vertical, blur, color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .tips-section {
-        padding: 30px 15px;
-    }
+.myart:hover {
+  transform: scale(1.05);
+   transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); 
+}
 
-    .tips-section h2 {
-        font-size: 28px;
-        margin-bottom: 30px;
-    }
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
 
-    .tips-grid {
-        gap: 20px;
-    }
+.neighborhood {
+  width: 100%;       /* image fills container width */
+  max-width: 600px;  /* optional: prevent it from being too wide */
+  height: auto;      /* keep aspect ratio */
+  margin: 15px auto; /* space around it and center */
+  display: block;    /* center via margin auto */
+  border-radius: 10px; /* optional rounded corners */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3); /* optional shadow */
+}
 
-    .tip-card {
-        padding: 20px;
-    }
 
-    .tip-card h3 {
-        font-size: 18px;
-    }
+footer {
+  background-color: rgb(241, 246, 179);
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+}
 
-    #footer {
-        padding: 20px 15px;
-    }
+ #bottom-section {
+  width: 100%;
+  font-style: italic;
+  font-weight: bold;
+  background-color: rgb(124, 157, 210); /* blue background */
+  color: rgb(2, 2, 2);
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-    #footer p {
-        font-size: 12px;
-        margin: 2px 0;
-    }
+#bottom-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bottom-flex {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* responsive wrapping on small screens */
+}
+
+/* Left Image */
+.bottom-left {
+  flex: 1 1 30%; /* takes up 30% of the width */
+}
+.bottom-left img.neighborhood {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Center Quiz */
+.bottom-center {
+  flex: 1 1 35%; /* takes up 35% of the width */
+  text-align: center;
+}
+
+/* Right Results */
+.bottom-right {
+  flex: 1 1 30%; /* takes up 30% of the width */
+  text-align: center;
+  font-size: 18px;
+}
+
+
+.quiz-question {
+  margin: 15px 0;
+}
+
+.quiz-question label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.quiz-question select {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+#quiz-submit {
+  padding: 12px 20px;
+  font-size: 16px;
+  margin-top: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #f7a0cb; /* contrast pink button */
+  color: black;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#quiz-submit:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+#quiz-result {
+  margin-top: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+
+#footer-top {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(241, 246, 179); /* like #myhdr */
+  color: rgb(7, 7, 7);
+  padding: 20px 15px;
+  font-weight: bold;
+}
+
+#footer-bottom {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(124, 157, 210); /* like #subhdr */
+  color: rgb(7, 7, 7);
+  padding: 15px 15px;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
+.link-block {
+  text-align: center;
+  max-width: 200px;
+}
+
+.link-block img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.link-block img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.link-block h5,
+.link-block h6 {
+  margin-top: 15px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #333;
 }
