@@ -627,18 +627,6 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-a:link {
-  color: #2f00ff
-}
-
-a:visited {
-  color: #00FF00;
-}
-
-a:hover {
-  color: #FF00FF;
-}
-
 .footer-links {
   display: flex;
   flex-direction: row !important;
