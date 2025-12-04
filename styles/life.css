@@ -265,10 +265,3 @@ footer{
     text-align:left;
     position:static;
 }
-@font-face{
-    font-family:"easyskyline";
-    src: url("fonts/easyskyline.ttf");  
-}
-skyline{
-    font-family: easyskyline, sans-serif;
-}
