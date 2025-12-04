@@ -15,6 +15,45 @@
     width: 100%;
     border-top: 2px solid var(--dusk);
     border-bottom: 2px solid var(--dusk);
+
+/* Header */
+#header {
+    width: 100%;
+    background-color: #FFFEF2;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+}
+
+#logo a {
+    text-decoration: none;
+    color: var(--dusk);
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+#logo img {
+    height: 60px;
+    width: auto;
+}
+
+#header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    border-top: 2px solid var(--dusk);
+    border-bottom: 2px solid var(--dusk);
+}
 /* Navigation */
 #nav ul {
     display: flex;
