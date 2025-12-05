@@ -1,3 +1,118 @@
+//group contribution
+:root {
+    --gossamer: #fef2ff;
+    --verdant: #dae080;
+    --lilac: #efaee4;
+    --sunbeam: #eeb570;
+    --moss: #4b4e01;
+    --dusk: #250f12;
+}
+
+
+body {
+    background-color: #FFFEF2;
+    color: #250f12;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+#header {
+    width: 100%;
+    background-color: #FFFEF2;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#logo a {
+    text-decoration: none;
+    color: #250f12;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+#logo img {
+    height: 60px;
+    width: auto;
+}
+
+#header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    border-top: 2px solid #250f12;
+    border-bottom: 2px solid #250f12;
+    box-sizing: border-box;
+}
+
+/* Navigation */
+#nav ul {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: auto;
+    height: auto;
+    justify-content: center
+}
+
+#nav li {
+    width: auto;
+    height: auto;
+    padding: 0;
+}
+
+nav a {
+    font-family: "Libre Baskerville", serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #250f12;
+    padding: 8px 16px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+nav a.blog:hover {
+    background-color: #eeb570;
+    color: #250f12;
+}
+
+nav a.meetnyc:hover {
+    background-color: #7C9DD2;
+    color: #250f12;
+}
+
+nav a.art:hover {
+    background-color: #dae080;
+    color: #250f12;
+}
+
+nav a.food:hover {
+    background-color: #D14C18;
+    color: #250f12;
+}
+
+nav a.life:hover {
+    background-color: #f8e8fa;
+    color: #250f12;
+}
+
+//food css starts here
 #myhdr {
   width: 100%;
   text-align: center;
@@ -46,7 +161,7 @@ body {
   font-size: 22px;
   margin: 14px 0 6px;
   font-weight: bold;
-  text-decoration: underline; /* optional */
+  text-decoration: underline; 
 }
 
 .train-info,
@@ -123,7 +238,7 @@ body {
   z-index: 2;
 }
 
-/* Borough label below image */
+/*Borough label below image */
 #boroughLabel {
   font-size: 28px;
   font-weight: bold;
