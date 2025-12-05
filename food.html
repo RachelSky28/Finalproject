@@ -914,14 +914,14 @@
         });
       });
 
-      // pressing the close buttons
+      // Close buttons
       document.querySelectorAll('.album .close-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           btn.parentElement.style.display = "none";
         });
       });
 
-      // Close when clicking outside the album 
+      // Close when clicking outside album content
       document.querySelectorAll('.album').forEach(album => {
         album.addEventListener('click', (e) => {
           if (e.target === album) {
@@ -973,13 +973,18 @@ async function getRandomFoodImage() {
   } catch (error) {
     console.error("Meal API Error:", error);
     return {
-      image: "./image/mta.jpeg",
-      name: "Hop on the Train To...",
+      image: "./images/mta.jpeg",
+      name: "How About..",
       category: "",
       area: ""
     };
   }
 }
+
+//API heart chard = random food (THANK YOU LORD THIS IS PERFECT)
+const heartImg = document.getElementById("heartImage");
+const boroughLabel = document.getElementById("boroughLabel");
+let showMtaNext = false;
 
 heartImg.addEventListener("click", async (e) => {
   e.stopPropagation();
@@ -998,9 +1003,10 @@ heartImg.addEventListener("click", async (e) => {
 
   } else {
 
+    //It will go from heart to food and back to heart
     heartImg.src ="./images/mta.jpeg";
 ;
-    boroughLabel.textContent = "Hop on the Train To...";
+    boroughLabel.textContent = "How About...";
 
     showMtaNext = false;
   }
@@ -1034,6 +1040,7 @@ heartImg.addEventListener("click", async (e) => {
 
   const resultBox = document.getElementById("quiz-result");
 
+  //what choices gives you the answer
   if (!borough || !cuisine || !vibe || !craving || !tooFar) {
     resultBox.innerHTML = `<p>Please answer all the questions.</p>`;
     return;
@@ -1042,16 +1049,16 @@ heartImg.addEventListener("click", async (e) => {
 //THE RESULTS
   const recommendations = {
     "Queens": {
-      "Italian": "./images/brass2.jpeg",
-      "Latin": "./images/jora.jpeg",
-      "Asian": "./images/kpot.jpeg",
-      "Surprise": "./imagesstreet.jpeg"
+      "Italian": "./image/brass2.jpeg",
+      "Latin": "./image/jora.jpeg",
+      "Asian": "./image/bully.jpeg",
+      "Surprise": "./image/street.jpeg"
     },
     "Brooklyn": {
-      "Italian": "./images/verde.jpeg",
-      "Latin": "./images/ribs.jpeg",
-      "Asian": "./images/knees.jpeg",
-      "Surprise": "./images/disco.jpeg"
+      "Italian": "./image/verde.jpeg",
+      "Latin": "./image/ribs.jpeg",
+      "Asian": "./image/knees.jpeg",
+      "Surprise": "./image/disco.jpeg"
     }
   };
 
@@ -1204,6 +1211,9 @@ heartImg.addEventListener("click", async (e) => {
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
   </footer>
 
 </body>
