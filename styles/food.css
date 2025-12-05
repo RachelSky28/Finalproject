@@ -113,7 +113,7 @@ nav a.life:hover {
 }
 
 //food css starts here
-/* #myhdr {
+#myhdr {
   width: 100%;
   text-align: center;
   border-radius: 4px;
@@ -121,7 +121,7 @@ nav a.life:hover {
   color: rgb(7, 7, 7);
   padding: 15px;
   box-sizing: border-box;
-} */
+}
 
 #subhdr {
   width: 100%;
