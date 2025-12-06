@@ -1,3 +1,4 @@
+/* Main */
 :root {
     --whitechoco: #EFE7D3;
     --verdant: #dae080;
@@ -186,24 +187,51 @@ nav a.life:hover {
     margin: 24px 0px;
 }
 
-.menu-item {
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-self: stretch;
-    background-color: var(--verdant);
-    padding: 16px 24px;
-    margin: 16px 40px;
-    align-items: left;
+.accordion {
+  background-color: #f4d68c;
+  color: #d14c18;
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  border: 1px solid #EFE7D3;
+  text-align: left;
+  outline: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  transition: 0.4s;
 }
 
-.menu-item p {
+.active, .accordion:hover {
+  background-color: var(--verdant);
+}
+
+.accordion:after {
+  color: var(--verdant);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+    background-color: var(--sunshine);
+
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: var(--verdant);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel p {
     font-family: "Raleway", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
-    color: var(--ketchup);
-    line-height: 120%;
+    padding: 16px 0px;
+    color: var(--dusk);
+    line-height: 150%;
     max-width: 100%;
     margin: 8px 0px;
 }
