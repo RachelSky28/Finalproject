@@ -644,8 +644,7 @@ footer {
   box-sizing: border-box;
   margin-top: auto;
 }
-
- #bottom-section {
+#bottom-section {
   width: 100%;
   font-style: italic;
   font-weight: bold;
@@ -680,6 +679,18 @@ footer {
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
+/* Left Image */
+.bottom-left {
+  flex: 1 1 30%; /* takes up 30% of the width */
+}
+.bottom-left img.neighborhood {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
 /* Center Quiz */
 .bottom-center {
   flex: 1 1 35%; /* takes up 35% of the width */
@@ -691,9 +702,10 @@ footer {
   flex: 1 1 30%; /* takes up 30% of the width */
   text-align: center;
   font-size: 18px;
+  color: white; /* ensures text is visible */
 }
 
-
+/* Quiz Questions */
 .quiz-question {
   margin: 15px 0;
 }
@@ -710,6 +722,7 @@ footer {
   border-radius: 5px;
 }
 
+/* Submit Button */
 #quiz-submit {
   padding: 12px 20px;
   font-size: 16px;
@@ -717,7 +730,7 @@ footer {
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  background-color: #f7a0cb; /* contrast pink button */
+  background-color: #f7a0cb;
   color: black;
   font-weight: bold;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -728,11 +741,24 @@ footer {
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
+/* Quiz Result Container */
 #quiz-result {
   margin-top: 20px;
   font-size: 20px;
   color: white;
 }
+
+/* --- NEW: Result Image Styling --- */
+.result-photo {
+  width: 100%;        /* fills the .bottom-right container */
+  max-width: 300px;   /* optional: controls max size */
+  height: auto;       /* keeps aspect ratio */
+  display: block;     /* ensures it appears */
+  margin: 10px auto;  /* centers the image */
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
 
 
 #footer-top {
