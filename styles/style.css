@@ -151,8 +151,8 @@ p {
 
 /* Makes the MTA image circular */
 .heart {
-  width: 350px;           /* size of the circle */
-  height: 250px;          /* same as width for perfect circle */
+  width: 450px;           /* size of the circle */
+  height: 350px;          /* same as width for perfect circle */
   border-radius: 50%;     /* makes the image circular */
   object-fit: cover;      /* ensures the image fills the circle without distortion */
   box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* optional: subtle shadow */
