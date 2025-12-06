@@ -111,6 +111,12 @@ nav a.life:hover {
     color: #250f12;
 }
 
+/* Active page highlighting */
+nav a.active-page {
+    background-color: var(--sky);
+    color: var(--dusk);
+}
+
 /* Hero */
 .hero-section {
     display: flex;
