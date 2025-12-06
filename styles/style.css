@@ -142,6 +142,14 @@ p {
     max-width: 900px;
 }
 
+.heart {
+  width: 150px;           /* size of the circle */
+  height: 150px;          /* same as width for a perfect circle */
+  border-radius: 50%;     /* makes the image circular */
+  object-fit: cover;      /* ensures the image fills the circle without distortion */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* optional: subtle shadow */
+}
+
 .imagecontainer {
   display: flex;
   align-items: center;
