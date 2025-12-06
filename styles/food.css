@@ -116,6 +116,7 @@ nav a.life:hover {
 #myhdr {
   width: 100%;
   text-align: center;
+  font-family: "Pinyon Script", cursive;
   border-radius: 4px;
   background: rgb(241, 246, 179);
   color: rgb(7, 7, 7);
@@ -126,6 +127,7 @@ nav a.life:hover {
 #subhdr {
   width: 100%;
   text-align: center;
+  font-family: "Pinyon Script", cursive;
   border-radius: 4px;
   background: rgb(124, 157, 210);
   color: rgb(7, 7, 7);
