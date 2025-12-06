@@ -156,11 +156,19 @@ p {
 
 /* slide show begins */
 /* Container holds text + slideshow side-by-side */
-.imagecontainer {
+/* .imagecontainer {
   display: flex;
   align-items: center;
   gap: 50px;
   margin-bottom: 40px;
+} */
+
+.imagecontainer {
+  flex-direction: row;  /* slideshow left, text right */
+}
+
+.imagecontainer-wrapper {
+  display: block;  /* example parent override */
 }
 
 /* Left side text – stays the same */
