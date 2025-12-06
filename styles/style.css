@@ -29,7 +29,7 @@ body {
   text-align: center;
   font-family: "Pinyon Script", cursive;
   border-radius: 4px;
-  background: rgb(124, 157, 210);
+  background:  --sunbeam: #eeb570;
   color: rgb(7, 7, 7);
   padding: 15px;
   box-sizing: border-box;
