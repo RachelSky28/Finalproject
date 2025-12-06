@@ -30,7 +30,7 @@ body {
   text-align: center;
   font-family: "Pinyon Script", cursive;
   border-radius: 4px;
-  background:  --sunbeam: #eeb570;
+  background:  var(--sunbeam);
   color: rgb(7, 7, 7);
   padding: 15px;
   box-sizing: border-box;
