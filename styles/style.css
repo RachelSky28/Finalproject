@@ -24,6 +24,17 @@ body {
     z-index: 100;
 }
 
+#subhdr {
+  width: 100%;
+  text-align: center;
+  font-family: "Pinyon Script", cursive;
+  border-radius: 4px;
+  background: rgb(124, 157, 210);
+  color: rgb(7, 7, 7);
+  padding: 15px;
+  box-sizing: border-box;
+}
+
 #logo-container {
     display: flex;
     justify-content: center;
