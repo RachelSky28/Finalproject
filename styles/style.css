@@ -142,7 +142,7 @@ p {
     max-width: 900px;
 }
 
-//slide show begins 
+/* slide show begins */
 /* Container holds text + slideshow side-by-side */
 .imagecontainer {
   display: flex;
