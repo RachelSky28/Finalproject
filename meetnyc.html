@@ -17,6 +17,7 @@
 </head>
 
 <body>
+      <!--Header Section *On all pages--> 
       <header id="header">
     <div id="logo-container">
       <div id="logo">
@@ -39,48 +40,83 @@
   </header>
 
 <body>
+        <!--Hero--> 
         <section class="hero-section">
             <div class="hero-content">
                 <center><h1>Meet New York City</h1>
-                <p>Your hub for third spaces, community events, and volunteer opportunities ♡</p><center>
+                <p>Your hub for third spaces, community events, and volunteer opportunities 
+                </br> ♡ Recommendations by Kathy ♡ </p><center>
             </div>
         </section>
 
         <section class="personal-menu">
-            <div class="section-container">
-                <h2>Kathy's Personal Menu</h2>
-                <p>Some of my favorite cafes + drinks to work, study, and chat!</p>
-            </div>       
-            <div class="menu-item">
-              <p class="drink">Coconut Americano from <a href="https://www.rhythmzeronyc.com/">Rhythm Zero</a>
-              <p class="description">iced. espresso cold foam. coconut water.</p>
-            </div>
-            <div class="menu-item">
-              <p class="drink">Cafe Con Panna from <a href="https://www.abraconyc.com/">abraço</a></p>
-              <p class="description">double shot espresso. italian sweet cream.</p>
-            </div>
-            <div class="menu-item">
-              <p class="drink">Salted Honey Latte from <a href="https://landtoseanyc.com/">Land to Sea</a></p>
-              <p class="description">wildflower honey. vanilla. pink salt. espresso.</p>
-            </div>
-            <div class="menu-item">
-              <p class="drink">cà phê sữa đá from <a href="https://www.legaz.cafe/">Le Gaz</a></p>
-              <p class="description">vietnamese iced coffee. condensed milk.</p>
-            </div>
-            <div class="menu-item">
-              <p class="drink">Matcha Cortado from <a href="https://themandarinnyc.com/">The Mandarin</a></p>
-              <p class="description">matcha shot. 2 oz milk.</p>
-            </div>
-            <div class="menu-item">
-               <p class="drink">Black Sesame Latte from <a href="https://www.yelp.com/biz/le-phin-new-york-2">Le Phin</a></p>
-               <p class="description">black sesame syrup. double shot espresso. </p>
-            </div>
-        </section>
+          <div class="section-container">
+           <h2>Kathy's Personal Menu</h2>
+           <p>Some of my favorite cafes + drinks to work, study, and chat!</p>
 
+        <!--My Menu Accordian--> 
+        <button class="accordion">Coconut Americano @ Rhythm Zero ↗</button>
+          <div class="panel">
+            <p><img src="./images/rhythmzero.jpeg" alt="Photo of Coconut Americano from Rhythm Zero" style="width:280px"></br>
+            iced. espresso cold foam. coconut water. <a href="https://www.rhythmzeronyc.com/">Visit Here!</a></p>
+          </div>
+
+        <button class="accordion">Cafe con Panna @ Abraço ↗</button>
+        <div class="panel">
+          <p><img src="./images/abraco.jpeg" alt="Photo of Cafe con Panna from Abraco" style="width:280px"></br>
+          double shot espresso. italian sweet cream. <a href="https://www.abraconyc.com/">Visit Here!</a></p>
+        </div>
+
+        <button class="accordion">Earl Grey Matcha Latte from Verse ↗</button>
+        <div class="panel">
+          <p><img src="./images/verse.jpeg" alt="Photo of Earl Grey Matcha Latte from Verse" style="width:280px"></br>
+          ceremonial grade matcha. earl grey syrup. milk of choice. <a href="https://www.instagram.com/versecafenyc/?hl=en">Visit Here!</a></p>
+        </div>
+          
+        <button class="accordion">coconut matcha latte from le gaz ↗</button>
+        <div class="panel">
+          <p><img src="./images/legaz.jpeg" alt="Photo of coconut matcha latte from le gaz" style="width:280px"></br>
+          kyoto premium matcha. coconut condensed milk. <a href="https://www.legaz.cafe/">Visit Here!</a></p>
+        </div>
+
+        <button class="accordion">Coffee & Cardamom Bun from Gem Home ↗</button>
+        <div class="panel">
+          <p><img src="./images/gemhome.jpeg" alt="Photo of Drip Coffee and Cardamom Bun from Gem Home" style="width:280px"></br>
+          drip black coffee. freshly baked cardamom bun <a href="https://www.gemhomenyc.com/">Visit Here!</a></p>
+        </div>
+
+        <button class="accordion">Cappuccino from Do Not Eat Alligators ↗</button>
+        <div class="panel">
+          <p><img src="./images/alligator.jpeg" alt="Photo of Cappuccino from Do Not Eat Alligators" style="width:280px"></br>
+          double shot espresso. extra foamy milk. <a href="https://www.yelp.com/biz/le-phin-new-york-2">Visit Here!</a></p>
+        </div>
+        
+        <!--Accordian JavaScript-->
+        <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
+
+       </section>
+
+        <!--Fun events (for me)--> 
         <section class="community-events">
           <div class="section-container">
             <h2>Community Events</h2>
-
+            
+            <!--Filter JavaScript & Tags--> 
             <div class="filter">
               <button class="filter-btn active" onclick="filterSelection('all')">All</button>
               <button class="filter-btn" onclick="filterSelection('run')">Run Clubs</button>
@@ -88,6 +124,7 @@
               <button class="filter-btn" onclick="filterSelection('trivia')">Trivia Nights</button>
             </div>
 
+            <!--Filter JavaScript Function--> 
             <script>
               function filterSelection(category) {
                 let cards = document.getElementsByClassName("card");
@@ -100,7 +137,7 @@
                     : "none";
                 }
 
-                // Active Button
+                // Makes Function Active
                 let btns = document.getElementsByClassName("filter-btn");
                 for (let b of btns) b.classList.remove("active");
                 event.target.classList.add("active");
@@ -108,77 +145,78 @@
             </script>
 
             <div class="card-container">
+
               <!-- Run Clubs -->
               <div class="card run">
-                <img src="./images/noname.jpeg" style="width:100%">
+                <img src="./images/noname.jpeg" alt="NoName logo img" style="width:100%">
                 <h2><b>Noname Run Club</b></h2>
                 <p>Sponsored by LuluLemon</p>
               </div>
 
               <div class="card run">
-                <img src="./images/endorphins.jpeg" style="width:100%">
+                <img src="./images/endorphins.jpeg" alt="Endorphins logo img" style="width:100%">
                 <h2><b>Endorphins Run Club</b></h2>
                 <p>Sponsored by New Balance</p>
               </div>
 
               <div class="card run">
-                <img src="./images/omrc.jpeg" style="width:100%">
+                <img src="./images/omrc.jpeg" alt="Old Man Run Club logo img" style="width:100%">
                 <h2><b>Old Man Run Club</b></h2>
                 <p>Independent Run Club</p>
               </div>
 
               <div class="card run">
-                <img src="./images/midnightrunners.jpeg" style="width:100%">
+                <img src="./images/midnightrunners.jpeg" alt="Midnight Runners logo img" style="width:100%">
                 <h2><b>Midnight Runners</b></h2>
                 <p>Sponsored by Mizuno</p>
               </div>
 
               <!-- Book Clubs -->
               <div class="card books">
-                <img src="./images/ll.jpeg" style="width:100%">
+                <img src="./images/ll.jpeg" alt="Literary League logo img" style="width:100%">
                 <h2><b>Literary League</b></h2>
                 <p>Book Club in New York, NY</p>
               </div>
 
               <div class="card books">
-                <img src="./images/obsessed.jpeg" style="width:100%">
+                <img src="./images/obsessed.jpeg" alt="Obsessed logo img" style="width:100%">
                 <h2><b>Obsessed</b></h2>
                 <p>Book Club in Brooklyn, NY</p>
               </div>
 
               <div class="card books">
-                <img src="./images/curiousminds.jpeg" style="width:100%">
+                <img src="./images/curiousminds.jpeg" alt="Curious Minds logo img" style="width:100%">
                 <h2><b>Curious Minds</b></h2>
                 <p>Book Club in Queens, NY</p>
               </div>
 
               <div class="card books">
-                <img src="./images/simplylit.jpeg" style="width:100%">
+                <img src="./images/simplylit.jpeg" alt="Simply Lit logo img" style="width:100%">
                 <h2><b>Simply Lit</b></h2>
                 <p>Book Club in Bronx, NY</p>
               </div>
 
               <!-- Trivia Nights -->
               <div class="card trivia">
-                <img src="./images/juke.jpeg" style="width:100%">
+                <img src="./images/juke.jpeg" alt="Juke Bar Bar logo img" style="width:100%">
                 <h2><b>Juke Bar, East Village</b></h2>
                 <p>Trivia Mondays at 7pm</p>
               </div>
 
               <div class="card trivia">
-                <img src="./images/cousin.jpeg" style="width:100%">
+                <img src="./images/cousin.jpeg" alt="Cousin Larry Bar logo img" style="width:100%">
                 <h2><b>Cousin Larry's, Sunnyside</b></h2>
                 <p>Trivia Tuesdays at 8pm</p>
               </div>
 
               <div class="card trivia">
-                <img src="./images/gaf.jpeg" style="width:100%">
+                <img src="./images/gaf.jpeg" alt="The Gaf Bar logo img" style="width:100%">
                 <h2><b>The Gaf East, Upper East Side</b></h2>
                 <p>Trivia Wednesdays at 8:30pm</p>
               </div>
 
               <div class="card trivia">
-                <img src="./images/roses.jpeg" style="width:100%">
+                <img src="./images/roses.jpeg" alt="Roses RR Bar logo img" style="width:100%">
                 <h2><b>Rose's R&R Bar, Williamsburg</b></h2>
                 <p>Trivia Thursdays at 7pm</p>
               </div>
@@ -186,7 +224,7 @@
           </div>
         </section>
         
-
+        <!--Volunteer Cards--> 
         <section class="volunteer">
             <div class="section-container">
                 <h2>Volunteer Opportunities</h2>
@@ -197,21 +235,21 @@
             <div class="volunteer-card-container">
                 
             <div class="volunteer-card">
-              <img src="./images/heartofdinner.jpeg" style="width:100%">
+              <img src="./images/heartofdinner.jpeg" alt="Heart of Dinner logo img" style="width:100%">
               <h2>Heart of Dinner</h2>
               <p>Delivering food to the underserved elderly community in Chinatown and Flushing.</p>
               <a href="https://www.heartofdinner.org/"><button class="volunteer-btn">Visit Site</a></button>
             </div>
 
             <div class="volunteer-card">
-              <img src="./images/bowery.jpeg" style="width:100%">
+              <img src="./images/bowery.jpeg" alt="The Bowery logo img" style="width:100%">
               <h2>The Bowery Mission</h2>
               <p>Serving food and necessities to those experiencing houselessness in the Lower East Side.</p>
               <a href="https://www.bowery.org/"><button class="volunteer-btn">Visit Site</a></button>
             </div>
 
             <div class="volunteer-card">
-              <img src="./images/paws.jpeg" style="width:100%">
+              <img src="./images/paws.jpeg" alt="The Paws logo img" style="width:100%">
               <h2>Paws NY</h2>
               <p>Provides services to vulnerable New Yorkers who need support caring for their pets due to physical and financial obstacles they face.</p>
               <a href="https://pawsny.org/"><button class="volunteer-btn">Visit Site</a></button>
