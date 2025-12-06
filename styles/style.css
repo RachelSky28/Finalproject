@@ -142,6 +142,8 @@ p {
     max-width: 900px;
 }
 
+//slide show begins 
+/* Container holds text + slideshow side-by-side */
 .imagecontainer {
   display: flex;
   align-items: center;
@@ -149,16 +151,39 @@ p {
   margin-bottom: 40px;
 }
 
-/* Makes the MTA image circular */
-.heart {
-  width: 450px;           /* size of the circle */
-  height: 350px;          /* same as width for perfect circle */
-  border-radius: 50%;     /* makes the image circular */
-  object-fit: cover;      /* ensures the image fills the circle without distortion */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* optional: subtle shadow */
-  flex-shrink: 0;         /* prevents shrinking in flex container */
+/* Left side text – stays the same */
+.fixed-text .p {
+  font-size: 24px;
+  font-weight: bold;
 }
 
+/* Slideshow layout */
+.slideshow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Slideshow arrows */
+.slideshow button {
+  background-color: #f7a0cb;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Image in slideshow */
+#slide-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; 
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+//slide show code ends 
 
 /* Footer */
 #footer {
