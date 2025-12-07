@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <title>Home - Like A New Yorker</title>
-  <meta name="description" content="Discover NYC's hidden art gems">
-  <meta name="keywords" content="NYC art, galleries, museums, public art">
+  <meta name="description" content="Explore NYC's like a new yorker">
   <meta name="author" content="Chloe Dahan, Kathy Baik, Rachel S. Khmelnitsky, and Sabrina Guzman">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,32 +16,118 @@
 </head>
 
 <body>
+  <!-- Skip link for keyboard navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header id="header">
     <div id="logo-container">
       <div id="logo">
         <a href="index.html">
-          <img src="./images/nyclogo.png" alt="Like a New Yorker site logo" style="width:100%">
+          <img src="./images/nyclogo.png" alt="Like a New Yorker site logo">
         </a>
       </div>
     </div>
     <div id="header-container">
-            <nav id="nav">
-                <ul>
-                    <li><a class="blog active-page" href="index.html">The Blog</a></li>
-                    <li><a class="meetnyc" href="meetnyc.html">Meet NYC</a></li>
-                    <li><a class="art" href="art.html">The Art</a></li>
-                    <li><a class="food" href="food.html">What's Good?</a></li>
-                    <li><a class="life" href="life.html">Day & Nightlife</a></li>
-                </ul>
-            </nav>
+      <nav id="nav">
+        <ul>
+          <li><a class="blog active-page" href="index.html" aria-current="page">The Blog</a></li>
+          <li><a class="meetnyc" href="meetnyc.html">Meet NYC</a></li>
+          <li><a class="art" href="art.html">The Art</a></li>
+          <li><a class="food" href="food.html">What's Good?</a></li>
+          <li><a class="life" href="life.html">Day & Nightlife</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
-  
+
+  <!-- Banner with skyline image -->
+  <section class="banner" role="banner" aria-label="Skyline of New York City">
+    <img class="banner-img" src="./images/skyline.JPG" alt="">
+    <div class="banner-text">
+      <h1>Like A New Yorker</h1>
+      <p>Exploring NYC the way locals do</p>
+    </div>
+  </section>
+
+  <!-- Main Content Section -->
+  <main id="main-content" class="content-section">
+    <div class="content-container">
+      <h2>About Our Site</h2>
+      <p>This website is dedicated to exploring NYC like a new yorker. Each page is dedicated to different kinds of
+        activities to help you discover the city beyond the guidebooks.</p>
+
+      <div class="activities-grid">
+        <div class="activity-card card-meetnyc" role="region" aria-labelledby="meetnyc-heading">
+          <h3 id="meetnyc-heading">Meet NYC</h3>
+          <p>Your hub for third spaces, community events, and volunteer opportunities</p>
+          <a href="meetnyc.html" aria-label="Explore Meet NYC">Explore →</a>
+        </div>
+
+        <div class="activity-card card-art" role="region" aria-labelledby="art-heading">
+          <h3 id="art-heading">The Art</h3>
+          <p>Discover NYC's hidden art gems, galleries, museums, and public art installations</p>
+          <a href="art.html" aria-label="Explore The Art">Explore →</a>
+        </div>
+
+        <div class="activity-card card-food" role="region" aria-labelledby="food-heading">
+          <h3 id="food-heading">NYC Eats By Borough</h3>
+          <p>Uncover the best food and dining experiences across all five boroughs</p>
+          <a href="food.html" aria-label="Explore Food">Explore →</a>
+        </div>
+
+        <div class="activity-card card-life" role="region" aria-labelledby="life-heading">
+          <h3 id="life-heading">Day & Nightlife</h3>
+          <p>From daytime adventures to late-night hotspots, experience NYC's vibrant lifestyle</p>
+          <a href="life.html" aria-label="Explore Day and Nightlife">Explore →</a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Authors Section -->
+    <div class="authors-section">
+      <h2>Meet The Curators</h2>
+      <div class="authors-grid">
+        <div class="author-card">
+          <div class="author-photo-wrap">
+            <img class="author-photo" src="./images/authors/kathy.jpg" alt="Photo of Kathy Baik">
+          </div>
+          <h3>Kathy Baik</h3>
+          <p>Discovering NYC's vibrant neighborhoods and hidden community spaces</p>
+        </div>
+
+        <div class="author-card">
+          <div class="author-photo-wrap">
+            <img class="author-photo" src="./images/chloe.jpg" alt="Photo of Chloe Dahan">
+          </div>
+          <h3>Chloe Dahan</h3>
+          <p>Exploring art and culture throughout the city</p>
+        </div>
+
+        <div class="author-card">
+          <div class="author-photo-wrap">
+            <img class="author-photo" src="./images/authors/sabrina.jpg" alt="Photo of Sabrina Guzman">
+          </div>
+          <h3>Sabrina Guzman</h3>
+          <p>Finding the best food and dining experiences across the boroughs</p>
+        </div>
+
+        <div class="author-card">
+          <div class="author-photo-wrap">
+            <img class="author-photo" src="./images/authors/rachel.jpg" alt="Photo of Rachel S. Khmelnitsky">
+          </div>
+          <h3>Rachel S. Khmelnitsky</h3>
+          <p>Uncovering NYC's vibrant day and nightlife scenes</p>
+        </div>
+      </div>
+    </div>
+
+    <!--Blog-->
     <div id="subhdr">
-    <h2>How would you use your day off to explore NYC</h2>
-  </div>
-  
-  <!-- 
+      <h2>How would you use your day off to explore NYC</h2>
+    </div>
+
+    <!-- 
   <button onclick="myFunction()">dark/light mode</button>
 <script>
 function myFunction() {
@@ -56,92 +141,92 @@ function myFunction() {
   </div>
 -->
 
-<div class="imagecontainer-wrapper">
-  <div class="slideshow">
-    <button class="prev">←</button>
-    <img class="slide-img" src="./images/mta.jpeg" alt="Slide Image">
-    <button class="next">→</button>
-  </div>
-  <div class="fixed-text">
-    <p class="p2">KATHY</p>
-  </div>
-</div>
+    <div class="imagecontainer-wrapper">
+      <div class="slideshow">
+        <button class="prev" aria-label="Previous slide for Kathy">←</button>
+        <img class="slide-img" src="./images/mta.jpeg" alt="Kathy's featured image">
+        <button class="next" aria-label="Next slide for Kathy">→</button>
+      </div>
+      <div class="fixed-text">
+        <p class="p2">KATHY</p>
+      </div>
+    </div>
 
-<div class="imagecontainer-wrapper">
-  <div class="slideshow">
-    <button class="prev">←</button>
-    <img class="slide-img" src="./images/mta.jpeg" alt="Slide Image">
-    <button class="next">→</button>
-  </div>
-  <div class="fixed-text">
-    <p class="p3">CHLOE</p>
-  </div>
-</div>
+    <div class="imagecontainer-wrapper">
+      <div class="slideshow">
+        <button class="prev" aria-label="Previous slide for Chloe">←</button>
+        <img class="slide-img" src="./images/mta.jpeg" alt="Chloe's featured image">
+        <button class="next" aria-label="Next slide for Chloe">→</button>
+      </div>
+      <div class="fixed-text">
+        <p class="p3">CHLOE</p>
+      </div>
+    </div>
 
-  <div class="imagecontainer-wrapper">
-  <div class="slideshow">
-    <button class="prev">←</button>
-    <img class="slide-img" src="./images/mta.jpeg" alt="Slide Image">
-    <button class="next">→</button>
-  </div>
-  <div class="fixed-text">
-    <p class="p4">sabrina</p>
-  </div>
-</div>
+    <div class="imagecontainer-wrapper">
+      <div class="slideshow">
+        <button class="prev" aria-label="Previous slide for Sabrina">←</button>
+        <img class="slide-img" src="./images/mta.jpeg" alt="Sabrina's featured image">
+        <button class="next" aria-label="Next slide for Sabrina">→</button>
+      </div>
+      <div class="fixed-text">
+        <p class="p4">sabrina</p>
+      </div>
+    </div>
 
-  <div class="imagecontainer-wrapper">
-  <div class="slideshow">
-    <button class="prev">←</button>
-    <img class="slide-img" src="./images/mta.jpeg" alt="Slide Image">
-    <button class="next">→</button>
-  </div>
-  <div class="fixed-text">
-    <p class="p5">rachel</p>
-  </div>
-</div>
+    <div class="imagecontainer-wrapper">
+      <div class="slideshow">
+        <button class="prev" aria-label="Previous slide for Rachel">←</button>
+        <img class="slide-img" src="./images/mta.jpeg" alt="Rachel's featured image">
+        <button class="next" aria-label="Next slide for Rachel">→</button>
+      </div>
+      <div class="fixed-text">
+        <p class="p5">rachel</p>
+      </div>
+    </div>
 
-<!-- Repeat for other slideshows -->
-
-
-<!-- slide show -->
-<script>
-document.querySelectorAll('.imagecontainer-wrapper').forEach(wrapper => {
-  const slideshow = wrapper.querySelector('.slideshow');
-  const img = slideshow.querySelector('.slide-img');
-  const prevBtn = slideshow.querySelector('.prev');
-  const nextBtn = slideshow.querySelector('.next');
-
-  // Replace this with the images for this album
-  const images = [img.src]; // start with the original image
-  // You can push more image URLs for this slideshow like:
-  // images.push('./images/mta_alt1.jpeg');
-
-  let currentIndex = 0;
-
-  function showSlide(index) {
-    img.src = images[index];
-  }
-
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    showSlide(currentIndex);
-  });
-
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    showSlide(currentIndex);
-  });
-
-  showSlide(currentIndex);
-});
-</script>
+    <!-- Repeat for other slideshows -->
 
 
-  <footer id="footer">
-    <p>&copy; 2025 Like A New Yorker</p>
-    <p>Curated by Kathy Baik, Chloe Dahan, Sabrina Guzman, and Rachel S. Khmelnitsky </p>
-  </footer>
-  </div>
+    <!-- slide show -->
+    <script>
+      document.querySelectorAll('.imagecontainer-wrapper').forEach(wrapper => {
+        const slideshow = wrapper.querySelector('.slideshow');
+        const img = slideshow.querySelector('.slide-img');
+        const prevBtn = slideshow.querySelector('.prev');
+        const nextBtn = slideshow.querySelector('.next');
+
+        // Replace this with the images for this album
+        const images = [img.src]; // start with the original image
+        // You can push more image URLs for this slideshow like:
+        // images.push('./images/mta_alt1.jpeg');
+
+        let currentIndex = 0;
+
+        function showSlide(index) {
+          img.src = images[index];
+        }
+
+        prevBtn.addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          showSlide(currentIndex);
+        });
+
+        nextBtn.addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % images.length;
+          showSlide(currentIndex);
+        });
+
+        showSlide(currentIndex);
+      });
+    </script>
+
+
+    <!-- Footer -->
+    <footer id="footer" role="contentinfo">
+      <p>&copy; 2025 Like A New Yorker</p>
+      <p>Curated by Kathy Baik, Chloe Dahan, Sabrina Guzman, and Rachel S. Khmelnitsky</p>
+    </footer>
 </body>
 
 </html>

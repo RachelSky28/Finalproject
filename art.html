@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- Header with logo and navigation -->
     <header class="header">
         <div id="logo-container">
@@ -26,11 +27,11 @@
             </div>
         </div>
         <div id="header-container">
-            <nav id="nav">
+            <nav id="nav" role="navigation" aria-label="Primary navigation">
                 <ul>
                     <li><a class="blog" href="index.html">The Blog</a></li>
                     <li><a class="meetnyc" href="meetnyc.html">Meet NYC</a></li>
-                    <li><a class="art active-page" href="art.html">The Art</a></li>
+                    <li><a class="art active-page" href="art.html" aria-current="page">The Art</a></li>
                     <li><a class="food" href="food.html">What's Good?</a></li>
                     <li><a class="life" href="life.html">Day & Nightlife</a></li>
                 </ul>
@@ -38,7 +39,7 @@
         </div>
     </header>
 
-    <main id="art-body">
+    <main id="main-content" tabindex="-1">
         <!-- Hero section with title and image -->
         <section class="hero-section">
             <div class="hero-content">
@@ -103,8 +104,10 @@
                                 <span class="tag">Museum</span>
                                 <span class="tag">Modern Art</span>
                             </div>
-                            <p class="location">📍 Midtown, Manhattan<br><a
-                                    href="https://maps.app.goo.gl/VHZtJt4pgDnUR8wd8" target="_blank">11 W 53rd St, New
+                            <p class="location"><span aria-hidden="true">📍</span> Midtown, Manhattan<br><a
+                                    href="https://maps.app.goo.gl/VHZtJt4pgDnUR8wd8" target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="11 W 53rd St, New York, NY 10019 (opens in a new tab)">11 W 53rd St, New
                                     York, NY 10019</a></p>
                             <p>The Museum of Modern Art is one of the world’s leading museums for modern and
                                 contemporary art, featuring works including paintings, sculpture, photography, film, and
@@ -146,8 +149,9 @@
                             <img class="thumbnail" src="./images/whitney_museum_of_american_art4.jpg"
                                 alt="Covered outdoor entrance to Whitney Museum with glass doors, steel columns, and city street visible; visitors and urban architecture surrounding."
                                 onclick="changeImage(this, 1)">
-                            <img class="thumbnail" src="./images/whitney_museum_of_american_art5.jpg" alt="Whitney gallery interior with abstract black and white paintings on walls and colorful striped artwork on right; visitors viewing works. 
-                                onclick=" changeImage(this, 1)">
+                            <img class="thumbnail" src="./images/whitney_museum_of_american_art5.jpg"
+                                alt="Whitney gallery interior with abstract black and white paintings on walls and colorful striped artwork on right; visitors viewing works."
+                                onclick="changeImage(this, 1)">
                         </div>
                         <div class="card-content">
                             <h3>Whitney Museum of American Art</h3>
@@ -155,8 +159,11 @@
                                 <span class="tag">Museum</span>
                                 <span class="tag">Modern Art</span>
                             </div>
-                            <p class="location">📍 Meatpacking District, Manhattan<br><a
-                                    href="https://maps.app.goo.gl/6Y3gVpZY8YFJqnvF6" target="_blank">99 Gansevoort St,
+                            <p class="location"><span aria-hidden="true">📍</span> Meatpacking District, Manhattan<br><a
+                                    href="https://maps.app.goo.gl/6Y3gVpZY8YFJqnvF6" target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="99 Gansevoort St, New York, NY 10014 (opens in a new tab)">99 Gansevoort
+                                    St,
                                     New York, NY 10014</a></p>
                             <p>The Whitney is the only museum dedicated to American art and artists. It has an
                                 incredible rooftop overlooking the Hudson River. The views are as impressive as the art.
@@ -202,8 +209,10 @@
                                 <span class="tag">Museum</span>
                                 <span class="tag">Sculpture</span>
                             </div>
-                            <p class="location">📍 Long Island City, Queens<br><a
-                                    href="https://maps.app.goo.gl/SANGjVh9JK5DdhUK8" target="_blank">9-01 33rd Rd,
+                            <p class="location"><span aria-hidden="true">📍</span> Long Island City, Queens<br><a
+                                    href="https://maps.app.goo.gl/SANGjVh9JK5DdhUK8" target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="9-01 33rd Rd, Astoria, NY 11106 (opens in a new tab)">9-01 33rd Rd,
                                     Astoria, NY 11106</a></p>
                             <p>A hidden gem dedicated to the life and work of sculptor and designer Isamu Noguchi. The
                                 space includes galleries, archival materials, and a celebrated outdoor sculpture garden.
@@ -248,8 +257,10 @@
                                 <span class="tag">Museum</span>
                                 <span class="tag">Fine Art</span>
                             </div>
-                            <p class="location">📍 Upper East Side, Manhattan<br><a
-                                    href="https://maps.app.goo.gl/tUL1bpbUADiyz2VL9" target="_blank">1000 5th Ave, New
+                            <p class="location"><span aria-hidden="true">📍</span> Upper East Side, Manhattan<br><a
+                                    href="https://maps.app.goo.gl/tUL1bpbUADiyz2VL9" target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="1000 5th Ave, New York, NY 10028 (opens in a new tab)">1000 5th Ave, New
                                     York, NY 10028</a></p>
                             <p>The Metropolitan Museum of Art is one of the landmark art museum's in NYC, showcasing
                                 thousands of years of global art, from ancient artifacts to modern works. It’s a
@@ -293,8 +304,11 @@
                                 <span class="tag">Museum</span>
                                 <span class="tag">Contemporary</span>
                             </div>
-                            <p class="location">📍 Long Island City, Queens<br><a
-                                    href="https://maps.app.goo.gl/yWYaNCGQSzKjnqBK7" target="_blank">22-25 Jackson Ave,
+                            <p class="location"><span aria-hidden="true">📍</span> Long Island City, Queens<br><a
+                                    href="https://maps.app.goo.gl/yWYaNCGQSzKjnqBK7" target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="22-25 Jackson Ave, Queens, NY 11101 (opens in a new tab)">22-25 Jackson
+                                    Ave,
                                     Queens, NY 11101</a></p>
                             <p>A contemporary art center in Long Island City dedicated to experimental and emerging art.
                                 Housed in a historic school building, PS1 features large-scale installations,
@@ -348,8 +362,10 @@
                                 <span class="tag">Gallery</span>
                                 <span class="tag">Contemporary</span>
                             </div>
-                            <p class="location">📍 Chelsea, Manhattan<br><a
-                                    href="https://maps.app.goo.gl/CpigGf3bcHFqJHuN6" target="_blank">19 E 64th St, New
+                            <p class="location"><span aria-hidden="true">📍</span> Chelsea, Manhattan<br><a
+                                    href="https://maps.app.goo.gl/CpigGf3bcHFqJHuN6" target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="19 E 64th St, New York, NY 10065 (opens in a new tab)">19 E 64th St, New
                                     York, NY 10065</a></p>
                             <p>Lévy Gorvy Dayan is a New York–based modern and contemporary art gallery known for its
                                 blue-chip exhibitions, curated programs, and work with major artist estates. The gallery
@@ -401,8 +417,11 @@
                                 <span class="tag">Gallery</span>
                                 <span class="tag">Contemporary</span>
                             </div>
-                            <p class="location">📍 Chelsea, Manhattan<br><a
-                                    href="https://maps.app.goo.gl/P4VarSDDqBQu7xJFA" target="_blank">537 W 20th St, New
+                            <p class="location"><span aria-hidden="true">📍</span> Chelsea, Manhattan<br><a
+                                    href="https://maps.app.goo.gl/P4VarSDDqBQu7xJFA" target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="537 W 20th St, New York, NY 10011 (opens in a new tab)">537 W 20th St,
+                                    New
                                     York, NY 10011</a></p>
                             <p>One of New York’s most prominent commercial galleries, with several locations in Chelsea.
                                 Zwirner represents major contemporary artists and frequently mounts ambitious
@@ -454,8 +473,11 @@
                                 <span class="tag">Musuem</span>
                                 <span class="tag">Natural History</span>
                             </div>
-                            <p class="location">📍 Upper West Side, Manhattan<br><a
-                                    href="https://maps.app.goo.gl/kx2UUtHRCjnM2XDJ8" target="_blank">200 Central Prk W,
+                            <p class="location"><span aria-hidden="true">📍</span> Upper West Side, Manhattan<br><a
+                                    href="https://maps.app.goo.gl/kx2UUtHRCjnM2XDJ8" target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="200 Central Park West, New York, NY 10024 (opens in a new tab)">200
+                                    Central Prk W,
                                     New York, NY 10024</a></p>
                             <p>One of the largest natural history museums in the world, featuring extensive collections
                                 on biodiversity, Earth science, human cultures, and paleontology. Popular exhibits
@@ -500,8 +522,11 @@
                                 <span class="tag">Musuem</span>
                                 <span class="tag">History</span>
                             </div>
-                            <p class="location">📍 Williamsburg, Brooklyn<br> <a
-                                    href="https://maps.app.goo.gl/Sv6YxdT3oDKLcP2P8" target="_blank">370 Metropolitan
+                            <p class="location"><span aria-hidden="true">📍</span> Williamsburg, Brooklyn<br> <a
+                                    href="https://maps.app.goo.gl/Sv6YxdT3oDKLcP2P8" target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="370 Metropolitan Ave, Brooklyn, NY 11211 (opens in a new tab)">370
+                                    Metropolitan
                                     Ave, Brooklyn, NY 11211</a></p>
                             <p> A small, community-run museum in Williamsburg showcasing NYC’s local history through
                                 everyday artifacts, vintage ephemera, and neighborhood-sourced collections. Exhibits
@@ -541,9 +566,12 @@
                                 <span class="tag">Museum</span>
                                 <span class="tag">Modern Art</span>
                             </div>
-                            <p class="location">📍 Midtown, Manhattan<br><a
-                                    href="https://maps.app.goo.gl/pLRqb9gUREdAR75Q6" target="_blank">1071 5th Ave, NewYork, NY 10128</a>
-                                    </p>
+                            <p class="location"><span aria-hidden="true">📍</span> Midtown, Manhattan<br><a
+                                    href="https://maps.app.goo.gl/pLRqb9gUREdAR75Q6" target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="1071 5th Ave, New York, NY 10128 (opens in a new tab)">1071 5th Ave,
+                                    NewYork, NY 10128</a>
+                            </p>
                             <p>The Guggenheim is an iconic Frank Lloyd Wright-designed museum known for its spiraling
                                 ramp galleries and world-class modern and contemporary art exhibitions.</p>
                         </div>
@@ -560,9 +588,12 @@
                                 <span class="tag">Museum</span>
                                 <span class="tag">European Fine and Decorative Arts</span>
                             </div>
-                            <p class="location">📍 Upper East Side, Manhattan<br><a
-                                    href="https://maps.app.goo.gl/wDbeVLNqN7cJQpSN8" target="_blank">1 E 70th St, New York, NY 10021</a>
-                                    </p>
+                            <p class="location"><span aria-hidden="true">📍</span> Upper East Side, Manhattan<br><a
+                                    href="https://maps.app.goo.gl/wDbeVLNqN7cJQpSN8" target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="1 E 70th St, New York, NY 10021 (opens in a new tab)">1 E 70th St, New
+                                    York, NY 10021</a>
+                            </p>
                             <p>The Frick Collection offers an intimate look at European masterpieces, decorative arts,
                                 and sculpture, all displayed in the elegant former mansion of industrialist Henry Clay
                                 Frick.</p>
@@ -580,8 +611,11 @@
                                 <span class="tag">Gallery</span>
                                 <span class="tag">Contemporary</span>
                             </div>
-                            <p class="location">📍 Chelsea, Manhattan<br><a
-                                    href="https://maps.app.goo.gl/SSq5wWHvS6JsRGEUA" target="_blank"></a>542 W 22nd St, New York, NY 10011</a>
+                            <p class="location"><span aria-hidden="true">📍</span> Chelsea, Manhattan<br><a
+                                    href="https://maps.app.goo.gl/SSq5wWHvS6JsRGEUA" target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="542 W 22nd St, New York, NY 10011 (opens in a new tab)">542 W 22nd St,
+                                    New York, NY 10011</a>
                             </p>
                             <p>Hauser & Wirth’s 22nd Street location in Chelsea features large, museum-style galleries
                                 that host ambitious contemporary art exhibitions. It’s a spacious, beautifully designed
@@ -632,8 +666,11 @@
                     <!-- Review and info on right -->
                     <div class="museum-intro">
                         <h3>Dia Beacon</h3>
-                        <p class="museum-location">📍 Beacon, NY<br><a href="https://maps.app.goo.gl/9Jokec3k36oUmf2W6"
-                                target="_blank">3 Beekman St, Beacon, NY 12508</a></p>
+                        <p class="museum-location"><span aria-hidden="true">📍</span> Beacon, NY<br><a
+                                href="https://maps.app.goo.gl/9Jokec3k36oUmf2W6" target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="3 Beekman St, Beacon, NY 12508 (opens in a new tab)">3 Beekman St, Beacon,
+                                NY 12508</a></p>
                         <p>Even though this isn't in New York City, this museum is a wonderful day trip. It's located
                             along the Hudson River, about 90 minutes from NYC. The train ride there is scenic and Beacon
                             is a fun town to explore. Known for its vast galleries and natural light, Dia Beacon
@@ -723,6 +760,11 @@
                             alt="Colorful graffiti art on metal security gate featuring stylized face with geometric crown and vibrant red, yellow, and blue colors.">
                         <div class="art-label">Sunset Park</div>
                     </div>
+                    <div class="art-photo">
+                        <img src="./images/cherry.jpeg"
+                            alt="Square tile mosaic of three cherries in a blue square with a gold.">
+                        <div class="art-label">Delancey Street-Essex Street Station</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -774,51 +816,119 @@
     </main>
 
     <!-- Footer -->
-    <footer id="footer">
+    <footer id="footer" role="contentinfo">
         <p>&copy; 2025 Like A New Yorker</p>
         <p>Curated by Chloe Dahan, Kathy Baik, Rachel S. Khmelnitsky, and Sabrina Guzman</p>
     </footer>
 
     <script>
-        // Function to change carousel image when user clicks thumbnail
+        /*
+         * changeImage(thumbnailElement, cardIndex)
+         * - thumbnailElement: the <img> thumbnail that was clicked
+         * - cardIndex: index of the card (not used by the current logic but kept for potential future features)
+         * This function finds the parent card and replaces the main carousel image's src/alt
+         * with the clicked thumbnail's src/alt, updates the visual "active" thumbnail state,
+         * and collapses any expanded carousel view.
+         */
         function changeImage(thumbnailElement, cardIndex) {
-            // Get the main image in the same card
+            // Find the nearest ancestor with class 'art-card' (the card that contains this thumbnail)
             const card = thumbnailElement.closest('.art-card');
+            // Within that card, find the element that displays the large carousel image
             const mainImage = card.querySelector('.carousel-image');
+            // Also get the carousel container (used to collapse/expand the large view)
             const carousel = card.querySelector('.image-carousel');
+            // Collect all thumbnail elements inside this card so we can update their "active" state
             const thumbnails = card.querySelectorAll('.thumbnail');
 
-            // Update main image src to match clicked thumbnail
-            mainImage.src = thumbnailElement.src;
-            mainImage.alt = thumbnailElement.alt;
+            // Replace the main image source with the thumbnail's source (so the main image shows the clicked thumbnail)
+            mainImage.src = thumbnailElement.src; // set the main <img> src attribute
+            mainImage.alt = thumbnailElement.alt; // keep alt text synchronized for screen reader users
 
-            // Remove active class from all thumbnails, add to clicked one
+            // Remove the 'active' CSS class from every thumbnail (clears previous selection)
             thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            // Add the 'active' CSS class to the clicked thumbnail (marks it as selected)
             thumbnailElement.classList.add('active');
 
-            // Collapse carousel when thumbnail is clicked
+            // If the carousel was in an expanded state (larger view), collapse it back to default
             carousel.classList.remove('expanded');
         }
 
-        // Function to expand carousel when main image is clicked
+
+        /*
+         * toggleCarouselSize(carouselElement)
+         * - carouselElement: the carousel element to toggle
+         * Toggles the 'expanded' CSS class on the carousel which changes its height.
+         */
         function toggleCarouselSize(carouselElement) {
+            // toggle the 'expanded' class on the carousel container
             carouselElement.classList.toggle('expanded');
         }
 
-        // Function to change the favorite museum main image when thumbnail is clicked
+        /*
+         * changeMuseumImage(thumbnailElement)
+         * - Works like changeImage but for the single featured museum gallery (uses an id 'museumMainImage')
+         */
         function changeMuseumImage(thumbnailElement) {
-            // Get main image element
+            // Grab the main image element for the favorite museum section by ID
             const mainImage = document.getElementById('museumMainImage');
+            // Find all thumbnails in the museum gallery so we can update their active state
             const allThumbs = document.querySelectorAll('.museum-thumb');
 
-            // Update main image to match clicked thumbnail
-            mainImage.src = thumbnailElement.src;
-            mainImage.alt = thumbnailElement.alt;
+            // Copy the thumbnail's src/alt to the main image so the displayed photo changes
+            mainImage.src = thumbnailElement.src; // update displayed image
+            mainImage.alt = thumbnailElement.alt; // update alt text for accessibility
 
-            // Update active state on thumbnails
+            // Remove the active marker from every museum thumbnail
             allThumbs.forEach(thumb => thumb.classList.remove('active'));
+            // Add the active marker to the clicked thumbnail
             thumbnailElement.classList.add('active');
         }
+
+        /*
+         * DOMContentLoaded handler
+         * - Adds keyboard accessibility and ARIA attributes to thumbnails and carousels after the DOM is ready.
+         */
+        document.addEventListener('DOMContentLoaded', function () {
+            // Select both regular thumbnails and museum thumbnails (they use different classes)
+            const thumbs = document.querySelectorAll('.thumbnail, .museum-thumb');
+
+            // For each thumbnail image, add ARIA/keyboard affordances so they behave like buttons
+            thumbs.forEach(thumb => {
+                // Announce the image to assistive tech as a button control
+                thumb.setAttribute('role', 'button'); // sets role=button so screen readers treat it as a control
+                // Ensure the element can receive keyboard focus (tab navigation)
+                if (!thumb.hasAttribute('tabindex')) thumb.setAttribute('tabindex', '0');
+                // If the thumbnail doesn't already have an aria-label, copy the alt text to aria-label
+                if (!thumb.hasAttribute('aria-label') && thumb.alt) thumb.setAttribute('aria-label', thumb.alt);
+
+                // Add keyboard activation: Enter or Space should trigger the same behavior as a mouse click
+                thumb.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault(); // prevent default scrolling on Space
+                        // Programmatically invoke a click so existing onclick handlers run
+                        thumb.click();
+                    }
+                });
+            });
+
+            // Select all carousel containers to add keyboard toggling behavior
+            const carousels = document.querySelectorAll('.image-carousel');
+            carousels.forEach(carousel => {
+                // Make the carousel focusable if it isn't already
+                if (!carousel.hasAttribute('tabindex')) carousel.setAttribute('tabindex', '0');
+                // Expose the carousel to assistive tech as a region with a descriptive label
+                carousel.setAttribute('role', 'region');
+                carousel.setAttribute('aria-label', 'Image carousel');
+
+                // Allow keyboard users to toggle expanded/collapsed state with Enter or Space
+                carousel.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        carousel.classList.toggle('expanded'); // same action as clicking to expand/collapse
+                    }
+                });
+            });
+        });
     </script>
 </body>
 
