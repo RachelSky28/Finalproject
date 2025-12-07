@@ -65,6 +65,7 @@
     </div>
   </div>
 
+
   <div class="color-container">
 
     <div class="color-section brownie card" data-target="QUEENS-folder">
@@ -93,8 +94,8 @@
             </p>
           </div>
           <div class="large-collage">
-            <img src="./images/fogo.jpeg" alt="food3">
-            <img src="./images/dechao.jpeg" alt="food3">
+            <img src="./images/fogo.jpeg" alt="bday">
+            <img src="./images/dechao.jpeg" alt="bday1">
           </div>
         </div>
         <div class="slide">
@@ -112,9 +113,8 @@
               Fresh seafood and comforting soups in a cozy Long Island City spot with a friendly, neighborhood vibe
             </p>
           </div>
-          <div class="large-collage">
-            <img src="./images/jora2.jpeg" alt="food3">
-            <img src="./images/jora.jpeg" alt="food3">
+          <div class="album-text">
+            <img src="./images/jora2.jpeg" alt="stone">
           </div>
         </div>
         <div class="slide">
@@ -133,9 +133,9 @@
             </p>
           </div>
           <div class="collage">
-            <img src="./images/brass.jpeg" alt="food3">
-            <img src="./images/brass2.jpeg" alt="food3">
-            <img src="./images/brass3.jpeg" alt="food3">
+            <img src="./images/brass.jpeg" alt="squid">
+            <img src="./images/brass2.jpeg" alt="red">
+            <img src="./images/brass3.jpeg" alt="sundae">
           </div>
         </div>
         <div class="slide">
@@ -154,8 +154,8 @@
             </p>
           </div>
           <div class="large-collage">
-            <img src="./images/christosqueens.jpeg" alt="food2">
-            <img src="./images/christos.jpeg" alt="food3">
+            <img src="./images/christosqueens.jpeg" alt="mac">
+            <img src="./images/christos.jpeg" alt="spoonsauce">
           </div>
         </div>
         <div class="slide">
@@ -174,8 +174,8 @@
             </p>
           </div>
           <div class="large-collage">
-            <img src="./images/bully.jpeg" alt="food3">
-            <img src="./images/queens2.jpeg" alt="food3">
+            <img src="./images/bully.jpeg" alt="meatyburger">
+            <img src="./images/queens2.jpeg" alt="steakmac">
           </div>
         </div>
         <div class="slide">
@@ -194,7 +194,7 @@
             </p>
           </div>
           <div class="album-text">
-            <img src="./images/dai.jpeg" alt="food3">
+            <img src="./images/dai.jpeg" alt="lechemartini">
           </div>
         </div>
         <div class="slide">
@@ -213,7 +213,7 @@
             </p>
           </div>
           <div class="album-text">
-            <img src="./images/bonchon.jpg" alt="bronx">
+            <img src="./images/bonchon.jpg" alt="shrimphead">
           </div>
         </div>
       </div>
@@ -1050,94 +1050,13 @@
           showMtaNext = false;
         }
       });
-
-
-
-      //quiz code
-      //this will run every time the button is clicked 
-      document.getElementById("quiz-submit").addEventListener("click", function () {
-
-        //it captures whtever the user clicks on
-        const borough = document.getElementById("borough-choice-1").value;
-        const cuisine = document.getElementById("food-type").value;
-        const vibe = document.getElementById("vibe-check").value;
-        const craving = document.getElementById("craving").value;
-        const tooFar = document.getElementById("too-far").value;
-
-        //where the quiz results will be displayed
-        const resultBox = document.getElementById("quiz-result");
-
-        //iff any answer is missing the quiz stops the display with a warning
-        if (!borough || !cuisine || !vibe || !craving |explain | !tooFar) {
-          resultBox.innerHTML = `<p>Please answer all the questions.</p>`;
-          return;
-        }
-
-        //THE RESULTS: where the quiz decided what images to show 
-        const recommendations = {
-          "Queens": {
-            "Italian": "images/disco.jpeg",
-            "Latin": "images/disco.jpeg",
-            "Asian": "images/disco.jpeg",
-            "Surprise": "images/disco.jpeg"
-          },
-          "Brooklyn": {
-            "Italian": "images/williamsburg.jpeg",
-            "Latin": "images/williamsburg.jpeg",
-            "Asian": "images/williamsburg.jpeg",
-            "Surprise": "images/williamsburg.jpeg"
-          },
-          "Bronx": {
-            "Italian": "images/domi.jpeg",
-            "Latin": "images/domi.jpeg",
-            "Asian": "images/domi.jpeg",
-            "Surprise": "images/domi.jpeg"
-          },
-          "Manhattan": {
-            "Italian": "images/house.jpeg",
-            "Latin": "images/house.jpeg",
-            "Asian": "images/house.jpeg",
-            "Surprise": "images/house.jpeg"
-          },
-          "Staten Island": {
-            "Italian": "images/eastvillage.jpeg",
-            "Latin": "images/eastvillage.jpeg",
-            "Asian": "images/eastvillage.jpeg",
-            "Surprise": "images/eastvillage.jpeg"
-          }
-
-        };
-
-        //THIS CHECKED: the correct borough, then cuisine, ect
-        //?. MEANS: prevents error if something is missing
-        const selectedImage = recommendations[borough]?.[cuisine];
-
-        console.log("Selected Image Path:", selectedImage);
-
-        // FALL BACK: ensure place holder image wil appear if file path is wromg
-        if (!selectedImage) {
-          selectedImage = "https://via.placeholder.com/300x200?text=No+Image+Found";
-        }
-
-        //if no matching combinatione exists
-        // if (!selectedImage) {
-        //   resultBox.innerHTML = `<p>No recommendation available yet for this combo.</p>`;
-        //   return;
-        // }
-
-        //shows thetitle and images
-        resultBox.innerHTML = `
-      <h3>Your Recommendation:</h3>
-      <img src="${selectedImage}" class="result-photo" alt="Recommendation"
-       onerror="this.src='https://via.placeholder.com/300x200?text=Image+Not+Found'">
-      `;
-      });
     </script>
-  </div>
+  <!-- </div> -->
 
   <div id="bottom-section">
     <h2>Find Your Recommended Resturant</h2>
     <div class="bottom-flex">
+    </div>
 
       <!-- Left: Street Image -->
       <div class="bottom-left">
