@@ -7,24 +7,22 @@
     <title>The Art - Like A New Yorker</title>
     <meta name="description" content="Discover NYC's hidden art gems">
     <meta name="keywords" content="NYC art, galleries, museums, public art">
-    <meta name="author" content="Chloe Dahan, Kathy Baik, Rachel S. Khmelnitsky, and Sabrina Guzman">
-    <script src="scripts/art.js"></script>
+    <meta name="author" content="Chloe Dahan">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Pinyon+Script&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/art.css">
+    <link rel="stylesheet" href="./styles/art.css">
 </head>
 
 <body>
-    <header id="header">
+    <!-- Header with logo and navigation -->
+    <header class="header">
         <div id="logo-container">
             <div id="logo">
                 <a href="index.html">
-                    <img src="./images/nyclogo.png" alt="Like A New Yorker">
-                </a>
+                    <img src="./images/nyclogo.png" alt="Like a New Yorker site logo" style="width:100%"> </a>
             </div>
         </div>
         <div id="header-container">
@@ -41,71 +39,695 @@
     </header>
 
     <main id="art-body">
+        <!-- Hero section with title and image -->
         <section class="hero-section">
             <div class="hero-content">
                 <h1>Experience New York City Art</h1>
-                <p>[TETX]</p>
-                <a href="#recommendations" class="scroll-arrow">↓</a>
+                <p>Discover museums, galleries, street art and subway mosaic art across the city.</p>
+                <p><em>By: Chloe Dahan</em></p>
+                <a href="#been-there" class="scroll-arrow">↓</a>
             </div>
             <div class="hero-image">
                 <img src="./images/moma_ps1.png"
-                    alt="Imagef from MoMA PS1 gallery with colorful art installation of many framed art peices hanging on the walls.">
+                    alt="Colorful art installation with many framed artpieces hanging on gallery walls">
             </div>
         </section>
 
+        <!-- Author note section from Chloe -->
         <section class="author-note-section">
             <div class="section-container">
                 <h2>A Note From Chloe</h2>
-                <p>[note]</p>
+                <p>New York City's art scene has something for everyone. Whether you're exploring world-class museums or
+                    stumbling upon street art in unexpected corners, there's always something new to discover. I've
+                    curated my favorite spots and experiences to help you explore like a New Yorker. Additionally,
+                    You'll find exploring tips and reccomendations of places I haven't been, but are on my list.</p>
             </div>
         </section>
 
-        <section class="recommendations-section" id="recommendations">
+        <!-- Section for places the author has been -->
+        <section class="been-there-section" id="been-there">
             <div class="section-container">
-                <h2>Explore Art Spaces</h2>
+                <h2>Places I've Been</h2>
+                <p class="intro-text">All images in this section have been taken by me. Click on thumbnails to see
+                    different views of each
+                    location.</p>
 
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="museum">Museum</button>
-                    <button class="filter-btn" data-filter="gallery">Gallery</button>
-                    <button class="filter-btn" data-filter="public">Public Art</button>
-                    <button class="filter-btn" data-filter="architecture">Architecture</button>
-                </div>
-
-                <div class="art-cards-container" id="cardsContainer">
-                </div>
-            </div>
-        </section>
-
-        <section class="favorite-museum-section">
-            <div class="museum-content">
-                <div class="museum-image">
-                    <img src="https://via.placeholder.com/500x400?text=The+Met" alt="The Metropolitan Museum">
-                </div>
-                <div class="museum-text">
-                    <h2>My Favorite Museum Experience</h2>
-                    <p>[TETX]</p>
-
-                    <div class="museum-carousel">
-                        <div class="carousel-main">
-                            <img id="carouselMain" src="https://via.placeholder.com/400x300?text=Gallery+1"
-                                alt="Gallery view">
+                <!-- Grid of art cards with multi-image carousel -->
+                <div class="art-cards">
+                    <!-- Card 1: Museum -->
+                    <div class="art-card">
+                        <div class="image-carousel">
+                            <img class="carousel-image" src="./images/moma1.jpg"
+                                alt="Framed sketches and prototypes of the I heart NY logo displayed on a deep red museum wall, including early versions and variations of the iconic design.">
                         </div>
-                        <div class="carousel-thumbnails">
-                            <img class="carousel-thumb" src="https://via.placeholder.com/80x80?text=1"
-                                onclick="changeCarouselImage(this)">
-                            <img class="carousel-thumb" src="https://via.placeholder.com/80x80?text=2"
-                                onclick="changeCarouselImage(this)">
-                            <img class="carousel-thumb" src="https://via.placeholder.com/80x80?text=3"
-                                onclick="changeCarouselImage(this)">
-                            <img class="carousel-thumb" src="https://via.placeholder.com/80x80?text=4"
-                                onclick="changeCarouselImage(this)">
+                        <div class="thumbnails">
+                            <img class="thumbnail active" src="./images/moma1.jpg"
+                                alt="Framed sketches and prototypes of the I heart NY logo displayed on a deep red museum wall, including early versions and variations of the iconic design."
+                                onclick="changeImage(this, 0)">
+                            <img class="thumbnail" src="./images/moma2.jpeg"
+                                alt="Large hanging sculptures made from clusters of colorful stuffed animals suspended from the ceiling in a white gallery space, with an angular orange wall sculpture in the background."
+                                onclick="changeImage(this, 0)">
+                            <img class="thumbnail" src="./images/moma3.jpg"
+                                alt="Gustav Klimt painting of a woman holding a child, featuring a tall, patterned cloak of vibrant circular motifs against a dark, textured background, mounted in a gold frame."
+                                onclick="changeImage(this, 0)">
+                            <img class="thumbnail" src="./images/moma4.jpeg"
+                                alt="Exterior of MoMA entrance at dusk with yellow traffic light above glass storefront displaying colorful striped artwork."
+                                onclick="changeImage(this, 0)">
+                            <img class="thumbnail" src="./images/moma3.jpg"
+                                alt="MoMA gallery interior with modernist painting of abstracted figures in pink on blue background and smaller dark painting on adjacent wall."
+                                onclick="changeImage(this, 0)">
+                        </div>
+                        <div class="card-content">
+                            <h3>MoMA</h3>
+                            <div class="tags">
+                                <span class="tag">Museum</span>
+                                <span class="tag">Modern Art</span>
+                            </div>
+                            <p class="location">📍 Midtown, Manhattan<br><a
+                                    href="https://maps.app.goo.gl/VHZtJt4pgDnUR8wd8" target="_blank">11 W 53rd St, New
+                                    York, NY 10019</a></p>
+                            <p>The Museum of Modern Art is one of the world’s leading museums for modern and
+                                contemporary art, featuring works including paintings, sculpture, photography, film, and
+                                design. Highlights include pieces by Van Gogh, Picasso, Warhol, and contemporary
+                                innovators.
+                                <br>
+                                <br>
+                                <strong>My Review: </strong>This was my first time visiting the main MoMA. It was such a
+                                beautiful space and easy to navigate through. The vibes were so amazing and we were able
+                                to go for free through UNIQLO Friday Nights (free admission for NY residents). My
+                                favorite exhibition was Pirouette: Turning Points in Design. It really emphasized how
+                                design is incorporated into everything we do and is a “fundamental element of life.” It
+                                was so cool to see the original sketch for the “I ❤️ NY” logo in real life after
+                                learning of its significance through podcasts a while back. I also really into how they
+                                showcased things/objects we see every day like the monobloc chair and head phones;
+                                showing how even the most ordinary things are designed with intention. My favorite
+                                painting I saw there was The Red Studio by Matisse. Overall it was a lovely evening and
+                                I’m excited to return with more time so I can see everything.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Museum -->
+                    <div class="art-card">
+                        <div class="image-carousel">
+                            <img class="carousel-image" src="./images/whitney_museum_of_american_art1.jpg"
+                                alt="Gallery with moss-covered sculptural installation in center; colorful abstract painting on left wall; visitors viewing artworks.">
+                        </div>
+                        <div class="thumbnails">
+                            <img class="thumbnail active" src="./images/whitney_museum_of_american_art1.jpg"
+                                alt="Gallery with moss-covered sculptural installation in center; colorful abstract painting on left wall; visitors viewing artworks."
+                                onclick="changeImage(this, 1)">
+                            <img class="thumbnail" src="./images/whitney_museum_of_american_art2.jpg"
+                                alt="Gallery wall with colorful lighting displaying video art of flowering plants on screen; yellow gallery space visible in background."
+                                onclick="changeImage(this, 1)">
+                            <img class="thumbnail" src="./images/whitney_museum_of_american_art3.jpg"
+                                alt="Large window overlooking city with suspended wire mesh sculpture of geometric shapes hanging in center; urban landscape visible outside."
+                                onclick="changeImage(this, 1)">
+                            <img class="thumbnail" src="./images/whitney_museum_of_american_art4.jpg"
+                                alt="Covered outdoor entrance to Whitney Museum with glass doors, steel columns, and city street visible; visitors and urban architecture surrounding."
+                                onclick="changeImage(this, 1)">
+                            <img class="thumbnail" src="./images/whitney_museum_of_american_art5.jpg" alt="Whitney gallery interior with abstract black and white paintings on walls and colorful striped artwork on right; visitors viewing works. 
+                                onclick=" changeImage(this, 1)">
+                        </div>
+                        <div class="card-content">
+                            <h3>Whitney Museum of American Art</h3>
+                            <div class="tags">
+                                <span class="tag">Museum</span>
+                                <span class="tag">Modern Art</span>
+                            </div>
+                            <p class="location">📍 Meatpacking District, Manhattan<br><a
+                                    href="https://maps.app.goo.gl/6Y3gVpZY8YFJqnvF6" target="_blank">99 Gansevoort St,
+                                    New York, NY 10014</a></p>
+                            <p>The Whitney is the only museum dedicated to American art and artists. It has an
+                                incredible rooftop overlooking the Hudson River. The views are as impressive as the art.
+                                <br>
+                                <br>
+                                <strong>My Review: </strong>I love the location of this museum and there is so much to
+                                do nearby. The views from the balconies on each floor are just as cool as the art. My
+                                favorite floor was the 7th, which had the Whitney’s Collection: Selections from 1900 to
+                                1965. The collection had pieces from Georgia O’Keeffe, Edward Hopper and Rockwell Kent -
+                                which were some of my favorites. Definitely want to go back again when they have new
+                                exhibits. Entry is free for people 25 and under everyday and free the second Sundays of
+                                every month for all.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Museum -->
+                    <div class="art-card">
+                        <div class="image-carousel">
+                            <img class="carousel-image" src="./images/the_noguchi_museum1.jpg"
+                                alt="Noguchi Museum's lush courtyard garden with ivy-covered brick building, visitors seated on benches among hanging vines and greenery.">
+                        </div>
+                        <div class="thumbnails">
+                            <img class="thumbnail active" src="./images/the_noguchi_museum1.jpg"
+                                alt="Noguchi Museum's lush courtyard garden with ivy-covered brick building, visitors seated on benches among hanging vines and greenery."
+                                onclick="changeImage(this, 2)">
+                            <img class="thumbnail" src="./images/the_noguchi_museum2.jpg"
+                                alt="Industrial gallery with concrete block walls displaying abstract stone sculptures under metal beam ceiling with track lighting."
+                                onclick="changeImage(this, 2)">
+                            <img class="thumbnail" src="./images/the_noguchi_museum3.jpg"
+                                alt="Contemporary gallery with orange and red striped tubular sculptures on white pedestals; large windows overlook green landscape."
+                                onclick="changeImage(this, 2)">
+                            <img class="thumbnail" src="./images/the_noguchi_museum4.jpg"
+                                alt="Red and orange striped curved sculpture mounted on orange pedestal framed by large grid window overlooking garden."
+                                onclick="changeImage(this, 2)">
+                            <img class="thumbnail" src="./images/the_noguchi_museum5.jpg"
+                                alt="Exterior concrete wall with vertical The Noguchi Museum text sign partially covered by hanging ivy vines."
+                                onclick="changeImage(this, 2)">
+                        </div>
+                        <div class="card-content">
+                            <h3>Noguchi Museum</h3>
+                            <div class="tags">
+                                <span class="tag">Museum</span>
+                                <span class="tag">Sculpture</span>
+                            </div>
+                            <p class="location">📍 Long Island City, Queens<br><a
+                                    href="https://maps.app.goo.gl/SANGjVh9JK5DdhUK8" target="_blank">9-01 33rd Rd,
+                                    Astoria, NY 11106</a></p>
+                            <p>A hidden gem dedicated to the life and work of sculptor and designer Isamu Noguchi. The
+                                space includes galleries, archival materials, and a celebrated outdoor sculpture garden.
+                                It emphasizes Noguchi’s blending of art, design, craft, and landscape.
+                                <br>
+                                <br>
+                                <strong>My Review: </strong>I’ve always wanted to go and I finally made it! Super cool
+                                fact - it’s the first in the U.S. designed and installed by a living artist to showcase
+                                their own work. The museum had a very serene atmosphere, especially the sculpture the
+                                sculpture garden - which was my favorite part. Also, it’s free on the first Friday of
+                                every month if you reserve a ticket!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Museum -->
+                    <div class="art-card">
+                        <div class="image-carousel">
+                            <img class="carousel-image" src="./images/the_met1.jpg"
+                                alt="Gallery with light blue walls and gridded skylight ceiling displaying classical paintings in gold frames and marble sculpture on pedestal.">
+                        </div>
+                        <div class="thumbnails">
+                            <img class="thumbnail active" src="./images/the_met1.jpg"
+                                alt="Gallery with light blue walls and gridded skylight ceiling displaying classical paintings in gold frames and marble sculpture on pedestal."
+                                onclick="changeImage(this, 3)">
+                            <img class="thumbnail" src="./images/the_met2.jpg"
+                                alt="Neoclassical Met facade with ornate white columns, arched windows, and red banner; visitors on grand entrance steps."
+                                onclick="changeImage(this, 3)">
+                            <img class="thumbnail" src="./images/the_met3.jpg"
+                                alt="Sunlit glass and steel atrium with classical decorative objects displayed in glass cases under geometric skylights."
+                                onclick="changeImage(this, 3)">
+                            <img class="thumbnail" src="./images/the_met4.jpg"
+                                alt="Gallery with barrel-vault glass ceiling and golden-framed history painting; visitors viewing artwork under skylights."
+                                onclick="changeImage(this, 3)">
+                            <img class="thumbnail" src="./images/the_met5.jpg"
+                                alt="Modern atrium with Egyptian temple reconstruction under geometric glass ceiling; reflecting pool with palm plants below."
+                                onclick="changeImage(this, 3)">
+                        </div>
+                        <div class="card-content">
+                            <h3>The MET</h3>
+                            <div class="tags">
+                                <span class="tag">Museum</span>
+                                <span class="tag">Fine Art</span>
+                            </div>
+                            <p class="location">📍 Upper East Side, Manhattan<br><a
+                                    href="https://maps.app.goo.gl/tUL1bpbUADiyz2VL9" target="_blank">1000 5th Ave, New
+                                    York, NY 10028</a></p>
+                            <p>The Metropolitan Museum of Art is one of the landmark art museum's in NYC, showcasing
+                                thousands of years of global art, from ancient artifacts to modern works. It’s a
+                                massive, inspiring place to explore and one of the city’s must-see cultural stops.
+                                <br>
+                                <br>
+                                <strong>My Review: </strong>The Chinese Garden Court was my favorite part. It’s so
+                                beautiful and cool. It was so busy though which was overstimulating but still so fun. We
+                                also were able to do pay what you wish as residents which was awesome. Seeing all the
+                                folliage in central park through the windows was so so beautiful too.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Museum -->
+                    <div class="art-card">
+                        <div class="image-carousel">
+                            <img class="carousel-image" src="./images/moma_ps1_1.jpg"
+                                alt="Outdoor courtyard with red brick buildings, picnic tables, colorful stacked cylindrical sculptures, and green sign reading PS1.">
+                        </div>
+                        <div class="thumbnails">
+                            <img class="thumbnail active" src="./images/moma_ps1_1.jpg"
+                                alt="Outdoor courtyard with red brick buildings, picnic tables, colorful stacked cylindrical sculptures, and green sign reading PS1."
+                                onclick="changeImage(this, 4)">
+                            <img class="thumbnail" src="./images/moma_ps1_2.jpg"
+                                alt="Gallery with turquoise walls displaying textured woven artworks with blue and purple botanical motifs on stands."
+                                onclick="changeImage(this, 4)">
+                            <img class="thumbnail" src="./images/moma_ps1_3.jpg"
+                                alt="Red brick building facade with vertical MoMA PS1 banners; bare tree and street signage visible."
+                                onclick="changeImage(this, 4)">
+                            <img class="thumbnail" src="./images/moma_ps1_4.jpg"
+                                alt="Gallery with pink walls, checkered floor displaying red plastic-wrapped sculptures suspended from gold chains and geometric wall installation."
+                                onclick="changeImage(this, 4)">
+                            <img class="thumbnail" src="./images/moma_ps1_5.jpg"
+                                alt="Concrete wall with embossed 'PS1' logo and text reading 'The Institute for Contemporary Art' at museum entrance."
+                                onclick="changeImage(this, 4)">
+                        </div>
+                        <div class="card-content">
+                            <h3>MoMA PS1</h3>
+                            <div class="tags">
+                                <span class="tag">Museum</span>
+                                <span class="tag">Contemporary</span>
+                            </div>
+                            <p class="location">📍 Long Island City, Queens<br><a
+                                    href="https://maps.app.goo.gl/yWYaNCGQSzKjnqBK7" target="_blank">22-25 Jackson Ave,
+                                    Queens, NY 11101</a></p>
+                            <p>A contemporary art center in Long Island City dedicated to experimental and emerging art.
+                                Housed in a historic school building, PS1 features large-scale installations,
+                                performances, and avant-garde programming. It operates in partnership with MoMA but has
+                                its own identity and curatorial focus.
+                                <br>
+                                <strong>My Review: </strong>Visited MoMA PS1 in Queens, which is separate from the MoMA
+                                in Manhattan. It isn’t about showing the big-name pieces like the main MoMA. This place
+                                is all about giving room for new, experimental art/artists.The space is super cool, but
+                                also kind of eerie, which just adds to the experience. It’s in an old public school
+                                building from 1892, so the architecture has this really unique, almost haunting feel (I
+                                lowkey got scared when there was no one else in the hallways).I visited mainly for the
+                                James Turrell site specific installation, Meeting, which was the second Skyspace that he
+                                constructed in the US. I went when they first opened during the day time, so none of the
+                                ambient colorful lights were turned on in the space. Wish I had gone closer to sunset to
+                                get the full experience. There is an uncovered opening in the ceiling so it is only open
+                                if weather permits.Not art related, but the cafe there was awesome. I grabbed a latte on
+                                the way out after checking out the museum store, and it was a nice chill moment.If
+                                you’re a New York resident, it’s free too, so there’s no excuse not to check it out!
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Gallery -->
+                    <div class="art-card">
+                        <div class="image-carousel">
+                            <img class="carousel-image" src="./images/levy_gorvy_dayan1.jpg"
+                                alt="Beige Neoclassical building facade with ornate details and blue banner reading 'Lévy Gorvy Dayan New York - London.'">
+                        </div>
+                        <div class="thumbnails">
+                            <img class="thumbnail active" src="./images/levy_gorvy_dayan1.jpg"
+                                alt="Beige Neoclassical building facade with ornate details and blue banner reading 'Lévy Gorvy Dayan New York - London.'"
+                                onclick="changeImage(this, 5)">
+                            <img class="thumbnail" src="./images/levy_gorvy_dayan2.jpg"
+                                alt="Classical gallery entry with arched doorway, decorative floor, displaying photographs of Western landscape and cowboy on horseback."
+                                onclick="changeImage(this, 5)">
+                            <img class="thumbnail" src="./images/levy_gorvy_dayan3.jpg"
+                                alt="Gallery with checkered marble floor displaying grid of black and white portrait photographs and single colorful portrait on wall."
+                                onclick="changeImage(this, 5)">
+                            <img class="thumbnail" src="./images/levy_gorvy_dayan4.jpg"
+                                alt="White marble staircase with ornate wrought iron railing; contemporary artworks displayed including hanging sculpture and pink painting."
+                                onclick="changeImage(this, 5)">
+                            <img class="thumbnail" src="./images/levy_gorvy_dayan5.jpg"
+                                alt="Gallery interior with decorative ceramic vessel on pedestal, colorful portrait painting, and figurative drawing on white walls."
+                                onclick="changeImage(this, 5)">
+                        </div>
+                        <div class="card-content">
+                            <h3>Lévy Gorvy Dayan</h3>
+                            <div class="tags">
+                                <span class="tag">Gallery</span>
+                                <span class="tag">Contemporary</span>
+                            </div>
+                            <p class="location">📍 Chelsea, Manhattan<br><a
+                                    href="https://maps.app.goo.gl/CpigGf3bcHFqJHuN6" target="_blank">19 E 64th St, New
+                                    York, NY 10065</a></p>
+                            <p>Lévy Gorvy Dayan is a New York–based modern and contemporary art gallery known for its
+                                blue-chip exhibitions, curated programs, and work with major artist estates. The gallery
+                                also offers art advisory and appraisal services, supporting collectors through
+                                acquisition, estate planning, and collection care.
+                                <br>
+                                <br>
+                                <strong>My Review: </strong>I’ve been wanting to visit this gallery for so long and I
+                                finally got the chance to! It felt like the perfect time to do so with the fall city
+                                feeling and halloween decorated upper east side townhomes, which the gallery is situated
+                                amongst. The space itself is so beautiful with the brightness from the skylight on the
+                                second floor, grand staircase and checkered granite floors on the first floor. One of
+                                the current exhibitions, Downtown/Uptown: New York in the Eighties, brought life into
+                                the gallery with vibrant colors and the recognizable works of artists like Jean-Michel
+                                Basquiat, Guerrilla Girls, Keith Haring and Andy Warhol. I loved the variety of mediums
+                                on display, showcasing the breadth of artistic exploration during that time. The gallery
+                                was free to enter - I was able to walk right in and explore. Definitely want to visit
+                                again for another exhibition.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 7: Gallery -->
+                    <div class="art-card">
+                        <div class="image-carousel">
+                            <img class="carousel-image" src="./images/david_zwirner_20th_st1.jpg"
+                                alt="David Zwirner 20th Street Gallery exterior. Modern white stone gallery facade with grid of rectangular windows with copper frames; street-level entrance with glass doors.">
+                        </div>
+                        <div class="thumbnails">
+                            <img class="thumbnail active" src="./images/david_zwirner_20th_st1.jpg"
+                                alt="David Zwirner 20th Street Gallery exterior. Modern white stone gallery facade with grid of rectangular windows with copper frames; street-level entrance with glass doors."
+                                onclick="changeImage(this, 6)">
+                            <img class="thumbnail" src="./images/david_zwirner_20th_st2.jpg"
+                                alt="Minimalist gallery interior with stark white walls and clean geometric forms; soft natural light through window opening."
+                                onclick="changeImage(this, 6)">
+                            <img class="thumbnail" src="./images/david_zwirner_20th_st3.jpg"
+                                alt="Concrete stairwell with metal railing and LED strip lighting; blue skylight visible through window at top."
+                                onclick="changeImage(this, 6)">
+                            <img class="thumbnail" src="./images/david_zwirner_20th_st4.jpg"
+                                alt="Minimalist gallery displaying small abstract paintings with deep blue and black geometric forms on white walls."
+                                onclick="changeImage(this, 6)">
+                            <img class="thumbnail" src="./images/david_zwirner_20th_st5.jpg"
+                                alt="Contemporary gallery with track lighting, white walls displaying framed works; yellow accent wall; visitors viewing artwork."
+                                onclick="changeImage(this, 6)">
+                        </div>
+                        <div class="card-content">
+                            <h3>David Zwirner | 20th Street</h3>
+                            <div class="tags">
+                                <span class="tag">Gallery</span>
+                                <span class="tag">Contemporary</span>
+                            </div>
+                            <p class="location">📍 Chelsea, Manhattan<br><a
+                                    href="https://maps.app.goo.gl/P4VarSDDqBQu7xJFA" target="_blank">537 W 20th St, New
+                                    York, NY 10011</a></p>
+                            <p>One of New York’s most prominent commercial galleries, with several locations in Chelsea.
+                                Zwirner represents major contemporary artists and frequently mounts ambitious
+                                exhibitions. Galleries are free to visit and often include museum-quality installations.
+                                <br>
+                                <br>
+                                <strong>My Review: </strong>Out of all the art movements ever, the light and space
+                                movement is my favorite. Seeing Doug Wheeler’s work was so insanely amazing (Doug
+                                Wheeler | Day Night Day). I got lucky and was able to enter the exhibit alone, which
+                                made my experience exponentially better. The illusion of scale was so mind boggling it
+                                was crazy. The room was so intensely white that it felt almost blinding; the light
+                                seemed to envelop everything. I had to walk with my hand in front of me because I
+                                couldn’t identify where the walls ended or how far the space extended. It really felt
+                                out of body. In the photos I took, shadows were captured, which made the space appear
+                                less purely bright, but in person, it truly was a luminous void. It was also super cool
+                                seeing some of Ad Reinhardt’s work in real life (Ad Reinhardt |
+                                Print-Painting-Maquette). The exhibit included screen printing which he took up later in
+                                his career. The 20th street gallery itself is a beautiful building and space, plus it is
+                                free which is awesome.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Card 8: Gallery -->
+                    <div class="art-card">
+                        <div class="image-carousel">
+                            <img class="carousel-image" src="./images/american_museum_of_natural_history1.jpg"
+                                alt="White concrete interior with circular skylights and curved architectural forms; visitors visible below in rotunda.">
+                        </div>
+                        <div class="thumbnails">
+                            <img class="thumbnail active" src="./images/american_museum_of_natural_history1.jpg"
+                                alt="White concrete interior with circular skylights and curved architectural forms; visitors visible below in rotunda."
+                                onclick="changeImage(this, 7)">
+                            <img class="thumbnail" src="./images/american_museum_of_natural_history2.jpg"
+                                alt="Ornate classical hall with decorative ceiling, large burgundy column, and colorful Asian artwork panels on walls."
+                                onclick="changeImage(this, 7)">
+                            <img class="thumbnail" src="./images/american_museum_of_natural_history3.jpg"
+                                alt="Diorama split view showing whales and fish underwater in turquoise water above desert landscape with clouds."
+                                onclick="changeImage(this, 7)">
+                            <img class="thumbnail" src="./images/american_museum_of_natural_history4.jpg"
+                                alt="Neoclassical ceiling with geometric octagonal pattern and arched window with grid panes; black sculpture suspended in center."
+                                onclick="changeImage(this, 7)">
+                            <img class="thumbnail" src="./images/american_museum_of_natural_history5.jpg"
+                                alt="Museum display of mounted fish specimens suspended on wires against dark background; various colorful fish and marine life."
+                                onclick="changeImage(this, 7)">
+                        </div>
+                        <div class="card-content">
+                            <h3>American Museum of Natural History</h3>
+                            <div class="tags">
+                                <span class="tag">Musuem</span>
+                                <span class="tag">Natural History</span>
+                            </div>
+                            <p class="location">📍 Upper West Side, Manhattan<br><a
+                                    href="https://maps.app.goo.gl/kx2UUtHRCjnM2XDJ8" target="_blank">200 Central Prk W,
+                                    New York, NY 10024</a></p>
+                            <p>One of the largest natural history museums in the world, featuring extensive collections
+                                on biodiversity, Earth science, human cultures, and paleontology. Popular exhibits
+                                include the dinosaur halls, the giant blue whale model, and the Hayden Planetarium.
+                                <br>
+                                <br>
+                                <strong>My Review: </strong>The American Museum of Natural History is a classic NYC
+                                experience that never disappoints. The dinosaur halls, planetarium shows, and vast
+                                cultural exhibits make it easy to spend hours wandering and still feel like you’ve only
+                                scratched the surface. It’s educational without being stuffy, visually stunning, and
+                                perfect for all ages. Whether you’re into science, nature, or just want to feel a sense
+                                of wonder, this museum delivers every time.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Card 9: Gallery -->
+                    <div class="art-card">
+                        <div class="image-carousel">
+                            <img class="carousel-image" src="./images/the_city_reliquary_museum1.jpeg"
+                                alt="Museum display with gold-framed portrait of baseball player in Brooklyn Dodgers uniform; vintage bottles and ephemera on shelves below.">
+                        </div>
+                        <div class="thumbnails">
+                            <img class="thumbnail active" src="./images/the_city_reliquary_museum1.jpeg"
+                                alt="Museum display with gold-framed portrait of baseball player in Brooklyn Dodgers uniform; vintage bottles and ephemera on shelves below."
+                                onclick="changeImage(this, 8)">
+                            <img class="thumbnail" src="./images/the_city_reliquary_museum2.jpeg"
+                                alt="Storefront of City Reliquary Museum with yellow and red signage, red door, and fire escape on red brick building."
+                                onclick="changeImage(this, 8)">
+                            <img class="thumbnail" src="./images/the_city_reliquary_museum3.jpeg"
+                                alt="Museum display case titled 'Meanwhile in Queens' containing handwritten letters, postcards, sketches, and personal memorabilia arranged on tan background."
+                                onclick="changeImage(this, 8)">
+                            <img class="thumbnail" src="./images/the_city_reliquary_museum4.jpeg"
+                                alt="Eclectic museum wall display with ornate frames, vintage ship model, decorative plates, quirky objects, and vintage signage; doorway opens to blue-lit street."
+                                onclick="changeImage(this, 8)">
+                            <img class="thumbnail" src="./images/the_city_reliquary_museum5.jpeg"
+                                alt="Four glass display cases filled with Statue of Liberty figurines, vintage souvenirs, photographs, collectibles, and Americana memorabilia."
+                                onclick="changeImage(this, 8)">
+                        </div>
+                        <div class="card-content">
+                            <h3>The City Reliquary Museum</h3>
+                            <div class="tags">
+                                <span class="tag">Musuem</span>
+                                <span class="tag">History</span>
+                            </div>
+                            <p class="location">📍 Williamsburg, Brooklyn<br> <a
+                                    href="https://maps.app.goo.gl/Sv6YxdT3oDKLcP2P8" target="_blank">370 Metropolitan
+                                    Ave, Brooklyn, NY 11211</a></p>
+                            <p> A small, community-run museum in Williamsburg showcasing NYC’s local history through
+                                everyday artifacts, vintage ephemera, and neighborhood-sourced collections. Exhibits
+                                highlight the city’s cultural quirks, civic pride, and grassroots storytelling.
+                                <br>
+                                <br>
+                                <strong>My Review: </strong>The City Reliquary is one of Brooklyn’s most charming hidden
+                                gems. It feels like stepping into a living scrapbook of New York, full of quirky
+                                artifacts, neighborhood history, and community, made exhibits. It’s small, a little
+                                eccentric, and completely heartfelt. If you love local history, odd treasures, or
+                                anything that captures the spirit of everyday NYC life, this tiny museum is absolutely
+                                worth the visit.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Section for recommendations (places author wants to visit) -->
+        <section class="recommendations-section">
+            <div class="section-container">
+                <h2>On My List</h2>
+                <p class="rec-intro">These are museums and galleries I haven't visited yet, but they're at the top of my
+                    list. Each one offers something unique to NYC's art scene.</p>
+
+                <!-- Grid of recommendation cards with single image -->
+                <div class="rec-cards">
+                    <div class="rec-card">
+                        <div class="rec-image">
+                            <img src="./images/guggenheim.jpeg"
+                                alt="Spiral gallery interior with white curved walls and multiple levels displaying small artworks; visitor viewing from railing.">
+                        </div>
+                        <div class="card-content">
+                            <h3>Solomon R. Guggenheim Museum</h3>
+                            <div class="tags">
+                                <span class="tag">Museum</span>
+                                <span class="tag">Modern Art</span>
+                            </div>
+                            <p class="location">📍 Midtown, Manhattan<br><a
+                                    href="https://maps.app.goo.gl/pLRqb9gUREdAR75Q6" target="_blank">1071 5th Ave, NewYork, NY 10128</a>
+                                    </p>
+                            <p>The Guggenheim is an iconic Frank Lloyd Wright-designed museum known for its spiraling
+                                ramp galleries and world-class modern and contemporary art exhibitions.</p>
+                        </div>
+                    </div>
+
+                    <div class="rec-card">
+                        <div class="rec-image">
+                            <img src="./images/frick_collection.jpg"
+                                alt="Grand neoclassical gallery with green walls, ornate gold-framed paintings, skylighted ceiling, wooden furnishings, and bronze sculptures on floor.">
+                        </div>
+                        <div class="card-content">
+                            <h3>The Frick Collection</h3>
+                            <div class="tags">
+                                <span class="tag">Museum</span>
+                                <span class="tag">European Fine and Decorative Arts</span>
+                            </div>
+                            <p class="location">📍 Upper East Side, Manhattan<br><a
+                                    href="https://maps.app.goo.gl/wDbeVLNqN7cJQpSN8" target="_blank">1 E 70th St, New York, NY 10021</a>
+                                    </p>
+                            <p>The Frick Collection offers an intimate look at European masterpieces, decorative arts,
+                                and sculpture, all displayed in the elegant former mansion of industrialist Henry Clay
+                                Frick.</p>
+                        </div>
+                    </div>
+
+                    <div class="rec-card">
+                        <div class="rec-image">
+                            <img src="./images/hauser_wirth.jpg"
+                                alt="Contemporary gallery with green grid floor, skylights, abstract sculptural installations, and minimal wall-mounted works.">
+                        </div>
+                        <div class="card-content">
+                            <h3>Hauser & Wirth | 22nd Street</h3>
+                            <div class="tags">
+                                <span class="tag">Gallery</span>
+                                <span class="tag">Contemporary</span>
+                            </div>
+                            <p class="location">📍 Chelsea, Manhattan<br><a
+                                    href="https://maps.app.goo.gl/SSq5wWHvS6JsRGEUA" target="_blank"></a>542 W 22nd St, New York, NY 10011</a>
+                            </p>
+                            <p>Hauser & Wirth’s 22nd Street location in Chelsea features large, museum-style galleries
+                                that host ambitious contemporary art exhibitions. It’s a spacious, beautifully designed
+                                spot to see major works by internationally recognized artists in the heart of NYC’s
+                                gallery district.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Favorite museum section with photo gallery -->
+        <section class="favorite-museum-section">
+            <div class="museum-container">
+                <h2>My Favorite NYC Museum Experience</h2>
+
+                <div class="museum-layout">
+                    <!-- Main image with thumbnail gallery on left -->
+                    <div class="museum-gallery">
+                        <div class="main-museum-image">
+                            <img id="museumMainImage" src="./images/diabeacon1.jpg"
+                                alt="Minimalist industrial gallery with exposed white truss ceiling, large windows, pink floor platform, and frosted glass box structures.">
+                        </div>
+
+                        <!-- Thumbnail gallery for selecting different museum photos -->
+                        <div class="museum-thumbnails">
+                            <img class="museum-thumb active" src="./images/diabeacon1.jpg"
+                                alt="Minimalist industrial gallery with exposed white truss ceiling, large windows, pink floor platform, and frosted glass box structures."
+                                onclick="changeMuseumImage(this)">
+                            <img class="museum-thumb" src="./images/diabeacon2.jpg"
+                                alt="Contemporary gallery corridor with high ceilings, grid windows, white walls, brown abstract artworks, and polished concrete floor."
+                                onclick="changeMuseumImage(this)">
+                            <img class="museum-thumb" src="./images/diabeacon3.jpg"
+                                alt="Abstract installation with towering rust-red and pale wooden forms under industrial ceiling; visitor standing in gallery space."
+                                onclick="changeMuseumImage(this)">
+                            <img class="museum-thumb" src="./images/diabeacon4.jpg"
+                                alt="Modern museum building with dark brick exterior alongside landscape of bare trees and grass field under clear sky."
+                                onclick="changeMuseumImage(this)">
+                            <img class="museum-thumb" src="./images/diabeacon5.jpg"
+                                alt="Minimalist gallery interior with wooden floor, coffered cream ceiling, large cylindrical sculptures, and tall windows with brick exterior."
+                                onclick="changeMuseumImage(this)">
+                            <img class="museum-thumb" src="./images/diabeacon6.jpg"
+                                alt="Dia Beacon sign in grassy landscape with bare autumn trees; information about hours and reservations displayed."
+                                onclick="changeMuseumImage(this)">
+                        </div>
+                    </div>
+
+                    <!-- Review and info on right -->
+                    <div class="museum-intro">
+                        <h3>Dia Beacon</h3>
+                        <p class="museum-location">📍 Beacon, NY<br><a href="https://maps.app.goo.gl/9Jokec3k36oUmf2W6"
+                                target="_blank">3 Beekman St, Beacon, NY 12508</a></p>
+                        <p>Even though this isn't in New York City, this museum is a wonderful day trip. It's located
+                            along the Hudson River, about 90 minutes from NYC. The train ride there is scenic and Beacon
+                            is a fun town to explore. Known for its vast galleries and natural light, Dia Beacon
+                            specializes in minimalist, conceptual, and land-art works from the 1960s onward. Many
+                            installations are site-specific and monumental in scale.
+                            <br>
+                            <br>
+                            <strong>My Review: </strong>This was one of the most beautiful spaces I’ve ever been in.
+                            Housed in a former Nabisco box-printing facility, the museum was renovated by Dia with
+                            artist Robert Irwin (a long-time San Diego resident known for his Light and Space work) and
+                            other architects. We learned that the museum is naturally lit, with skylights as the primary
+                            light source—originally crucial for factory workers to monitor print quality. Now, it’s
+                            considered a “daylight museum,” with hours adjusted to the changing seasons and sunsets. My
+                            favorite installation was Larry Bell’s Duo Nesting Boxes (2021), pictured in the first
+                            slide. The natural light brought out the vibrant colors, making it feel like the piece was
+                            constantly shifting with the environment. The scale of the space and installations was truly
+                            incredible. We took the train up to Beacon, NY, which runs along the water (sit on the left
+                            side going to the museum from NYC to be on the Hudson side), and there’s a free shuttle from
+                            the station into town. The visit was so amazing and restorative!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--New York City Subway Mosaic & Street Art-->
+        <section class="street-art-section">
+            <div class="section-container">
+                <h2>NYC Subway Mosaic & Street Art</h2>
+                <p class="intro-text">A collection of some unique street art and subway mosaics found throughout the
+                    city.
+                </p>
+
+                <div class="street-art-gallery">
+                    <div class="art-photo">
+                        <img src="./images/81st.jpeg"
+                            alt="Subway tile wall with red exit sign above; blue fish mosaic artwork on white tiles.">
+                        <div class="art-label">81st Street Station</div>
+                    </div>
+                    <div class="art-photo">
+                        <img src="./images/williamsburg_cat.jpeg"
+                            alt="Yellow roller gate with cat portrait and speech bubble reading 'Best Shop Cheese in Astoria'; graffiti text.">
+                        <div class="art-label">Williamsburg Bodega</div>
+                    </div>
+                    <div class="art-photo">
+                        <img src="./images/bedford_station.jpeg"
+                            alt="Mosaic floor mural with yellow brick pattern and blue figures with white polka dots dancing.">
+                        <div class="art-label">Bedford Station</div>
+                    </div>
+                    <div class="art-photo">
+                        <img src="./images/mfdoom truck.jpeg"
+                            alt="Green and red delivery truck with MF DOOM graffitied on it, on a wet city street.">
+                        <div class="art-label">MF DOOM Truck</div>
+                    </div>
+                    <div class="art-photo">
+                        <img src="./images/bushwick_mural.png"
+                            alt="Street art on brick buildings featuring colorful abstract designs.">
+                        <div class="art-label">Bushwick</div>
+                    </div>
+                    <div class="art-photo">
+                        <img src="./images/delancey_essex.png"
+                            alt="Colorful mosaic mural of stylized fish with detailed scales in greens, blues, and golds.">
+                        <div class="art-label">Delancey Street-Essex Street Station</div>
+                    </div>
+                    <div class="art-photo">
+                        <img src="./images/roberta_mural.png"
+                            alt="Vibrant street mural on corrugated metal featuring blue ape or monster face with open mouth and patterned background.">
+                        <div class="art-label">East Williamsburg</div>
+                    </div>
+                    <div class="art-photo">
+                        <img src="./images/hunterspoint.jpeg"
+                            alt="Mosaic tile mural of abstract landscape with flowing shapes, sun, and wind elements in blues and oranges.">
+                        <div class="art-label">Hunters Point Avenue Station</div>
+                    </div>
+                    <div class="art-photo">
+                        <img src="./images/greenwhich_village.jpg"
+                            alt="Large building mural with colorful figures on burgundy background; diverse characters in blues, yellows, and earth tones.">
+                        <div class="art-label">Greenwich Village</div>
+                    </div>
+                    <div class="art-photo">
+                        <img src="./images/financial_district.jpg"
+                            alt="Black and white portrait mural of woman's face on building facade between office towers.">
+                        <div class="art-label">Financial District</div>
+                    </div>
+                    <div class="art-photo">
+                        <img src="./images/sunset_park.jpg"
+                            alt="Colorful graffiti art on metal security gate featuring stylized face with geometric crown and vibrant red, yellow, and blue colors.">
+                        <div class="art-label">Sunset Park</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pro tips section -->
         <section class="tips-section">
             <div class="section-container">
                 <h2>Pro Tips for Experiencing NYC Art Like a Local</h2>
@@ -113,42 +735,91 @@
                 <div class="tips-grid">
                     <div class="tip-card">
                         <h3>Free Hours</h3>
-                        <p>[TETX]</p>
+                        <p>Many museums offer pay-what-you-wish hours. Check their websites for specific times and don't
+                            miss these opportunities to explore.</p>
                     </div>
 
                     <div class="tip-card">
                         <h3>Off-Peak Visits</h3>
-                        <p>[TETX]</p>
+                        <p>Visit weekday mornings or late afternoons to avoid crowds. You'll have a much more intimate
+                            experience with the art.</p>
                     </div>
 
                     <div class="tip-card">
                         <h3>Gallery Walks</h3>
-                        <p>[TETX]</p>
+                        <p>Explore Chelsea or the Lower East Side on a Saturday afternoon. Many galleries have opening
+                            receptions with free wine and good company.</p>
                     </div>
 
                     <div class="tip-card">
                         <h3>Street Art Tours</h3>
-                        <p>[TETX]</p>
+                        <p>Join a guided street art tour in Williamsburg or Astoria to discover incredible murals and
+                            meet local artists.</p>
                     </div>
 
                     <div class="tip-card">
                         <h3>Public Spaces</h3>
-                        <p>[TETX]</p>
+                        <p>Don't overlook free public art. The High Line, NYCBA sculptures, and street installations are
+                            awesome and available to all.</p>
                     </div>
 
                     <div class="tip-card">
                         <h3>Follow the Locals</h3>
-                        <p>[TETX]</p>
+                        <p>Check local art Instagram accounts and blogs for hidden gems. New York's best art experiences
+                            are often found through community recommendations.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer id="footer">
         <p>&copy; 2025 Like A New Yorker</p>
         <p>Curated by Chloe Dahan, Kathy Baik, Rachel S. Khmelnitsky, and Sabrina Guzman</p>
     </footer>
+
+    <script>
+        // Function to change carousel image when user clicks thumbnail
+        function changeImage(thumbnailElement, cardIndex) {
+            // Get the main image in the same card
+            const card = thumbnailElement.closest('.art-card');
+            const mainImage = card.querySelector('.carousel-image');
+            const carousel = card.querySelector('.image-carousel');
+            const thumbnails = card.querySelectorAll('.thumbnail');
+
+            // Update main image src to match clicked thumbnail
+            mainImage.src = thumbnailElement.src;
+            mainImage.alt = thumbnailElement.alt;
+
+            // Remove active class from all thumbnails, add to clicked one
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            thumbnailElement.classList.add('active');
+
+            // Collapse carousel when thumbnail is clicked
+            carousel.classList.remove('expanded');
+        }
+
+        // Function to expand carousel when main image is clicked
+        function toggleCarouselSize(carouselElement) {
+            carouselElement.classList.toggle('expanded');
+        }
+
+        // Function to change the favorite museum main image when thumbnail is clicked
+        function changeMuseumImage(thumbnailElement) {
+            // Get main image element
+            const mainImage = document.getElementById('museumMainImage');
+            const allThumbs = document.querySelectorAll('.museum-thumb');
+
+            // Update main image to match clicked thumbnail
+            mainImage.src = thumbnailElement.src;
+            mainImage.alt = thumbnailElement.alt;
+
+            // Update active state on thumbnails
+            allThumbs.forEach(thumb => thumb.classList.remove('active'));
+            thumbnailElement.classList.add('active');
+        }
+    </script>
 </body>
 
 </html>
