@@ -1,39 +1,48 @@
 :root {
     --vanilla: #FFFEF2;
-    --raspberry: #a7162c;
+    --raspberry: #D14C18;
     --sunbeam: #eeb570;
     --sunshine: #f4d68c;
-     --blueberry: #5493D6;
+    --verdant: #dae080;
+    --blueberry: #7C9DD2;
     --moss: #4b4e01;
+    --lilac: #efaee4;
+    --peppermint: #f8e8fa;
     --dusk: #250f12;
 }
 
-
 body {
-    background-color: #FFFEF2;
-    color: #250f12;
+    background-color: var(--vanilla);
+    color: var(--dusk);
     margin: 0;
     padding: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+/* Skip link for keyboard navigation */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--dusk);
+    color: var(--vanilla);
+    padding: 8px;
+    z-index: 1000;
+    text-decoration: none;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+    top: 0;
 }
 
 /* Header */
 #header {
     width: 100%;
-    background-color: #FFFEF2;
+    background-color: var(--vanilla);
     position: sticky;
     top: 0;
     z-index: 100;
-}
-
-#subhdr {
-  width: 100%;
-  text-align: center;
-  font-family: "Pinyon Script", cursive;
-  border-radius: 4px;
-  background:  var(--sunbeam);
-  color: rgb(7, 7, 7);
-  padding: 15px;
-  box-sizing: border-box;
 }
 
 #logo-container {
@@ -47,7 +56,7 @@ body {
 
 #logo a {
     text-decoration: none;
-    color: #250f12;
+    color: var(--dusk);
     display: block;
     transition: opacity 0.3s ease;
 }
@@ -63,8 +72,8 @@ body {
     align-items: center;
     padding: 20px 0;
     width: 100%;
-    border-top: 2px solid #250f12;
-    border-bottom: 2px solid #250f12;
+    border-top: 2px solid var(--dusk);
+    border-bottom: 2px solid var(--dusk);
     box-sizing: border-box;
 }
 
@@ -91,7 +100,7 @@ nav a {
     font-size: 16px;
     font-weight: 400;
     text-decoration: none;
-    color: #250f12;
+    color: var(--dusk);
     padding: 8px 16px;
     border-radius: 6px;
     display: inline-block;
@@ -99,59 +108,330 @@ nav a {
 }
 
 nav a.blog:hover {
-    background-color: #eeb570;
-    color: #250f12;
+    background-color: var(--sunbeam);
+    color: var(--dusk);
 }
 
 nav a.meetnyc:hover {
-    background-color: #7C9DD2;
-    color: #250f12;
+    background-color: var(--blueberry);
+    color: var(--dusk);
 }
 
 nav a.art:hover {
-    background-color: #dae080;
-    color: #250f12;
+    background-color: var(--verdant);
+    color: var(--dusk);
 }
 
 nav a.food:hover {
-    background-color: #D14C18;
-    color: #250f12;
+    background-color: var(--raspberry);
+    color: var(--dusk);
 }
 
 nav a.life:hover {
-    background-color: #f8e8fa;
-    color: #250f12;
+    background-color: var(--peppermint);
+    color: var(--dusk);
 }
-/* Active page highlighting */
+
 nav a.active-page {
-    background-color:#eeb570;
-    color: #250F12;
+    background-color: var(--sunbeam);
+    color: var(--dusk);
+    border: 2px solid var(--dusk);
 }
 
+/* Banner */
+.banner {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /* allow absolutely-positioned img and overlay */
+    overflow: hidden;
+}
 
-h1 {
+.banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* subtle dark overlay to keep white text readable */
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--dusk);
+    pointer-events: none;
+}
+
+.banner-text {
+    position: relative;
+    z-index: 1;
+}
+
+.banner-text {
+    text-align: center;
+    color: var(--dusk);
+}
+
+.banner-text h1 {
     font-family: "Pinyon Script", cursive;
-    font-size: 64px;
+    font-size: 100px;
     font-weight: 400;
-    color: #250F12;
+    color: var(--dusk);
     margin: 0 0 20px 0;
 }
 
-h2, h3, h4 {
-    font-family: "Libre Baskerville", serif;
-    font-size: 32px;
-    font-weight: 400;
-    color: #250F12;
-    margin-top: 0;
+.banner-text p {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--dusk);
+    line-height: 1.8;
+    max-width: 800px;
 }
 
-p {
+/* Main content sections */
+.content-section {
+    background-color: var(--dusk);
+    color: var(--vanilla);
+    padding: 60px 0;
+    /* vertical padding stays on full-width section */
+    text-align: left;
+    /* left-align header and body as requested */
+}
+
+.content-container {
+    max-width: 1100px;
+    /* constrain inner content */
+    padding: 0 40px;
+    /* horizontal padding for inner content */
+    margin: 0 auto;
+    /* center inner content */
+}
+
+.content-section h2 {
+    font-family: "Libre Baskerville", serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--vanilla);
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.content-section p {
     font-family: "Raleway", sans-serif;
     font-size: 16px;
     font-weight: 300;
-    color: #250F12;
+    color: var(--vanilla);
     line-height: 1.8;
     max-width: 900px;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns on desktop */
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.activity-card {
+    background-color: rgba(255, 254, 242, 0.08);
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid var(--dusk);
+    transition: transform 0.18s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-3px);
+    /* slight lift for affordance, no color change */
+}
+
+.activity-card h3 {
+    font-family: "Libre Baskerville", serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--dusk);
+    /* headings inside cards use dusk */
+    margin-top: 0;
+}
+
+.activity-card p {
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--dusk);
+    /* body text inside cards uses dusk */
+    line-height: 1.8;
+    max-width: none;
+}
+
+.activity-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 18px;
+    background: transparent;
+    /* outline-only buttons */
+    color: var(--dusk);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 2px solid var(--dusk);
+    transition: box-shadow 0.12s ease, transform 0.12s ease;
+}
+
+.activity-card a:focus,
+.activity-card a:focus-visible {
+    background-color: var(--vanilla); /* invert to vanilla on focus */
+    color: var(--dusk);
+    outline: 3px solid var(--dusk);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 6px rgba(37, 15, 18, 0.15);
+}
+
+.activity-card a:hover {
+    background-color: var(--vanilla);
+    /* invert to vanilla background */
+    color: var(--dusk);
+    /* dusk text on hover */
+    transform: translateY(-1px);
+}
+
+/* Card-specific backgrounds that match the nav hover colors. */
+.card-meetnyc {
+    background-color: var(--blueberry);
+    color: var(--dusk);
+    border: 4px solid var(--dusk);
+}
+
+.card-art {
+    background-color: var(--verdant);
+    color: var(--dusk);
+    border: 4px solid var(--dusk);
+}
+
+.card-food {
+    background-color: var(--raspberry);
+    color: var(--dusk);
+    border: 4px solid var(--dusk);
+}
+
+.card-life {
+    background-color: var(--peppermint);
+    color: var(--dusk);
+    border: 4px solid var(--dusk);
+}
+
+/* Ensure readable text and focus styles for accessibility */
+.activity-card h3,
+.activity-card p {
+    margin: 0 0 12px 0;
+}
+
+.activity-card:focus-within {
+    outline: 3px solid #fff3;
+    /* visible focus ring when a child receives focus */
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Author photo styles */
+.author-photo-wrap {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid var(--dusk);
+}
+
+.author-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Screen-reader only helper */
+.sr-only {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+    border: 0;
+    padding: 0;
+    margin: -1px;
+}
+
+/* Authors section */
+.authors-section {
+    background-color: var(--raspberry);
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.authors-section h2 {
+    font-family: "Libre Baskerville", serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--vanilla);
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.authors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.author-card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fffaf5;
+    border: 3px solid var(--dusk);
+}
+
+.author-card h3 {
+    font-family: "Libre Baskerville", serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--dusk);
+    margin: 15px 0 10px 0;
+}
+
+.author-card p {
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: #666;
+    line-height: 1.6;
+    max-width: none;
+}
+
+.author-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: var(--sunbeam);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--dusk);
 }
 
 /* slide show begins */
@@ -164,27 +444,29 @@ p {
 } */
 
 .imagecontainer {
-  flex-direction: row;  /* slideshow left, text right */
+    flex-direction: row;
+    /* slideshow left, text right */
 }
 
 .imagecontainer-wrapper {
-  display: flex;
-  flex-direction: row;   /* image left, text right */
-  align-items: flex-start;
-  gap: 20px;
+    display: flex;
+    flex-direction: row;
+    /* image left, text right */
+    align-items: flex-start;
+    gap: 20px;
 }
 
 /* Text inside fixed-text */
 .fixed-text p {
-  font-size: 24px;
-  font-weight: bold;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 /* Slideshow layout */
 .slideshow {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 /* Slideshow arrows */
@@ -196,102 +478,61 @@ p {
   border-radius: 8px;
   font-size: 18px;
   font-weight: bold;
+  transition: outline 0.2s ease;
 }
 
-/* Image in slideshow */
+.slideshow button:focus,
+.slideshow button:focus-visible {
+  outline: 3px solid var(--dusk);
+  outline-offset: 2px;
+}/* Image in slideshow */
 .slide-img {
-  width: 400px;       /* 30% of the container width */
-  max-width: 400px; /* optional max size */
-  height: auto;     /* maintain aspect ratio */
-  border-radius: 50%; 
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    width: 30%;
+    /* 30% of the container width */
+    max-width: 300px;
+    /* optional max size */
+    height: auto;
+    /* maintain aspect ratio */
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Oval text boxes */
-.p2 {
- flex: 1;
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-  color: rgb(9, 9, 9);
-  text-indent: 20px;
-  border: 4px solid rgb(224, 195, 175);
-  border-radius: 40px;
-  padding: 60px;
-  background-color: #fffaf5;
-  font-family: opensans, sans-serif;
-  position: relative;
-  max-width: 1000px;
-  line-height: 1.6;
-}
-
-.p3 {
-   flex: 1;
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-  color: rgb(9, 9, 9);
-  text-indent: 20px;
-  border: 4px solid rgb(224, 195, 175);
-  border-radius: 40px;
-  padding: 60px;
-  background-color: #fffaf5;
-  font-family: opensans, sans-serif;
-  position: relative;
-  max-width: 1000px;
-  line-height: 1.6;
-}
-
-.p4 {
-    flex: 1;
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-  color: rgb(9, 9, 9);
-  text-indent: 20px;
-  border: 4px solid rgb(224, 195, 175);
-  border-radius: 40px;
-  padding: 60px;
-  background-color: #fffaf5;
-  font-family: opensans, sans-serif;
-  position: relative;
-  max-width: 1000px;
-  line-height: 1.6;
-}
-
+/* Consolidated profile text styles used for the text blocks beside slideshows */
+.p2,
+.p3,
+.p4,
 .p5 {
     flex: 1;
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-  color: rgb(9, 9, 9);
-  text-indent: 20px;
-  border: 4px solid rgb(224, 195, 175);
-  border-radius: 40px;
-  padding: 60px;
-  background-color: #fffaf5;
-  font-family: opensans, sans-serif;
-  position: relative;
-  max-width: 1000px;
-  line-height: 1.6;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(9, 9, 9);
+    text-indent: 20px;
+    border: 4px solid var(--blueberry);
+    /* use the theme color variable */
+    border-radius: 40px;
+    padding: 30px;
+    background-color: #fffaf5;
+    font-family: opensans, sans-serif;
+    position: relative;
+    max-width: 1000px;
+    line-height: 1.6;
 }
+
 /*end of slide show style */
 
 /* Footer */
 #footer {
     width: 100%;
-    background-color: #250f12;
-    color: #fef2ff;
+    background-color: var(--dusk);
+    color: var(--vanilla);
     padding: 30px 40px;
-    border-top: 2px solid #250f12;
-    margin-top: 0;
-    margin-bottom: 0;
-    color:  #FFFEF2;
+    border-top: 2px solid var(--dusk);
 }
 
 #footer p {
-    font-family: "Raleway", sans-serif;
     font-size: 14px;
     font-weight: 300;
     margin: 5px 0;
@@ -320,6 +561,42 @@ p {
         font-size: 14px;
         padding: 6px 12px;
     }
+
+    .banner {
+        height: 250px;
+    }
+
+    .banner-text h1 {
+        font-size: 40px;
+    }
+
+    .banner-text p {
+        font-size: 16px;
+    }
+
+    .content-section h2,
+    .authors-section h2,
+    .blog-section h2 {
+        font-size: 28px;
+    }
+
+    .activities-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on tablets */
+    }
+
+    /* revert content alignment to center on smaller screens for readability */
+    .content-section {
+        text-align: center;
+    }
+
+    .authors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #footer {
+        padding: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -344,102 +621,35 @@ p {
         font-size: 12px;
         padding: 5px 10px;
     }
-}    height: auto;
-    padding: 0;
+
+    .banner {
+        height: 200px;
+    }
+
+    .banner-text h1 {
+        font-size: 28px;
+    }
+
+    .banner-text p {
+        font-size: 14px;
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr;
+        /* 1 column on small screens */
+    }
+
+    .authors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-section,
+    .authors-section,
+    .blog-section {
+        padding: 40px 20px;
+    }
+
+    #footer p {
+        font-size: 12px;
+    }
 }
-
-nav a {
-    font-family: "Libre Baskerville", serif;
-    font-size: 16px;
-    font-weight: 400;
-    text-decoration: none;
-    color: #250f12;
-    padding: 8px 16px;
-    border-radius: 6px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-nav a.blog:hover {
-    background-color: #eeb570;
-    color: #250f12;
-}
-
-nav a.meetnyc:hover {
-    background-color: #7C9DD2;
-    color: #250f12;
-}
-
-nav a.art:hover {
-    background-color: #dae080;
-    color: #250f12;
-}
-
-nav a.food:hover {
-    background-color: #D14C18;
-    color: #250f12;
-}
-
-nav a.life:hover {
-    background-color: #f8e8fa;
-    color: #250f12;
-}
-
-
-
-/* Body Styles*/ 
-h1 {
-    font-family: "Pinyon Script", cursive;
-    font-size: 64px;
-    font-weight: 400;
-    color: #250F12;
-    margin: 0 0 20px 0;
-}
-
-h2, h3, h4 {
-    font-family: "Libre Baskerville", serif;
-    font-size: 32px;
-    font-weight: 400;
-    color: #250F12;
-    margin-top: 0;
-}
-
-p {
-    font-family: "Raleway", sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: #250F12;
-    line-height: 1.8;
-    max-width: 900px;
-}
-
-/* Footer */
-#footer {
-    width: 100%;
-    background-color: var(--dusk);
-    font-color: var(--vanilla);
-    padding: 30px 40px;
-    border-top: 2px solid #250f12;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-#footer p {
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    margin: 5px 0;
-}
-
-#footer p:first-child {
-    font-weight: 500;
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #header-container {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 0;
-    }}
