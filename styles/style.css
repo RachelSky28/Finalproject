@@ -483,12 +483,8 @@ nav a.active-page {
 
 /* Image in slideshow */
 .slide-img {
-    width: 400px;
-    /the container width */
-    max-width: 400px;
-    /* max size */
-    height: auto;
-    /* maintain aspect ratio */
+    width: 300px;      /* same width */
+    height: 300px;     /* same height → perfect circle */
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
