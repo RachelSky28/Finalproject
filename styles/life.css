@@ -1,75 +1,14 @@
 /* Life page style */
+
 :root {
     --vanilla: #FFFEF2;
     --raspberry: #a7162c;
     --peppermint: #f8e8fa;
-    --sunbeam: #eeb570;
+  --sunshine: #f4d68c;
     --navy: #052A37;
     --dusk: #250f12;
 }
 
-Body {
-    background-size: cover;
-    background-color: #FFFEF2;
-    color: #250F12;
-    position:relative;
-    padding: 0px;
-    margin: 0px;
-    justify-content: space-evenly;
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight:300;
-    font-style:large; 
-    transition: background-color 0.3s, color 0.3s; 
-}
-h1{
-    font-family:"Pinyon Script", cursive;
-    font-weight: 100;
-    font-size: 59px;
-    font-style:oblique;
-}
-h1 {
-    font-family: "Pinyon Script", cursive;
-    font-size: 64px;
-    font-weight: 400;
-    margin: 0 0 20px 0;
-}
-
-h2, h3, h4 {
-    font-family: "Libre Baskerville", serif;
-    font-size: 32px;
-    font-weight: 400;
-    margin-top: 0;
-}
-
-p {
-    font-family: "Raleway", sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.8;
-    max-width: 900px;
-}
-
-/* logo style */
-#subhdr {
-  width: 100%;
-  text-align: center;
-  font-family: "Pinyon Script", cursive;
-  border-radius: 4px;
-  background:  var(--sunbeam);
-  color: rgb(7, 7, 7);
-  padding: 15px;
-  box-sizing: border-box;
-}
-
-/* Header */
-#header {
-    width: 100%;
-    background-color: #FFFEF2;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
 
 #logo-container {
     display: flex;
@@ -88,19 +27,40 @@ p {
 }
 
 #logo img {
-    height: 48px;
+    height: 32px;
     width: auto;
 }
-
+Body {
+    background-size: cover;
+    background-color: var(--vanilla);
+    color: #250F12;
+    position:relative;
+    justify-content: space-evenly;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style:large; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+h1{
+    font-family:"Pinyon Script", cursive;
+    font-weight: 100;
+    font-size: 59px;
+    font-style:oblique;
+}
+h2{
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 #header-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
     width: 100%;
-    border-top: 2px solid #250f12;
-    border-bottom: 2px solid #250f12;
-    box-sizing: border-box;
+    border-top: 2px solid var(--dusk);
+    border-bottom: 2px solid var(--dusk);
 }
 /* Navigation */
 #nav ul {
@@ -133,50 +93,53 @@ nav a {
 }
 
 nav a.blog:hover {
-    background-color: #eeb570;
-    color: #250F12;
+    background-color: var(--sunbeam);
+    color: var(--dusk);
 }
 
 nav a.meetnyc:hover {
     background-color: #7C9DD2;
-    color: #250F12;
+    color: var(--dusk);
 }
 
 nav a.food:hover {
     background-color: #D14C18;
-    color: #250F12;
+    color: var(--dusk);
 }
 nav a.art:hover {
     background-color:#DAE080;
-    color: #250F12; 
+    color: var(--dusk); 
 }
 nav a.life:hover {
     background-color:#f8e8fa;
-    color: #250F12;
+    color: var(--dusk);
 }
 
 /* Active page highlighting */
 nav a.active-page {
-    background-color:#f8e8fa;
-    color: #250F12;
+    background-color:var(--peppermint);
+    color: var(--dusk);
+    border: 2px solid var(--dusk);
 }
 
 #homebody {
-    background-color: transparent;
-    color: #250F12;
-    padding: 20px;
+    background-color: var(--vanilla);
+    background-image: url("../images/disco.jpg");
+    background-position: center center;
+    color: var(--vanilla);
+    padding: 40px;
     width: 100%;  
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
-    text-align: left;
+    text-align: center;
 }
 #body1{
     background-color: #f8e8fa;
     background-image:  radial-gradient(#a7162c 1.8px, transparent 1.8px), radial-gradient(#a7162c 1.8px, #f8e8fa 1.8px);
     background-size: 72px 72px;
     background-position: 0 0,36px 36px;
-    color: #052A37;
+    color: var(--navy);
     padding:40px;
     width: 100%; 
     height: auto;
@@ -185,8 +148,8 @@ nav a.active-page {
     position: relative;
 }
 #body2{
-    background-color: #052A37;
-    color:#f8e8fa;
+    background-color: var(--navy);
+    color:var(--peppermint);
     padding:40px;
     width: 100%; 
     height: auto;
@@ -199,7 +162,7 @@ nav a.active-page {
     opacity: 0.8;
     background-size: 20px 20px;
     background-image:  repeating-linear-gradient(to right, #052A37,#052A37 2px, #FFFEF2 1px, #FFFEF2);
-    color: #a7162c;
+    color: var(--raspberry);
     padding:40px;
     width: 100%; 
     height: auto;
@@ -210,12 +173,12 @@ nav a.active-page {
 }
 .spoiler {
     background-color: rgba(255, 254, 242, 0.61);
-    color:#a7162c;
+    color:var(--raspberry);
     padding: 10px;
 }
 #body4{
-   background-color:#a7162c;
-    color: #f8e8fa;
+   background-color:var(--navy);
+    color:var(--sunshine);
     padding:40px;
     width: 100%; 
     height: auto;
@@ -224,30 +187,30 @@ nav a.active-page {
     position: relative; 
     float:left;
 }
-
+/* accodion style starts here*/
 .accordion {
     font-family: "Libre Baskerville", serif;
     font-weight: 400;
     font-style: oblique;
     font-size: x-large;
     background-color: #FFFEF2;
-    color: #250F12;
+    color: var(--dusk);
     cursor: pointer;
     padding: 20px;
-    width: 50%;
+    width: 60%;
     text-align: center;
     border:solid;
     border-width:thin;
-    border-color: #250F12;
+    border-color: var(--dusk);
     transition: 0.4s ease;
 }
 .active, .accordion:hover {
-  background-color: #F4D68D;
+  background-color: var(--sunshine);
 }
 .panel {
     font-size: x-large;
-    background-color: #FFFEF2; 
-    color: #250F12;
+    background-color: var(--vanilla); 
+    color: var(--dusk);
     padding: 0 18px;
     width: 50%;
     overflow:hidden;
@@ -255,57 +218,324 @@ nav a.active-page {
     transition: max-height 0.2s ease-out;
 }
 
-.map {
-    float: right;
-    width: 40%;
-    height: auto;
-    border:solid;
-    border-color: #250F12;
+/* card styles start here*/
+/*card text */
+.card-title {
+  font-size: 45px;
+  font-weight: bold;
+  color: var(--vanilla);
+  text-align: center;
+  margin: 20px 0 0 0;
+  z-index: 2;
 }
-.favspotscarousel {
-    margin-top: 30px;
-}
-
-.carousel-main {
-    width: 100%;
-    height: 300px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.carousel-main img {
-    width: 20%;
-    height: 20%;
-    object-fit: cover;
+/*activity label below image */
+#activityLabel {
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin: 10px 0 0 8;
+  z-index: 2;
 }
 
-.carousel-thumbnails {
+#activityLabel.visible {
+  opacity: 1;
+}
+/* colors for my sections  */
+.color-section.peppermint{
+    background-color: var(--peppermint)
+}
+.color-section.sunshine{
+    background-color: var(--sunshine);
+}
+.color-section {
+    width: 300px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 20px auto;
     display: flex;
-    gap: 10px;
-    background-color: transparent;
-    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+    color: var(--navy);
+}
+.color-section img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
 }
 
-.carousel-thumb {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    cursor: pointer;
-    border-radius: 6px;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease;
+.color-section p {
+  font-size: 18px;
 }
 
-.carousel-thumb:hover {
-    border-color: var(--verdant);
+.color-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 50px;
+  justify-content: center;
+  /* margin: 0 auto;
+  max-width: 1000px; */
+  /* padding: 20px; */
+}
+
+.card-wrapper {
+  display: block;
+  /* flex-direction: column;
+  align-items: center; */
+}
+
+.album {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.album-content {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  max-width: 1400px;
+  margin: 5% auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+/* Single images in slides (big images) */
+.album-content .slide img {
+  width: 80%;
+  /* fills most of the slide */
+  max-width: 700px;
+  /* won’t get too wide on large screens */
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  /* center the image */
+}
+
+.album-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.album-text p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/* //collage imaghes side by side   */
+.album-content .slide .collage {
+  display: flex;
+  flex-wrap: wrap;
+  /* wrap to new lines if needed */
+  gap: 10px;
+  justify-content: center;
+  /* center the collage */
+}
+
+.album-content .slide .collage img {
+  width: calc(33% - 10px);
+  /* 3 images per row */
+  max-width: 250px;
+  /* prevent images from being too big */
+  height: auto;
+  /* keep aspect ratio */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#sport-album .collage {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  /* center the collage */
+}
+
+#sport-album .collage img {
+  width: 48%;
+  /* makes each image bigger than the default 33% */
+  max-width: 500px;
+  /* increase max size */
+  height: auto;
+  border-radius: 10px;
+}
+#parks-album .collage {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  /* center the collage */
+}
+
+#parks-album .collage img {
+  width: 48%;
+  /* makes each image bigger than the default 33% */
+  max-width: 500px;
+  /* increase max size */
+  height: auto;
+  border-radius: 10px;
+}
+#tea-album .collage {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  /* center the collage */
+}
+#tea-album .collage img {
+  width: 48%;
+  /* makes each image bigger than the default 33% */
+  max-width: 500px;
+  /* increase max size */
+  height: auto;
+  border-radius: 10px;
+}
+#movie-album .collage {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  /* center the collage */
+}
+#movie-album .collage img {
+  width: 48%;
+  /* makes each image bigger than the default 33% */
+  max-width: 500px;
+  /* increase max size */
+  height: auto;
+  border-radius: 10px;
+}
+#adult-album .collage {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  /* center the collage */
+}
+#adult-album .collage img {
+  width: 48%;
+  /* makes each image bigger than the default 33% */
+  max-width: 500px;
+  /* increase max size */
+  height: auto;
+  border-radius: 10px;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: #f0eeee;
+  cursor: pointer;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+}
+
+.slider img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  color: #333;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+/*end of code*/
+
+.image-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: left;
+  gap: 40px;
+  margin: 20px 0;
+}
+.location-info {
+  text-align: center;     /* centers all text */
+  margin-bottom: 15px;
+  color: rgb(4, 4, 4);          /* adjust if you want */
+}
+
+.location-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.address {
+  font-size: 18px;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.section-header {
+  font-size: 22px;
+  margin: 14px 0 6px;
+  font-weight: bold;
+  text-decoration: underline; 
+}
+
+.train-info,
+.review {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.cover-image{
+  width: 520px;
+  height: 530px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 footer{
-    color: black;
+    background-color: var(--dusk);
+    color: var(--vanilla);
     padding: 25px;
-    width: auto;
+    width: 100%;
     margin: 40px;
     text-align:left;
     position:static;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #header-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+    }}
