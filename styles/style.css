@@ -483,10 +483,10 @@ nav a.active-page {
 
 /* Image in slideshow */
 .slide-img {
-    width: 50%;
-    /* 30% of the container width */
-    max-width: 450px;
-    /* optional max size */
+    width: 400px;
+    /the container width */
+    max-width: 400px;
+    /* max size */
     height: auto;
     /* maintain aspect ratio */
     border-radius: 50%;
