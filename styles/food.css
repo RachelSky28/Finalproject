@@ -631,14 +631,23 @@ body {
   margin: 0;
 }
 
-footer {
-  background-color: rgb(241, 246, 179);
-  padding: 40px 20px;
-  text-align: center;
+#footer-top {
   width: 100%;
-  box-sizing: border-box;
-  margin-top: auto;
+  text-align: center;
+  background-color: rgb(241, 246, 179); /* like #myhdr */
+  color: rgb(7, 7, 7);
+  padding: 20px 15px;
+  font-weight: bold;
 }
+
+#footer-bottom {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(124, 157, 210); /* like #subhdr */
+  color: rgb(7, 7, 7);
+  padding: 15px 15px;
+}
+
 .copyright {
   margin-top: 20px;
   font-size: 14px;
@@ -646,22 +655,13 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* .footer-links {
+.footer-links {
   display: flex;
   flex-direction: row !important;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 100px;
-} */
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 50px;
-  margin-bottom: 30px;
 }
 
 .link-block {
