@@ -622,6 +622,20 @@ h2 {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); 
 }
 
+.personal {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 600%;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3); /* horizontal, vertical, blur, color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.personal:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); 
+}
+
 body {
   min-height: 100vh;
   display: flex;
