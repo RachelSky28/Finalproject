@@ -603,9 +603,8 @@ h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.insta :hover {
+.insta:hover {
   transform: scale(1.05);
-   transform: scale(1.05);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); 
 }
 
@@ -620,7 +619,6 @@ h2 {
 
 .myart:hover {
   transform: scale(1.05);
-   transform: scale(1.05);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); 
 }
 
@@ -669,13 +667,13 @@ body {
   max-width: 200px;
 }
 
-.link-block img {
+/* .link-block img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
   transition: transform 0.3s ease;
-}
+} */
 
 .link-block img:hover {
   transform: scale(1.05);
