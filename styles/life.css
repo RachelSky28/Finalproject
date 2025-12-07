@@ -8,6 +8,14 @@
     --navy: #052a37;
     --dusk: #250f12;
 }
+/* Header */
+#header {
+    width: 100%;
+    background-color: var(--vanilla);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 #logo-container {
     display: flex;
     justify-content: center;
@@ -19,13 +27,13 @@
 
 #logo a {
     text-decoration: none;
-    color: #250f12;
+    color: var(--dusk);
     display: block;
     transition: opacity 0.3s ease;
 }
 
 #logo img {
-    height: 32px;
+    height: 48px;
     width: auto;
 }
 Body {
