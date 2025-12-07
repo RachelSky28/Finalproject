@@ -200,8 +200,8 @@ p {
 
 /* Image in slideshow */
 .slide-img {
-  width: 30%;       /* 30% of the container width */
-  max-width: 300px; /* optional max size */
+  width: 400px;       /* 30% of the container width */
+  max-width: 400px; /* optional max size */
   height: auto;     /* maintain aspect ratio */
   border-radius: 50%; 
   object-fit: cover;
