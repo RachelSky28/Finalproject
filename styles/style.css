@@ -174,12 +174,8 @@ p {
   gap: 20px;
 }
 
-/* .imagecontainer-wrapper {
-  display: block;  /* example parent override */
-} */
-
-/* Left side text – stays the same */
-.fixed-text .p {
+/* Text inside fixed-text */
+.fixed-text p {
   font-size: 24px;
   font-weight: bold;
 }
@@ -203,7 +199,7 @@ p {
 }
 
 /* Image in slideshow */
-#slide-img {
+.slide-img {
   width: 400px;
   height: 400px;
   border-radius: 50%; 
@@ -211,9 +207,8 @@ p {
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
-//slide show code ends 
 
-/*START OF side by side text*/
+/* Oval text boxes */
 p,
 .p2,
 .p3,
@@ -233,6 +228,7 @@ p,
   max-width: 1000px;
   line-height: 1.6;
 }
+
 /*end of slide show style */
 
 /* Footer */
