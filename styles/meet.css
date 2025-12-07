@@ -113,6 +113,7 @@ nav a.life:hover {
 
 /* Active page highlighting */
 nav a.active-page {
+    border: 2px solid var(--dusk);
     background-color: var(--sky);
     color: var(--dusk);
 }
