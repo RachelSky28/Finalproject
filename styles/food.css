@@ -108,10 +108,13 @@ nav a.food:hover {
 }
 
 nav a.life:hover {
-    background-color: #f8e8fa;
+    background-color: #D14C18;
     color: #250f12;
 }
-
+/* Active page highlighting */
+nav a.active-page {
+    background-color:#f8e8fa;
+    color: #250F12;
 //food css starts here
 #myhdr {
   width: 100%;
