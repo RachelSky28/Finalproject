@@ -56,109 +56,86 @@ function myFunction() {
   </div>
 -->
 
-  <!--new slide show code test -->
-  <div class="imagecontainer">
-
-  <!-- LEFT SIDE: Slideshow -->
+<div class="imagecontainer-wrapper">
   <div class="slideshow">
     <button class="prev">←</button>
-
-    <img id="slide-img" src="./images/mta.jpeg" alt="Slide Image">
-
+    <img class="slide-img" src="./images/mta.jpeg" alt="Slide Image">
     <button class="next">→</button>
   </div>
-
-  <!-- RIGHT SIDE: Text that never changes -->
   <div class="fixed-text">
-   <p class="p">KATHY</p>
+    <p class="p">KATHY</p>
   </div>
+</div>
 
-   <div class="imagecontainer">
-
-  <!-- LEFT SIDE: Slideshow -->
+<div class="imagecontainer-wrapper">
   <div class="slideshow">
     <button class="prev">←</button>
-
-    <img id="slide-img" src="./images/mta.jpeg" alt="Slide Image">
-
+    <img class="slide-img" src="./images/mta.jpeg" alt="Slide Image">
     <button class="next">→</button>
   </div>
-
-  <!-- RIGHT SIDE: Text that never changes -->
   <div class="fixed-text">
     <p class="p2">CHLOE</p>
   </div>
+</div>
 
-      <div class="imagecontainer">
-
-  <!-- LEFT SIDE: Slideshow -->
+  <div class="imagecontainer-wrapper">
   <div class="slideshow">
     <button class="prev">←</button>
-
-    <img id="slide-img" src="./images/mta.jpeg" alt="Slide Image">
-
+    <img class="slide-img" src="./images/mta.jpeg" alt="Slide Image">
     <button class="next">→</button>
   </div>
-
-  <!-- RIGHT SIDE: Text that never changes -->
   <div class="fixed-text">
-    <p class="p3">SABRINA</p>
+    <p class="p3">sabrina</p>
   </div>
+</div>
 
-         <div class="imagecontainer">
-
-  <!-- LEFT SIDE: Slideshow -->
+  <div class="imagecontainer-wrapper">
   <div class="slideshow">
     <button class="prev">←</button>
-
-    <img id="slide-img" src="./images/mta.jpeg" alt="Slide Image">
-
+    <img class="slide-img" src="./images/mta.jpeg" alt="Slide Image">
     <button class="next">→</button>
   </div>
-
-  <!-- RIGHT SIDE: Text that never changes -->
   <div class="fixed-text">
-    <p class="p4">RACHEL</p>
+    <p class="p4">rachel</p>
   </div>
+</div>
 
-</div>
-</div>
-</div>
-  </div>
-  
-   <!-- code to make slide show work --!>
+<!-- Repeat for other slideshows -->
+
+
+<!-- slide show -->
 <script>
-   <!-- image path(beings from 1 to the next photos) --!>
-  const images = [
-    "./images/mta.jpeg",
-    "./images/disco.jpeg",
-    "./images/williamsburg.jpeg",
-    "./images/house.jpeg"
-  ];
- <!-- index keeps track of which image number were currently on --!>
-  let index = 0;
- <!-- this is where the picture changes --!>
-  const slideImg = document.getElementById("slide-img");
-  <!-- next button --!>
-  const nextBtn = document.querySelector(".next");
-  <!-- previous button --!>
-  const prevBtn = document.querySelector(".prev");
+document.querySelectorAll('.imagecontainer-wrapper').forEach(wrapper => {
+  const slideshow = wrapper.querySelector('.slideshow');
+  const img = slideshow.querySelector('.slide-img');
+  const prevBtn = slideshow.querySelector('.prev');
+  const nextBtn = slideshow.querySelector('.next');
 
-   <!-- changes the image source to whatver image is currently choosen --!>
-  function updateSlide() {
-    slideImg.src = images[index];
+  // Replace this with the images for this album
+  const images = [img.src]; // start with the original image
+  // You can push more image URLs for this slideshow like:
+  // images.push('./images/mta_alt1.jpeg');
+
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    img.src = images[index];
   }
- <!-- ensures the slideshow loops back to the beginning when it reaches the end --!>
-  nextBtn.addEventListener("click", () => {
-    index = (index + 1) % images.length;
-    updateSlide();
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showSlide(currentIndex);
   });
- <!-- changes the picture --!>
-  prevBtn.addEventListener("click", () => {
-    index = (index - 1 + images.length) % images.length;
-    updateSlide();
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showSlide(currentIndex);
   });
+
+  showSlide(currentIndex);
+});
 </script>
+
 
   <footer id="footer">
     <p>&copy; 2025 Like A New Yorker</p>
