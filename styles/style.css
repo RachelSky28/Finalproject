@@ -168,8 +168,15 @@ p {
 }
 
 .imagecontainer-wrapper {
-  display: block;  /* example parent override */
+  display: flex;
+  flex-direction: row;   /* image left, text right */
+  align-items: flex-start;
+  gap: 20px;
 }
+
+/* .imagecontainer-wrapper {
+  display: block;  /* example parent override */
+} */
 
 /* Left side text – stays the same */
 .fixed-text .p {
