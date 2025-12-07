@@ -58,6 +58,38 @@ p {
     border-top: 2px solid #250F12;
     border-bottom: 2px solid #250F12;
 }
+/* logo style */
+#subhdr {
+  width: 100%;
+  text-align: center;
+  font-family: "Pinyon Script", cursive;
+  border-radius: 4px;
+  background:  var(--sunbeam);
+  color: rgb(7, 7, 7);
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+#logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#logo a {
+    text-decoration: none;
+    color: #250f12;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+#logo img {
+    height: 48px;
+    width: auto;
+}
 /* Navigation */
 #nav ul {
     display: flex;
