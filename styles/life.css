@@ -49,15 +49,7 @@ p {
     line-height: 1.8;
     max-width: 900px;
 }
-#header-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-    width: 100%;
-    border-top: 2px solid #250F12;
-    border-bottom: 2px solid #250F12;
-}
+
 /* logo style */
 #subhdr {
   width: 100%;
@@ -68,6 +60,15 @@ p {
   color: rgb(7, 7, 7);
   padding: 15px;
   box-sizing: border-box;
+}
+
+/* Header */
+#header {
+    width: 100%;
+    background-color: #FFFEF2;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 #logo-container {
@@ -89,6 +90,17 @@ p {
 #logo img {
     height: 48px;
     width: auto;
+}
+
+#header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    border-top: 2px solid #250f12;
+    border-bottom: 2px solid #250f12;
+    box-sizing: border-box;
 }
 /* Navigation */
 #nav ul {
