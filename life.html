@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<header id="header">
+    <header id="header">
     <div id="logo-container">
       <div id="logo">
         <a href="index.html">
@@ -187,10 +187,10 @@
     </div>
       
 <!--<color for park-album div>-->
-    <div class="color-container">
+    <!--<div class="color-container">-->
     <div class="color-section sunshine card" data-target="park-folder">
       <p>Parks</p>
-      <img class="cover-image" src="images/parks.jpg" alt="photo taken in prospect park">
+      <img class="cover-image" src="./images/parks.jpg" alt="photo taken in prospect park">
     </div>
 <!--<park-album div>-->
         <div id="park-album" class="album">
@@ -260,9 +260,9 @@
       <button class="prev">&#10094;</button>
       <button class="next">&#10095;</button>
     </div>
-    </div>
+    <!--</div>-->
 <!--<color for tea-album div>-->
-    <div class="color-container">
+    <!--<div class="color-container">-->
     <div class="color-section sunshine card" data-target="tea-folder">
       <p>Tea</p>
       <img class="cover-image" src="./images/teasympathy.jpg" alt="uptown">
@@ -272,8 +272,8 @@
       <span class="close-btn">&times;</span>
       <div class="album-content">
         <div class="slide">
-          <div class="activity-info">
-            <h3 class="activity-title">Tea & Sympathy</h3>
+          <div class="location-info">
+            <h3 class="location-title">Tea & Sympathy</h3>
             <p class="address">
               108 Greenwich Ave<br>
               New York, NY, 10011<br>
@@ -290,8 +290,8 @@
           </div>
         </div>
         <div class="slide">
-          <div class="restaurant-info">
-            <h3 class="restaurant-title">Prince Tea House</h3>
+          <div class="location-info">
+            <h3 class="location-title">Prince Tea House</h3>
             <p class="address">
               6122 7th Ave<br>
               Brooklyn, NY 11220<br>
@@ -313,7 +313,7 @@
     </div>
     </div>      
   </div>
-  </div>
+  <!--</div>-->
 
   <!--</div>-->
 <div id=body3>
@@ -420,9 +420,8 @@
       <button class="prev">&#10094;</button>
       <button class="next">&#10095;</button>
     </div>
-</div>
+
     <!--<color for adult-album div>-->
-    <div class="color-container">
     <div class="color-section peppermint card" data-target="adult-folder">
       <p>Adult-only spots</p>
       <img class="cover-image" src="moma_ps1" alt="uptown">
@@ -449,7 +448,7 @@
             <img src="./images/wineceller.jpg" alt="Image of the back of a bar, with a mirror showing Rachel in the reflection and social scenery">
           </div>
         </div>
-     <div class="slide">
+        <div class="slide">
           <div class="location-info">
             <h3 class="location-title">Wiggle Room</h3>
             <p class="address">
@@ -492,11 +491,7 @@
 </div>
   </div>
 
-    <footer id="footer">
-        <p>&copy; 2025 Like A New Yorker</p>
-        <p>Curated by Kathy Baik, Chloe Dahan, Sabrina Guzman, and Rachel S. Khmelnitsky </p>
-      <p> Most images are from Rachel, but some are open source from openverse.org, credit given in image captions</p>
-    </footer>
+    
       <script>
   /* this is the script for the accordions */
 var acc = document.getElementsByClassName("accordion");
@@ -525,7 +520,7 @@ for (i = 0; i < acc.length; i++) {
         "Park": "park-album",
         "Tea": "tea-album",
         "Party Areas": "movie-album",
-        "Fancy Places": "adult-album"
+        "Adult-only spots": "adult-album"
       };
 
       // Opens album on card when clicked
@@ -587,5 +582,11 @@ for (i = 0; i < acc.length; i++) {
         });
       });
 </script>
+<footer id="footer">
+        <p>&copy; 2025 Like A New Yorker</p>
+        <p>Curated by Kathy Baik, Chloe Dahan, Sabrina Guzman, and Rachel S. Khmelnitsky </p>
+      <p> Most images are from Rachel, but some are open source from openverse.org, credit given in image captions</p>
+    </footer>
 </body>
 </html>
+
