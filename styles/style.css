@@ -1,16 +1,23 @@
 :root {
     --vanilla: #FFFEF2;
+    --blueberry: #7C9DD2;
+    /* Kathy Baik - Meet NYC */
+    --verdant: #dae080;
+    /* Chloe Dahan - The Art */
     --raspberry: #D14C18;
+    /* Sabrina Guzman - What's Good? */
+    --peppermint: #f8e8fa;
+    /* Rachel S. Khmelnitsky - Day & Nightlife */
+    --sunbeam: #eeb570;
+    /* Blog color */
     --sunbeam: #eeb570;
     --sunshine: #f4d68c;
-    --verdant: #dae080;
-    --blueberry: #7C9DD2;
     --moss: #4b4e01;
     --lilac: #efaee4;
-    --peppermint: #f8e8fa;
     --dusk: #250f12;
 }
 
+/* Main body styles - sets the default font, colors, and background */
 body {
     background-color: var(--vanilla);
     color: var(--dusk);
@@ -19,7 +26,7 @@ body {
     font-family: "Raleway", sans-serif;
 }
 
-/* Skip link for keyboard navigation */
+/* [GLOBAL] Skip link appears when focused - helps with keyboard navigation */
 .skip-link {
     position: absolute;
     top: -40px;
@@ -36,57 +43,69 @@ body {
     top: 0;
 }
 
-/* Header */
+/* [GLOBAL] header*/
 #header {
     width: 100%;
     background-color: var(--vanilla);
     position: sticky;
     top: 0;
     z-index: 100;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
+/* [GLOBAL] Logo container - keeps logo centered with good spacing that adapts to screen size */
 #logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 15px 20px;
     width: 100%;
+    height: auto;
+    overflow: hidden;
     box-sizing: border-box;
 }
 
 #logo a {
     text-decoration: none;
     color: var(--dusk);
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: opacity 0.3s ease;
+    width: 100%;
+    min-width: 0;
 }
 
 #logo img {
-    height: 48px;
-    width: auto;
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    display: block;
 }
 
 #header-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px;
     width: 100%;
     border-top: 2px solid var(--dusk);
     border-bottom: 2px solid var(--dusk);
     box-sizing: border-box;
 }
 
-/* Navigation */
+/* [GLOBAL] Navigation */
 #nav ul {
     display: flex;
     gap: 30px;
     margin: 0;
     padding: 0;
     list-style: none;
-    width: auto;
-    height: auto;
-    justify-content: center
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #nav li {
@@ -107,38 +126,46 @@ nav a {
     transition: background-color 0.3s ease;
 }
 
+/* Hover colors by member */
+
+/* The Blog */
 nav a.blog:hover {
     background-color: var(--sunbeam);
     color: var(--dusk);
 }
 
+/* Kathy - Meet NYC */
 nav a.meetnyc:hover {
     background-color: var(--blueberry);
     color: var(--dusk);
 }
 
+/* Chloe - The Art */
 nav a.art:hover {
     background-color: var(--verdant);
     color: var(--dusk);
 }
 
+/* Sabrina - What's Good? */
 nav a.food:hover {
     background-color: var(--raspberry);
     color: var(--dusk);
 }
 
+/* Rachel - Day & Nightlife */
 nav a.life:hover {
     background-color: var(--peppermint);
     color: var(--dusk);
 }
 
+/* Active page - Switch to your page color or hover nav color */
 nav a.active-page {
     background-color: var(--sunbeam);
     color: var(--dusk);
     border: 2px solid var(--dusk);
 }
 
-/* Banner */
+/* [GLOBAL] Banner */
 .banner {
     width: 100%;
     min-height: 400px;
@@ -148,8 +175,8 @@ nav a.active-page {
     margin: 0;
     padding: 0;
     position: relative;
-    /* allow absolutely-positioned img and overlay */
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .banner-img {
@@ -162,28 +189,19 @@ nav a.active-page {
     display: block;
 }
 
-/* subtle dark overlay to keep white text readable */
-.banner::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: var(--dusk);
-    pointer-events: none;
-}
-
 .banner-text {
     position: relative;
     z-index: 1;
-}
-
-.banner-text {
     text-align: center;
     color: var(--dusk);
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .banner-text h1 {
     font-family: "Pinyon Script", cursive;
-    font-size: 100px;
+    font-size: clamp(40px, 10vw, 100px);
     font-weight: 400;
     color: var(--dusk);
     margin: 0 0 20px 0;
@@ -191,39 +209,39 @@ nav a.active-page {
 
 .banner-text p {
     font-family: "Raleway", sans-serif;
-    font-size: 18px;
+    font-size: clamp(14px, 4vw, 18px);
     font-weight: 300;
     color: var(--dusk);
     line-height: 1.8;
     max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Main content sections */
 .content-section {
     background-color: var(--dusk);
     color: var(--vanilla);
-    padding: 60px 0;
-    /* vertical padding stays on full-width section */
+    padding: 60px 20px;
     text-align: left;
-    /* left-align header and body as requested */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .content-container {
     max-width: 1100px;
-    /* constrain inner content */
-    padding: 0 40px;
-    /* horizontal padding for inner content */
     margin: 0 auto;
-    /* center inner content */
+    padding: 0 15px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .content-section h2 {
     font-family: "Libre Baskerville", serif;
-    font-size: 40px;
     font-weight: 400;
     color: var(--vanilla);
     margin-top: 0;
     margin-bottom: 30px;
+    font-size: 32px;
 }
 
 .content-section p {
@@ -237,32 +255,30 @@ nav a.active-page {
 
 .activities-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* 4 columns on desktop */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     margin: 40px 0;
 }
 
 .activity-card {
-    background-color: rgba(255, 254, 242, 0.08);
     padding: 30px;
     border-radius: 10px;
     border: 2px solid var(--dusk);
     transition: transform 0.18s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .activity-card:hover {
     transform: translateY(-3px);
-    /* slight lift for affordance, no color change */
 }
 
 .activity-card h3 {
     font-family: "Libre Baskerville", serif;
-    font-size: 24px;
     font-weight: 400;
     color: var(--dusk);
-    /* headings inside cards use dusk */
     margin-top: 0;
+    margin-bottom: 12px;
 }
 
 .activity-card p {
@@ -270,9 +286,9 @@ nav a.active-page {
     font-size: 14px;
     font-weight: 300;
     color: var(--dusk);
-    /* body text inside cards uses dusk */
     line-height: 1.8;
     max-width: none;
+    flex-grow: 1;
 }
 
 .activity-card a {
@@ -280,7 +296,6 @@ nav a.active-page {
     margin-top: 15px;
     padding: 8px 18px;
     background: transparent;
-    /* outline-only buttons */
     color: var(--dusk);
     text-decoration: none;
     border-radius: 6px;
@@ -291,7 +306,7 @@ nav a.active-page {
 
 .activity-card a:focus,
 .activity-card a:focus-visible {
-    background-color: var(--vanilla); /* invert to vanilla on focus */
+    background-color: var(--vanilla);
     color: var(--dusk);
     outline: 3px solid var(--dusk);
     outline-offset: 2px;
@@ -300,13 +315,11 @@ nav a.active-page {
 
 .activity-card a:hover {
     background-color: var(--vanilla);
-    /* invert to vanilla background */
     color: var(--dusk);
-    /* dusk text on hover */
     transform: translateY(-1px);
 }
 
-/* Card-specific backgrounds that match the nav hover colors. */
+/* Card-specific backgrounds */
 .card-meetnyc {
     background-color: var(--blueberry);
     color: var(--dusk);
@@ -331,19 +344,65 @@ nav a.active-page {
     border: 4px solid var(--dusk);
 }
 
-/* Ensure readable text and focus styles for accessibility */
-.activity-card h3,
-.activity-card p {
-    margin: 0 0 12px 0;
-}
-
 .activity-card:focus-within {
-    outline: 3px solid #fff3;
-    /* visible focus ring when a child receives focus */
+    outline: 3px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.08);
 }
 
-/* Author photo styles */
+/* Authors section */
+.authors-section {
+    background-color: var(--raspberry);
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.authors-section h2 {
+    font-family: "Libre Baskerville", serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--vanilla);
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.authors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1100px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.author-card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fffaf5;
+    border: 3px solid var(--dusk);
+}
+
+.author-card h3 {
+    font-family: "Libre Baskerville", serif;
+    font-size: clamp(16px, 4vw, 20px);
+    font-weight: 400;
+    color: var(--dusk);
+    margin: 15px 0 10px 0;
+}
+
+.author-card p {
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: #666;
+    line-height: 1.6;
+    max-width: none;
+}
+
 .author-photo-wrap {
     width: 150px;
     height: 150px;
@@ -360,7 +419,6 @@ nav a.active-page {
     display: block;
 }
 
-/* Screen-reader only helper */
 .sr-only {
     position: absolute !important;
     height: 1px;
@@ -373,145 +431,122 @@ nav a.active-page {
     margin: -1px;
 }
 
-/* Authors section */
-.authors-section {
-    background-color: var(--raspberry);
-    padding: 60px 40px;
-    text-align: center;
-}
 
-.authors-section h2 {
-    font-family: "Libre Baskerville", serif;
-    font-size: 40px;
-    font-weight: 400;
-    color: var(--vanilla);
-    margin-top: 0;
-    margin-bottom: 40px;
-}
-
-.authors-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
-}
-
-.author-card {
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #fffaf5;
-    border: 3px solid var(--dusk);
-}
-
-.author-card h3 {
-    font-family: "Libre Baskerville", serif;
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--dusk);
-    margin: 15px 0 10px 0;
-}
-
-.author-card p {
-    font-family: "Raleway", sans-serif;
-    font-size: 13px;
-    font-weight: 300;
-    color: #666;
-    line-height: 1.6;
-    max-width: none;
-}
-
-.author-icon {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    border-radius: 50%;
-    background-color: var(--sunbeam);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
-    font-weight: bold;
-    color: var(--dusk);
-}
-
-/* slide show begins */
+/* Slideshow section */
 #subhdr {
-  font-family: "Libre Baskerville", serif;
-    font-size: 40px;
+    background-color: var(--moss);
+    color: var(--vanilla);
+    padding: 40px 20px;
+    font-family: "Libre Baskerville", serif;
+    font-size: clamp(24px, 6vw, 40px);
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#subhdr h2 {
+    font-family: "Libre Baskerville", serif;
     font-weight: 400;
     color: var(--vanilla);
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    font-size: 32px;
 }
 
-/* Container holds text + slideshow side-by-side */
-.imagecontainer {
-    flex-direction: row;
-    /* slideshow left, text right */
-}
-
-/* Stack slideshow ABOVE text, centered */
 .imagecontainer-wrapper {
     display: flex;
-    flex-direction: column;   /* <-- this stacks vertically */
-    align-items: center;      /* <-- centers everything */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    gap: 20px;
+    gap: 30px;
+    padding: 60px 20px;
+    background-color: var(--moss);
+    color: var(--vanilla);
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Text inside fixed-text */
+.fixed-text {
+    padding: 20px;
+}
+
 .fixed-text p {
-    font-size: 24px;
-    font-weight: bold;
+    margin: 0 0 15px 0;
+    line-height: 1.6;
 }
 
-/* Center the slideshow + arrows */
+.fixed-text p.p2 {
+    font-size: clamp(18px, 4vw, 24px);
+    font-weight: bold;
+    font-family: "Libre Baskerville", serif;
+}
+
+.fixed-text p.caption-text {
+    font-size: clamp(14px, 3vw, 16px);
+    font-weight: 300;
+    max-width: 600px;
+}
+
+/* Slideshow arrows */
 .slideshow {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    width: 100%;
 }
 
-/* Slideshow arrows */
 .slideshow button {
-  background-color: #f7a0cb;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: bold;
-  transition: outline 0.2s ease;
+    background-color: #f7a0cb;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: outline 0.2s ease, background-color 0.2s ease;
+}
+
+.slideshow button:hover {
+    background-color: #f08ab8;
 }
 
 .slideshow button:focus,
 .slideshow button:focus-visible {
-  outline: 3px solid var(--dusk);
-  outline-offset: 2px;
+    outline: 3px solid var(--vanilla);
+    outline-offset: 2px;
+    background-color: #f08ab8;
 }
 
 /* Image in slideshow */
 .slide-img {
-    width: 450px;      /* same width */
-    height: 450px;     /* same height → perfect circle */
+    width: clamp(250px, 80vw, 450px);
+    height: clamp(250px, 80vw, 450px);
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-/*end of slide show style */
 
-/* Footer */
+/* [GLOBAL] footer*/
 #footer {
     width: 100%;
     background-color: var(--dusk);
     color: var(--vanilla);
-    padding: 30px 40px;
+    padding: 20px 0;
     border-top: 2px solid var(--dusk);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#footer {
+    text-align: center;
 }
 
 #footer p {
-    font-size: 14px;
+    font-size: clamp(12px, 2vw, 14px);
     font-weight: 300;
     margin: 5px 0;
 }
@@ -520,79 +555,45 @@ nav a.active-page {
     font-weight: 500;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    #header-container {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 0;
-    }
-
-    #nav ul {
-        flex-direction: row;
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav a {
-        font-size: 14px;
-        padding: 6px 12px;
-    }
-
-    .banner {
-        height: 250px;
-    }
-
-    .banner-text h1 {
-        font-size: 40px;
-    }
-
-    .banner-text p {
-        font-size: 16px;
-    }
-
-    .content-section h2,
-    .authors-section h2,
-    .blog-section h2 {
-        font-size: 28px;
-    }
-
-    .activities-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 columns on tablets */
-    }
-
-    /* revert content alignment to center on smaller screens for readability */
-    .content-section {
-        text-align: center;
-    }
-
-    .authors-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
+@media (min-width: 1024px) {
     #footer {
-        padding: 20px;
+        text-align: left;
+        padding: 20px 40px;
     }
 }
 
-@media (max-width: 480px) {
-    #logo-container {
-        padding: 12px;
+/* [GLOBAL] Responsive Design */
+
+/* Mobile (under 768px) */
+@media (max-width: 767px) {
+    .banner {
+        min-height: 250px;
     }
 
-    #logo img {
-        height: 50px;
+    .banner-text {
+        padding: 40px 20px;
+    }
+
+    .content-section {
+        padding: 40px 15px;
+    }
+
+    .authors-section {
+        padding: 40px 15px;
+    }
+
+    .imagecontainer-wrapper {
+        padding: 40px 15px;
+        gap: 20px;
     }
 
     #header-container {
-        padding: 12px 0;
-        gap: 12px;
+        padding: 12px 15px;
     }
 
     #nav ul {
-        gap: 8px;
+        gap: 10px;
+        flex-wrap: wrap;
     }
 
     nav a {
@@ -600,34 +601,91 @@ nav a.active-page {
         padding: 5px 10px;
     }
 
-    .banner {
-        height: 200px;
-    }
-
-    .banner-text h1 {
-        font-size: 28px;
-    }
-
-    .banner-text p {
-        font-size: 14px;
-    }
-
     .activities-grid {
         grid-template-columns: 1fr;
-        /* 1 column on small screens */
+        gap: 20px;
+    }
+
+    .activity-card {
+        padding: 20px;
+    }
+
+    #logo img {
+        height: 40px;
     }
 
     .authors-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    .content-section,
-    .authors-section,
-    .blog-section {
-        padding: 40px 20px;
+    .author-photo-wrap {
+        width: 120px;
+        height: 120px;
     }
 
-    #footer p {
-        font-size: 12px;
+    .author-card {
+        padding: 15px;
+    }
+
+    .slideshow {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .slideshow button {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    .slide-img {
+        width: clamp(200px, 90vw, 350px);
+        height: clamp(200px, 90vw, 350px);
+    }
+
+    #footer {
+        padding: 20px;
+    }
+}
+
+/* Tablets (768px and up) */
+@media (min-width: 768px) {
+    .content-section {
+        padding: 60px 40px;
+    }
+
+    .authors-section {
+        padding: 60px 40px;
+    }
+
+    .imagecontainer-wrapper {
+        padding: 60px 40px;
+    }
+
+    #header-container {
+        padding: 20px 40px;
+    }
+
+    #nav ul {
+        gap: 40px;
+    }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+    .banner {
+        min-height: 500px;
+    }
+
+    .activities-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .authors-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .content-section {
+        text-align: left;
     }
 }
