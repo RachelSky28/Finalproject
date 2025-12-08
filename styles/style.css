@@ -555,13 +555,6 @@ nav a.active-page {
     font-weight: 500;
 }
 
-@media (min-width: 1024px) {
-    #footer {
-        text-align: left;
-        padding: 20px 40px;
-    }
-}
-
 /* [GLOBAL] Responsive Design */
 
 /* Mobile (under 768px) */
@@ -687,5 +680,10 @@ nav a.active-page {
 
     .content-section {
         text-align: left;
+    }
+    
+    #footer {
+        text-align: left;
+        padding: 20px 40px;
     }
 }
