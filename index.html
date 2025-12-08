@@ -124,7 +124,7 @@
 
     <!--Blog-->
     <div id="subhdr">
-      <h2>How would you use your day off to explore NYC</h2>
+      <h2>How would you use your day off to explore NYC?</h2>
     </div>
 
     <!-- 
@@ -141,85 +141,78 @@ function myFunction() {
   </div>
 -->
  <!-- ALBUM SECTION FOR BLOG POST -->
-    <div class="imagecontainer-wrapper">
-      <div class="slideshow">
-        <button class="prev" aria-label="Previous slide for Kathy">←</button>
-        <img class="slide-img" src="./images/mta.jpeg" alt="Kathy's featured image">
-        <button class="next" aria-label="Next slide for Kathy">→</button>
-      </div>
-      <div class="fixed-text">
-        <p class="p2">KATHY</p>
-      </div>
-    </div>
+   <!-- Main wrapper that holds BOTH the slideshow and the text under it -->
+<div class="imagecontainer-wrapper">
+  <!-- Slideshow section (image + arrows) -->
+  <div class="slideshow">
+    <!-- Left arrow button (go to previous image) -->
+    <button class="prev" aria-label="Previous slide">←</button>
+    <!-- The image that will change when arrows are clicked -->
+    <img class="slide-img" src="./images/mta.jpeg" alt="Featured image">
+    <!-- Right arrow button (go to next image) -->
+    <button class="next" aria-label="Next slide">→</button>
+  </div>
 
-    <!-- <div class="imagecontainer-wrapper">
-      <div class="slideshow">
-        <button class="prev" aria-label="Previous slide for Chloe">←</button>
-        <img class="slide-img" src="./images/mta.jpeg" alt="Chloe's featured image">
-        <button class="next" aria-label="Next slide for Chloe">→</button>
-      </div>
-      <div class="fixed-text">
-        <p class="p3">CHLOE</p>
-      </div>
-    </div>
+  <!-- Text section under the image -->
+  <div class="fixed-text">
+    <!-- The title or name that stays the same -->
+    <p class="p2">KATHY</p>
+    <!-- This paragraph changes automatically when the image changes -->
+    <p class="caption-text"></p>
+  </div>
 
-    <div class="imagecontainer-wrapper">
-      <div class="slideshow">
-        <button class="prev" aria-label="Previous slide for Sabrina">←</button>
-        <img class="slide-img" src="./images/mta.jpeg" alt="Sabrina's featured image">
-        <button class="next" aria-label="Next slide for Sabrina">→</button>
-      </div>
-      <div class="fixed-text">
-        <p class="p4">sabrina</p>
-      </div>
-    </div>
+</div>
 
-    <div class="imagecontainer-wrapper">
-      <div class="slideshow">
-        <button class="prev" aria-label="Previous slide for Rachel">←</button>
-        <img class="slide-img" src="./images/mta.jpeg" alt="Rachel's featured image">
-        <button class="next" aria-label="Next slide for Rachel">→</button>
-      </div>
-      <div class="fixed-text">
-        <p class="p5">rachel</p>
-      </div>
-    </div> -->
-
-    <!-- Repeat for other slideshows -->
 
 
     <!-- slide show -->
     <script>
-      document.querySelectorAll('.imagecontainer-wrapper').forEach(wrapper => {
-        const slideshow = wrapper.querySelector('.slideshow');
-        const img = slideshow.querySelector('.slide-img');
-        const prevBtn = slideshow.querySelector('.prev');
-        const nextBtn = slideshow.querySelector('.next');
+document.querySelectorAll('.imagecontainer-wrapper').forEach(wrapper => {    //finds all slideshows on the page / lets the same code run for each slideshow.
+  const slideshow = wrapper.querySelector('.slideshow'); //the box with image + arrows
+  const img = slideshow.querySelector('.slide-img');
+  const prevBtn = slideshow.querySelector('.prev');
+  const nextBtn = slideshow.querySelector('.next');
+  const captionEl = wrapper.querySelector('.caption-text'); //the paragraph under the image
 
-        // Replace this with the images for this album
-        const images = [img.src]; // start with the original image
-        // You can push more image URLs for this slideshow like:
-        // images.push('./images/mta_alt1.jpeg');
+  // Your images (a list) 
+  //This list stores ALL the images you want to rotate through.
+  const images = [
+    './images/street.jpeg',
+    './images/mta.jpeg',
+    './images/williamsburg.jpeg',
+    './images/eastvillage.jpeg'
+  ];
 
-        let currentIndex = 0;
+  // Your 3–5 sentence paragraphs (one per image) M;
+  const captions = [
+    /* BLOG 1 */ "Kathy ...",
+  /* BLOG 2 */ "Chloe...",
+  /* BLOG 3 */ "Sabrina...",
+  /* BLOG 4 */ "Rachel..."
+  ];
 
-        function showSlide(index) {
-          img.src = images[index];
-        }
+  let currentIndex = 0; //This means the slideshow begins on the firt image
 
-        prevBtn.addEventListener('click', () => {
-          currentIndex = (currentIndex - 1 + images.length) % images.length;
-          showSlide(currentIndex);
-        });
+  function showSlide(index) { //This function is the “engine” that updates the slideshow.
+    img.src = images[index];
+    captionEl.textContent = captions[index];
+  }
 
-        nextBtn.addEventListener('click', () => {
-          currentIndex = (currentIndex + 1) % images.length;
-          showSlide(currentIndex);
-        });
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length; //moves backwards and wraps around 
+    showSlide(currentIndex); //updates the screen
+  });
 
-        showSlide(currentIndex);
-      });
-    </script>
+  //updates image and text
+  nextBtn.addEventListener('click', () => {  //moves forward
+    currentIndex = (currentIndex + 1) % images.length;  //wraps around to slide 0 when you reach the end 
+    showSlide(currentIndex);
+  });
+
+  // Show the first slide
+  showSlide(currentIndex);
+});
+</script>
 
 
     <!-- Footer -->
