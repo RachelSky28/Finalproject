@@ -2,11 +2,16 @@
 :root {
     --gossamer: #fef2ff;
     --vanilla: #fffef2;
-    --blueberry: #7C9DD2; /* Kathy Baik - Meet NYC */
-    --verdant: #dae080; /* Chloe Dahan - The Art */
-    --raspberry: #D14C18; /* Sabrina Guzman - What's Good? */
-    --peppermint: #f8e8fa; /* Rachel S. Khmelnitsky - Day & Nightlife */
-    --sunbeam: #eeb570;/* Blog color */
+    --blueberry: #7C9DD2;
+    /* Kathy Baik - Meet NYC */
+    --verdant: #dae080;
+    /* Chloe Dahan - The Art */
+    --raspberry: #D14C18;
+    /* Sabrina Guzman - What's Good? */
+    --peppermint: #f8e8fa;
+    /* Rachel S. Khmelnitsky - Day & Nightlife */
+    --sunbeam: #eeb570;
+    /* Blog color */
     --lilac: #efaee4;
     --moss: #4b4e01;
     --dusk: #250f12;
@@ -195,6 +200,7 @@ nav a.active-page {
 }
 
 @keyframes bounce {
+
     0%,
     100% {
         transform: translateY(0);
