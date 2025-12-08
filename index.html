@@ -82,77 +82,75 @@
         </div>
       </div>
     </div>
-    </div>
+  </main>
 
-    <!-- Authors Section -->
-    <div class="authors-section">
-      <h2>Meet The Curators</h2>
-      <div class="authors-grid">
-        <div class="author-card">
-          <div class="author-photo-wrap">
-            <img class="author-photo" src="./images/kathy.jpg" alt="Photo of Kathy Baik">
-          </div>
-          <h3>Kathy Baik</h3>
-          <p>Discovering NYC's vibrant neighborhoods and hidden community spaces</p>
+  <!-- Authors Section (moved outside content-section) -->
+  <div class="authors-section">
+    <h2>Meet The Curators</h2>
+    <div class="authors-grid">
+      <div class="author-card">
+        <div class="author-photo-wrap">
+          <img class="author-photo" src="./images/kathy.jpg" alt="Photo of Kathy Baik">
         </div>
+        <h3>Kathy Baik</h3>
+        <p>Discovering NYC's vibrant neighborhoods and hidden community spaces</p>
+      </div>
 
-        <div class="author-card">
-          <div class="author-photo-wrap">
-            <img class="author-photo" src="./images/chloe.jpg" alt="Photo of Chloe Dahan">
-          </div>
-          <h3>Chloe Dahan</h3>
-          <p>Exploring art and culture throughout the city</p>
+      <div class="author-card">
+        <div class="author-photo-wrap">
+          <img class="author-photo" src="./images/chloe.jpg" alt="Photo of Chloe Dahan">
         </div>
+        <h3>Chloe Dahan</h3>
+        <p>Exploring art and culture throughout the city</p>
+      </div>
 
-        <div class="author-card">
-          <div class="author-photo-wrap">
-            <img class="author-photo" src="./images/sabrina.jpg" alt="Photo of Sabrina Guzman">
-          </div>
-          <h3>Sabrina Guzman</h3>
-          <p>Finding the best food and dining experiences across the boroughs</p>
+      <div class="author-card">
+        <div class="author-photo-wrap">
+          <img class="author-photo" src="./images/sabrina.jpg" alt="Photo of Sabrina Guzman">
         </div>
+        <h3>Sabrina Guzman</h3>
+        <p>Finding the best food and dining experiences across the boroughs</p>
+      </div>
 
-        <div class="author-card">
-          <div class="author-photo-wrap">
-            <img class="author-photo" src="./images/authors/rachel.jpg" alt="Photo of Rachel S. Khmelnitsky">
-          </div>
-          <h3>Rachel S. Khmelnitsky</h3>
-          <p>Uncovering NYC's vibrant day and nightlife scenes</p>
+      <div class="author-card">
+        <div class="author-photo-wrap">
+          <img class="author-photo" src="./images/authors/rachel.jpg" alt="Photo of Rachel S. Khmelnitsky">
         </div>
+        <h3>Rachel S. Khmelnitsky</h3>
+        <p>Uncovering NYC's vibrant day and nightlife scenes</p>
       </div>
     </div>
+  </div>
 
- <!-- ALBUM SECTION FOR BLOG POST -->
-    <div id="subhdr">
-      <h2>How would you use your day off to explore NYC?</h2>
+  <!-- ALBUM SECTION FOR BLOG POST -->
+  <div id="subhdr">
+    <h2>How would you use your day off to explore NYC?</h2>
+  </div>
+  
+  <!-- Main wrapper that holds BOTH the slideshow and the text under it -->
+  <div class="imagecontainer-wrapper">
+    <!-- Slideshow section (image + arrows) -->
+    <div class="slideshow">
+      <!-- Left arrow button (go to previous image) -->
+      <button class="prev" aria-label="Previous slide">←</button>
+      <!-- The image that will change when arrows are clicked -->
+      <img class="slide-img" src="./images/mta.jpeg" alt="Featured image">
+      <!-- Right arrow button (go to next image) -->
+      <button class="next" aria-label="Next slide">→</button>
     </div>
-    
-   <!-- Main wrapper that holds BOTH the slideshow and the text under it -->
-<div class="imagecontainer-wrapper">
-  <!-- Slideshow section (image + arrows) -->
-  <div class="slideshow">
-    <!-- Left arrow button (go to previous image) -->
-    <button class="prev" aria-label="Previous slide">←</button>
-    <!-- The image that will change when arrows are clicked -->
-    <img class="slide-img" src="./images/mta.jpeg" alt="Featured image">
-    <!-- Right arrow button (go to next image) -->
-    <button class="next" aria-label="Next slide">→</button>
+
+    <!-- Text section under the image -->
+    <div class="fixed-text">
+      <!-- The title or name that stays the same -->
+      <p class="p2">Get to know...</p>
+      <!-- This paragraph changes automatically when the image changes -->
+      <p class="caption-text"></p>
+    </div>
+
   </div>
 
-  <!-- Text section under the image -->
-  <div class="fixed-text">
-    <!-- The title or name that stays the same -->
-    <p class="p2">Get to know...</p>
-    <!-- This paragraph changes automatically when the image changes -->
-    <p class="caption-text"></p>
-  </div>
-
-</div>
-
-
-
-    <!-- slide show -->
-    <script>
+  <!-- slide show -->
+  <script>
 document.querySelectorAll('.imagecontainer-wrapper').forEach(wrapper => {    //finds all slideshows on the page / lets the same code run for each slideshow.
   const slideshow = wrapper.querySelector('.slideshow'); //the box with image + arrows
   const img = slideshow.querySelector('.slide-img');
@@ -179,7 +177,7 @@ document.querySelectorAll('.imagecontainer-wrapper').forEach(wrapper => {    //f
 
   let currentIndex = 0; //This means the slideshow begins on the firt image
 
-  function showSlide(index) { //This function is the “engine” that updates the slideshow.
+  function showSlide(index) { //This function is the "engine" that updates the slideshow.
     img.src = images[index];
     captionEl.textContent = captions[index];
   }
@@ -198,14 +196,13 @@ document.querySelectorAll('.imagecontainer-wrapper').forEach(wrapper => {    //f
   // Show the first slide
   showSlide(currentIndex);
 });
-</script>
+  </script>
 
-
-    <!-- Footer -->
-    <footer id="footer" role="contentinfo">
-      <p>&copy; 2025 Like A New Yorker</p>
-      <p>Curated by Kathy Baik, Chloe Dahan, Sabrina Guzman, and Rachel S. Khmelnitsky</p>
-    </footer>
+  <!-- Footer -->
+  <footer id="footer" role="contentinfo">
+    <p>&copy; 2025 Like A New Yorker</p>
+    <p>Curated by Kathy Baik, Chloe Dahan, Sabrina Guzman, and Rachel S. Khmelnitsky</p>
+  </footer>
 </body>
 
 </html>
