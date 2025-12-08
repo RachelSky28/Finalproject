@@ -33,18 +33,14 @@ body {
     box-sizing: border-box;
 }
 
-#logo a {
-    text-decoration: none;
-    color: #250f12;
-    display: block;
-    transition: opacity 0.3s ease;
-}
-
 #logo img {
     height: auto;
     width: 100%;
     max-width: 400px;
     display: block;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
 }
 
 #header-container {
