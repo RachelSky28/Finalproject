@@ -435,6 +435,14 @@ nav a.active-page {
 }
 
 /* slide show begins */
+#subhdr {
+  font-family: "Libre Baskerville", serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--vanilla);
+    margin-top: 0;
+    margin-bottom: 40px;
+}
 
 /* Container holds text + slideshow side-by-side */
 .imagecontainer {
@@ -491,7 +499,6 @@ nav a.active-page {
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-    
 /*end of slide show style */
 
 /* Footer */
