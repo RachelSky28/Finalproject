@@ -485,12 +485,13 @@ nav a.active-page {
 
 /* Image in slideshow */
 .slide-img {
-    width: 300px;      /* same width */
-    height: 300px;     /* same height → perfect circle */
+    width: 450px;      /* same width */
+    height: 450px;     /* same height → perfect circle */
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+    
 /*end of slide show style */
 
 /* Footer */
