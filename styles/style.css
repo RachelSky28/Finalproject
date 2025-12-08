@@ -442,11 +442,12 @@ nav a.active-page {
     /* slideshow left, text right */
 }
 
+/* Stack slideshow ABOVE text, centered */
 .imagecontainer-wrapper {
     display: flex;
-    flex-direction: row;
-    /* image left, text right */
-    align-items: flex-start;
+    flex-direction: column;   /* <-- this stacks vertically */
+    align-items: center;      /* <-- centers everything */
+    text-align: center;
     gap: 20px;
 }
 
@@ -456,10 +457,11 @@ nav a.active-page {
     font-weight: bold;
 }
 
-/* Slideshow layout */
+/* Center the slideshow + arrows */
 .slideshow {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
 }
 
