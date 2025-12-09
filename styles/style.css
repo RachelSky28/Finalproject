@@ -4,7 +4,7 @@
     /* Kathy Baik - Meet NYC */
     --verdant: #dae080;
     /* Chloe Dahan - The Art */
-    --ketchup: #D14C18;
+    --raspberry: #D14C18;
     /* Sabrina Guzman - What's Good? */
     --peppermint: #f8e8fa;
     /* Rachel S. Khmelnitsky - Day & Nightlife */
@@ -59,22 +59,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 20px;
+    padding: 15px;
     width: 100%;
-    height: auto;
-    overflow: hidden;
     box-sizing: border-box;
-}
-
-#logo a {
-    text-decoration: none;
-    color: var(--dusk);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.3s ease;
-    width: 100%;
-    min-width: 0;
 }
 
 #logo img {
@@ -82,6 +69,9 @@ body {
     width: 100%;
     max-width: 400px;
     display: block;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
 }
 
 #header-container {
@@ -148,7 +138,7 @@ nav a.art:hover {
 
 /* Sabrina - What's Good? */
 nav a.food:hover {
-    background-color: var(--ketchup);
+    background-color: var(--raspberry);
     color: var(--dusk);
 }
 
@@ -333,7 +323,7 @@ nav a.active-page {
 }
 
 .card-food {
-    background-color: var(--ketchup);
+    background-color: var(--raspberry);
     color: var(--dusk);
     border: 4px solid var(--dusk);
 }
@@ -351,7 +341,7 @@ nav a.active-page {
 
 /* Authors section */
 .authors-section {
-    background-color: var(--ketchup);
+    background-color: var(--raspberry);
     padding: 60px 20px;
     text-align: center;
     width: 100%;
@@ -555,6 +545,13 @@ nav a.active-page {
     font-weight: 500;
 }
 
+@media (min-width: 1024px) {
+    #footer {
+        text-align: left;
+        padding: 20px 40px;
+    }
+}
+
 /* [GLOBAL] Responsive Design */
 
 /* Mobile (under 768px) */
@@ -680,10 +677,5 @@ nav a.active-page {
 
     .content-section {
         text-align: left;
-    }
-    
-    #footer {
-        text-align: left;
-        padding: 20px 40px;
     }
 }

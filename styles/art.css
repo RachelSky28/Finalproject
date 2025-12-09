@@ -23,15 +23,34 @@
     box-sizing: border-box;
 }
 
+/* Main body styles - sets the default font, colors, and background */
 body {
     background-color: var(--vanilla);
     color: var(--dusk);
+    margin: 0;
+    padding: 0;
     font-family: "Raleway", sans-serif;
 }
 
-/* [GLOBAL] header & navigation*/
+/* [GLOBAL] Skip link appears when focused - helps with keyboard navigation */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--dusk);
+    color: var(--vanilla);
+    padding: 8px;
+    z-index: 1000;
+    text-decoration: none;
+    border-radius: 0 0 4px 0;
+}
 
-header {
+.skip-link:focus {
+    top: 0;
+}
+
+/* [GLOBAL] header*/
+#header {
     width: 100%;
     background-color: var(--vanilla);
     position: sticky;
@@ -41,27 +60,14 @@ header {
     overflow-x: hidden;
 }
 
+/* [GLOBAL] Logo container - keeps logo centered with good spacing that adapts to screen size */
 #logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 20px;
+    padding: 15px;
     width: 100%;
     box-sizing: border-box;
-}
-
-#logo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-#logo a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
 }
 
 #logo img {
@@ -69,6 +75,9 @@ header {
     width: 100%;
     max-width: 400px;
     display: block;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
 }
 
 #header-container {
@@ -82,17 +91,17 @@ header {
     box-sizing: border-box;
 }
 
-/* Navigation */
+/* [GLOBAL] Navigation */
 #nav ul {
     display: flex;
     gap: 30px;
     margin: 0;
     padding: 0;
     list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     box-sizing: border-box;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
 #nav li {
@@ -148,8 +157,8 @@ nav a.life:hover {
 /* Active page - Switch to your page color or hover nav color */
 nav a.active-page {
     background-color: var(--verdant);
-    border: 2px solid var(--dusk);
     color: var(--dusk);
+    border: 2px solid var(--dusk);
 }
 
 /*Hero section*/
@@ -690,16 +699,12 @@ section h2 {
 
 /* Mobile (under 768px) */
 @media (max-width: 767px) {
-    #logo-container {
+    #header-container {
         padding: 12px 15px;
     }
 
     #logo img {
-        max-width: 300px;
-    }
-
-    #header-container {
-        padding: 12px 15px;
+        height: 40px;
     }
 
     #nav ul {
@@ -772,10 +777,6 @@ section h2 {
 
 /* Small Mobile (under 480px) */
 @media (max-width: 479px) {
-    #logo img {
-        max-width: 250px;
-    }
-
     nav a {
         font-size: 11px;
         padding: 5px 8px;
@@ -857,10 +858,6 @@ section h2 {
 
 /* Tablets (768px and up) */
 @media (min-width: 768px) {
-    #logo-container {
-        padding: 18px 30px;
-    }
-
     #header-container {
         padding: 20px 40px;
     }
@@ -911,10 +908,6 @@ section h2 {
 
 /* Desktop (1024px and up) */
 @media (min-width: 1024px) {
-    #logo img {
-        max-width: 450px;
-    }
-
     nav a {
         font-size: 16px;
     }
