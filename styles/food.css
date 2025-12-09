@@ -25,15 +25,18 @@ body {
     padding: 0;
 }
 
-/* Header */
+/* [GLOBAL] header*/
 #header {
     width: 100%;
-    background-color: #FFFEF2;
+    background-color: var(--vanilla);
     position: sticky;
     top: 0;
     z-index: 100;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
+/* [GLOBAL] Logo container - keeps logo centered with good spacing that adapts to screen size */
 #logo-container {
     display: flex;
     justify-content: center;
@@ -43,26 +46,24 @@ body {
     box-sizing: border-box;
 }
 
-#logo a {
-    text-decoration: none;
-    color: #250f12;
-    display: block;
-    transition: opacity 0.3s ease;
-}
-
 #logo img {
-    height: 60px;
-    width: auto;
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
 }
 
 #header-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px;
     width: 100%;
-    border-top: 2px solid #250f12;
-    border-bottom: 2px solid #250f12;
+    border-top: 2px solid var(--dusk);
+    border-bottom: 2px solid var(--dusk);
     box-sizing: border-box;
 }
 
