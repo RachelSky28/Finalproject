@@ -1,10 +1,19 @@
-//group contribution
 :root {
-    --gossamer: #fef2ff;
+    --vanilla: #FFFEF2;
+    --blueberry: #7C9DD2;
+    /* Kathy Baik - Meet NYC */
     --verdant: #dae080;
-    --lilac: #efaee4;
+    /* Chloe Dahan - The Art */
+    --raspberry: #D14C18;
+    /* Sabrina Guzman - What's Good? */
+    --peppermint: #f8e8fa;
+    /* Rachel S. Khmelnitsky - Day & Nightlife */
     --sunbeam: #eeb570;
+    /* Blog color */
+    --sunbeam: #eeb570;
+    --sunshine: #f4d68c;
     --moss: #4b4e01;
+    --lilac: #efaee4;
     --dusk: #250f12;
 }
 
