@@ -66,66 +66,48 @@ body {
     box-sizing: border-box;
 }
 
-/* Navigation */
-#nav ul {
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    width: auto;
-    height: auto;
-    justify-content: center
-}
+/* Hover colors by member */
 
-#nav li {
-    width: auto;
-    height: auto;
-    padding: 0;
-}
-
-nav a {
-    font-family: "Libre Baskerville", serif;
-    font-size: 16px;
-    font-weight: 400;
-    text-decoration: none;
-    color: #250f12;
-    padding: 8px 16px;
-    border-radius: 6px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
+/* The Blog */
 nav a.blog:hover {
-    background-color: #eeb570;
-    color: #250f12;
+    background-color: var(--sunbeam);
+    color: var(--dusk);
 }
 
+/* Kathy - Meet NYC */
 nav a.meetnyc:hover {
-    background-color: #7C9DD2;
-    color: #250f12;
+    background-color: var(--blueberry);
+    color: var(--dusk);
 }
 
+/* Chloe - The Art */
 nav a.art:hover {
-    background-color: #dae080;
-    color: #250f12;
+    background-color: var(--verdant);
+    color: var(--dusk);
 }
 
+/* Sabrina - What's Good? */
 nav a.food:hover {
-    background-color: #D14C18;
-    color: #250f12;
+    background-color: var(--raspberry);
+    color: var(--dusk);
 }
 
+/* Rachel - Day & Nightlife */
 nav a.life:hover {
-    background-color: #D14C18;
-    color: #250f12;
+    background-color: var(--peppermint);
+    color: var(--dusk);
 }
-/* Active page highlighting */
+
+/* Active page - Switch to your page color or hover nav color */
 nav a.active-page {
-    background-color:#D14C18;
-    color: #250F12;
+    background-color: var(--sunbeam);
+    color: var(--dusk);
+    border: 2px solid var(--dusk);
 }
-    
+
+
+
+
 #myhdr {
   width: 100%;
   text-align: center;
