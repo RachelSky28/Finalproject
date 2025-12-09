@@ -267,16 +267,7 @@ body {
   z-index: 2;
 }
 
-.heart-description {
-  width: 500px; /* matches the card width */
-  margin: 20px auto; /* centers it below the card */
-  text-align: center;
-}
 
-.heart-description p {
-  font-size: 20px;
-  color: #333;
-}
 
 
 /*Borough label below image */
