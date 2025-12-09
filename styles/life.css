@@ -1,111 +1,89 @@
+/* Life page style */
+
 :root {
-    --vanilla: #FFFEF2;
-    --blueberry: #7C9DD2;
-    /* Kathy Baik - Meet NYC */
-    --verdant: #dae080;
-    /* Chloe Dahan - The Art */
-    --ketchup: #D14C18;
-    /* Sabrina Guzman - What's Good? */
+    --vanilla: #fffef2;
+    --raspberry: #a7162c;
     --peppermint: #f8e8fa;
-    /* Rachel S. Khmelnitsky - Day & Nightlife */
-    --sunbeam: #eeb570;
-    /* Blog color */
-    --sunbeam: #eeb570;
     --sunshine: #f4d68c;
-    --moss: #4b4e01;
-    --lilac: #efaee4;
+    --navy: #052a37;
     --dusk: #250f12;
 }
-
-/* Main body styles - sets the default font, colors, and background */
-body {
-    background-color: var(--vanilla);
-    color: var(--dusk);
-    margin: 0;
-    padding: 0;
-    font-family: "Raleway", sans-serif;
-}
-
-/* [GLOBAL] Skip link appears when focused - helps with keyboard navigation */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: var(--dusk);
-    color: var(--vanilla);
-    padding: 8px;
-    z-index: 1000;
-    text-decoration: none;
-    border-radius: 0 0 4px 0;
-}
-
-.skip-link:focus {
-    top: 0;
-}
-
-/* [GLOBAL] header*/
+/* Header */
 #header {
     width: 100%;
     background-color: var(--vanilla);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-sizing: border-box;
-    overflow-x: hidden;
 }
-
-/* [GLOBAL] Logo container - keeps logo centered with good spacing that adapts to screen size */
 #logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 20px;
+    padding: 15px;
     width: 100%;
-    height: auto;
-    overflow: hidden;
     box-sizing: border-box;
 }
 
 #logo a {
     text-decoration: none;
     color: var(--dusk);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     transition: opacity 0.3s ease;
-    width: 100%;
-    min-width: 0;
 }
 
 #logo img {
-    height: auto;
-    width: 100%;
-    max-width: 400px;
-    display: block;
+    height: 48px;
+    width: auto;
+}
+Body {
+    background-size: cover;
+    background-color: var(--vanilla);
+    color: #250f12;
+    position: relative;
+    justify-content: space-evenly;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: large;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+}
+h1 {
+    font-family: "Pinyon Script", cursive;
+    font-size: 100px;
+    font-weight: 400;
+}
+h2 {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h4 {
+     font-size: 18px;
+    font-weight: 300;
 }
 
 #header-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 20px 0;
     width: 100%;
     border-top: 2px solid var(--dusk);
     border-bottom: 2px solid var(--dusk);
-    box-sizing: border-box;
 }
-
-/* [GLOBAL] Navigation */
+/* Navigation */
 #nav ul {
     display: flex;
     gap: 30px;
     margin: 0;
     padding: 0;
     list-style: none;
-    flex-wrap: wrap;
+    width: auto;
+    height: auto;
     justify-content: center;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 #nav li {
@@ -119,434 +97,427 @@ nav a {
     font-size: 16px;
     font-weight: 400;
     text-decoration: none;
-    color: var(--dusk);
+    color: #250f12;
     padding: 8px 16px;
     border-radius: 6px;
     display: inline-block;
     transition: background-color 0.3s ease;
 }
 
-/* Hover colors by member */
-
-/* The Blog */
 nav a.blog:hover {
     background-color: var(--sunbeam);
     color: var(--dusk);
 }
 
-/* Kathy - Meet NYC */
 nav a.meetnyc:hover {
-    background-color: var(--blueberry);
+    background-color: #7c9dd2;
     color: var(--dusk);
 }
 
-/* Chloe - The Art */
-nav a.art:hover {
-    background-color: var(--verdant);
-    color: var(--dusk);
-}
-
-/* Sabrina - What's Good? */
 nav a.food:hover {
-    background-color: var(--ketchup);
+    background-color: #d14c18;
+    color: var(--dusk);
+}
+nav a.art:hover {
+    background-color: #dae080;
+    color: var(--dusk);
+}
+nav a.life:hover {
+    background-color: #f8e8fa;
     color: var(--dusk);
 }
 
-/* Rachel - Day & Nightlife */
-nav a.life:hover {
+/* Active page highlighting */
+nav a.active-page {
     background-color: var(--peppermint);
     color: var(--dusk);
-}
-
-/* Active page - Switch to your page color or hover nav color */
-nav a.active-page {
-    background-color: var(--sunbeam);
-    color: var(--dusk);
     border: 2px solid var(--dusk);
 }
 
-/* [GLOBAL] Banner */
-.banner {
-    width: 100%;
-    min-height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
-}
-
-.banner-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.banner-text {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    color: var(--dusk);
-    padding: 20px;
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-.banner-text h1 {
-    font-family: "Pinyon Script", cursive;
-    font-size: clamp(40px, 10vw, 100px);
-    font-weight: 400;
-    color: var(--dusk);
-    margin: 0 0 20px 0;
-}
-
-.banner-text p {
-    font-family: "Raleway", sans-serif;
-    font-size: clamp(14px, 4vw, 18px);
-    font-weight: 300;
-    color: var(--dusk);
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Main content sections */
-.content-section {
-    background-color: var(--dusk);
+#homebody {
+    background-color: var(--vanilla);
+    background-image: url("../images/disco.jpg");
+    background-position: center center;
     color: var(--vanilla);
-    padding: 60px 20px;
+    padding: 40px;
+    width: 100%;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#body1 {
+    background-color: #fffef2;
+    opacity: 0.8;
+    background-size: 20px 20px;
+    background-image: repeating-linear-gradient(to right, #052a37, #052a37 2px, #f8e8fa 1px, #f8e8fa);
+    color: var(--raspberry);
+    padding: 40px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    overflow: auto;
+    position: relative;
+}
+#body2 {
+    background-color: var(--navy);
+    color: var(--peppermint);
+    padding: 40px;
+    width: 100%;
+    height: auto;
     text-align: left;
+    overflow: auto;
+    position: relative;
+}
+#body3 {
+    background-color: #fffef2;
+    opacity: 0.8;
+    background-size: 20px 20px;
+    background-image: repeating-linear-gradient(to right, #052a37, #052a37 2px, #f4d68c 1px, #f4d68c);
+    color: var(--raspberry);
+    padding: 40px;
     width: 100%;
-    box-sizing: border-box;
+    height: auto;
+    text-align: center;
+    overflow: clip;
+    position: relative;
 }
 
-.content-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 15px;
-    box-sizing: border-box;
+#body4 {
+    background-color: var(--navy);
+    color: var(--sunshine);
+    padding: 40px;
     width: 100%;
+    height: auto;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+    float: left;
 }
-
-.content-section h2 {
+/* accodion style starts here*/
+.accordion {
     font-family: "Libre Baskerville", serif;
     font-weight: 400;
+    font-size: x-large;
+    background-color: var(--navy);
     color: var(--vanilla);
-    margin-top: 0;
-    margin-bottom: 30px;
-    font-size: 32px;
+    cursor: pointer;
+    padding: 20px;
+    width: 60%;
+    text-align: center;
+    border: solid;
+    border-width: thin;
+    border-color: transparent;
+    transition: 0.4s ease;
 }
-
-.content-section p {
-    font-family: "Raleway", sans-serif;
-    font-size: 16px;
-    font-weight: 300;
+.active,
+.accordion:hover {
+    background-color: var(--raspberry);
     color: var(--vanilla);
-    line-height: 1.8;
-    max-width: 900px;
+}
+.panel {
+    font-size: x-large;
+    background-color: var(--raspberry);
+    color: var(--vanilla);
+    padding:18px;
+    margin: 0 auto;
+    width: 55%;
+    text-align-last: left;
+    overflow: hidden;
+    display: none;
+    float: none;
+    transition: max-height 0.2s ease-out;
 }
 
-.activities-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
+/* card styles start here*/
+/*card text */
+.card-title {
+    font-size: 45px;
+    font-weight: bold;
+    color: var(--vanilla);
+    text-align: center;
+    margin: 20px 0 0 0;
+    z-index: 2;
+}
+/*activity label below image */
+#activityLabel {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin: 10px 0 0 8;
+    z-index: 2;
 }
 
-.activity-card {
-    padding: 30px;
-    border-radius: 10px;
-    border: 2px solid var(--dusk);
-    transition: transform 0.18s ease;
+#activityLabel.visible {
+    opacity: 1;
+}
+/* colors for my sections  */
+.color-section.peppermint {
+    background-color: var(--peppermint);
+}
+.color-section.sunshine {
+    background-color: var(--sunshine);
+}
+.color-section {
+    width: 300px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
-}
-
-.activity-card:hover {
-    transform: translateY(-3px);
-}
-
-.activity-card h3 {
-    font-family: "Libre Baskerville", serif;
+    align-items: center;
+    transition: transform 0.2s;
+    color: var(--navy);
+   font-family: "Libre Baskerville", serif;
     font-weight: 400;
-    color: var(--dusk);
-    margin-top: 0;
+    font-style: normal;
+}
+.color-section img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.color-section p {
+    font-size: 18px;
+}
+
+.color-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 50px;
+    justify-content: center;
+    /* margin: 0 auto;
+  max-width: 1000px; */
+    /* padding: 20px; */
+}
+
+.card-wrapper {
+    display: block;
+    /* flex-direction: column;
+  align-items: center; */
+}
+
+.album {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction:column-reverse;
+}
+
+.album-content {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    max-width: 1400px;
+    margin: 5% auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+/* Single images in slides (big images) */
+.album-content .slide img {
+    width: 100%;
+    /* fills most of the slide */
+    max-width: 700px;
+    /* won’t get too wide on large screens */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    /* center the image */
+}
+
+.album-text {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.album-text p {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+
+.album-content .slide .collage img {
+    width: 100%;
+    height: auto;
+    /* keep aspect ratio */
+    object-fit:fill;
+    border-radius: 10px;
+}
+.figcaption {
+    font-size: x-small;
+    color: var(--raspberry);
+    float: bottom;
+    text-align-last: right;
+    width: 100%;
+}
+#sport-album .collage {
+    display: block;
+    gap: 10px;
+    justify-content: righ;
+    /* center the collage */
+}
+
+#sport-album .collage img {
+    border-radius: 10px;
+}
+#parks-album .collage {
+    display: block;
+    gap: 10px;
+    justify-content: center;
+    /* center the collage */
+}
+
+#parks-album .collage img {
+    border-radius: 10px;
+}
+#tea-album .collage {
+    display: block;
+    gap: 10px;
+    justify-content: center;
+    /* center the collage */
+}
+#tea-album .collage img {
+    border-radius: 10px;
+}
+#movie-album .collage {
+    display: block;
+    gap: 10px;
+    justify-content: center;
+    /* center the collage */
+}
+#movie-album .collage img {
+    max-height: 1000px;
+    border-radius: 10px;
+}
+#adult-album .collage {
+    display:block;
+    gap: 10px;
+    justify-content: center;
+    /* center the collage */
+}
+#adult-album .collage img {
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #f0eeee;
+    cursor: pointer;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+}
+
+.slider img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    color: #333;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+/*end of code*/
+
+.image-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: left;
+    gap: 40px;
+    margin: 20px 0;
+}
+.location-info {
+    text-align: center; /* centers all text */
+    margin-bottom: 15px;
+    color: rgb(4, 4, 4); /* adjust if you want */
+}
+
+.location-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.address {
+    font-size: 18px;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.section-header {
+    font-size: 22px;
+    margin: 14px 0 6px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.train-info,
+.review {
+    font-size: 18px;
     margin-bottom: 12px;
 }
 
-.activity-card p {
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--dusk);
-    line-height: 1.8;
-    max-width: none;
-    flex-grow: 1;
-}
-
-.activity-card a {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 18px;
-    background: transparent;
-    color: var(--dusk);
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    border: 2px solid var(--dusk);
-    transition: box-shadow 0.12s ease, transform 0.12s ease;
-}
-
-.activity-card a:focus,
-.activity-card a:focus-visible {
-    background-color: var(--vanilla);
-    color: var(--dusk);
-    outline: 3px solid var(--dusk);
-    outline-offset: 2px;
-    box-shadow: 0 0 0 6px rgba(37, 15, 18, 0.15);
-}
-
-.activity-card a:hover {
-    background-color: var(--vanilla);
-    color: var(--dusk);
-    transform: translateY(-1px);
-}
-
-/* Card-specific backgrounds */
-.card-meetnyc {
-    background-color: var(--blueberry);
-    color: var(--dusk);
-    border: 4px solid var(--dusk);
-}
-
-.card-art {
-    background-color: var(--verdant);
-    color: var(--dusk);
-    border: 4px solid var(--dusk);
-}
-
-.card-food {
-    background-color: var(--ketchup);
-    color: var(--dusk);
-    border: 4px solid var(--dusk);
-}
-
-.card-life {
-    background-color: var(--peppermint);
-    color: var(--dusk);
-    border: 4px solid var(--dusk);
-}
-
-.activity-card:focus-within {
-    outline: 3px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.08);
-}
-
-/* Authors section */
-.authors-section {
-    background-color: var(--ketchup);
-    padding: 60px 20px;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.authors-section h2 {
-    font-family: "Libre Baskerville", serif;
-    font-size: 32px;
-    font-weight: 400;
-    color: var(--vanilla);
-    margin-top: 0;
-    margin-bottom: 40px;
-    padding: 0;
-}
-
-.authors-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    margin: 40px auto;
-    max-width: 1100px;
-    padding: 0 20px;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-.author-card {
-    padding: 20px;
+.cover-image {
+    width: 520px;
+    height: 530px;
+    object-fit: cover;
     border-radius: 10px;
-    background-color: #fffaf5;
-    border: 3px solid var(--dusk);
 }
 
-.author-card h3 {
-    font-family: "Libre Baskerville", serif;
-    font-size: clamp(16px, 4vw, 20px);
-    font-weight: 400;
-    color: var(--dusk);
-    margin: 15px 0 10px 0;
-}
-
-.author-card p {
-    font-family: "Raleway", sans-serif;
-    font-size: 13px;
-    font-weight: 300;
-    color: #666;
-    line-height: 1.6;
-    max-width: none;
-}
-
-.author-photo-wrap {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 50%;
-    border: 2px solid var(--dusk);
-}
-
-.author-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.sr-only {
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-    white-space: nowrap;
-    border: 0;
-    padding: 0;
-    margin: -1px;
-}
-
-
-/* Slideshow section */
-#subhdr {
-    background-color: var(--moss);
-    color: var(--vanilla);
-    padding: 40px 20px;
-    font-family: "Libre Baskerville", serif;
-    font-size: clamp(24px, 6vw, 40px);
-    font-weight: 400;
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-#subhdr h2 {
-    font-family: "Libre Baskerville", serif;
-    font-weight: 400;
-    color: var(--vanilla);
-    margin-top: 0;
-    margin-bottom: 30px;
-    font-size: 32px;
-}
-
-.imagecontainer-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 30px;
-    padding: 60px 20px;
-    background-color: var(--moss);
-    color: var(--vanilla);
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.fixed-text {
-    padding: 20px;
-}
-
-.fixed-text p {
-    margin: 0 0 15px 0;
-    line-height: 1.6;
-}
-
-.fixed-text p.p2 {
-    font-size: clamp(18px, 4vw, 24px);
-    font-weight: bold;
-    font-family: "Libre Baskerville", serif;
-}
-
-.fixed-text p.caption-text {
-    font-size: clamp(14px, 3vw, 16px);
-    font-weight: 300;
-    max-width: 600px;
-}
-
-/* Slideshow arrows */
-.slideshow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-}
-
-.slideshow button {
-    background-color: #f7a0cb;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    transition: outline 0.2s ease, background-color 0.2s ease;
-}
-
-.slideshow button:hover {
-    background-color: #f08ab8;
-}
-
-.slideshow button:focus,
-.slideshow button:focus-visible {
-    outline: 3px solid var(--vanilla);
-    outline-offset: 2px;
-    background-color: #f08ab8;
-}
-
-/* Image in slideshow */
-.slide-img {
-    width: clamp(250px, 80vw, 450px);
-    height: clamp(250px, 80vw, 450px);
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* [GLOBAL] footer*/
+/* Footer */
 #footer {
     width: 100%;
     background-color: var(--dusk);
     color: var(--vanilla);
-    padding: 20px 0;
+    padding: 30px 40px;
     border-top: 2px solid var(--dusk);
-    text-align: center;
-    box-sizing: border-box;
-}
-
-#footer {
-    text-align: center;
 }
 
 #footer p {
-    font-size: clamp(12px, 2vw, 14px);
+    font-size: 14px;
     font-weight: 300;
     margin: 5px 0;
 }
@@ -555,135 +526,11 @@ nav a.active-page {
     font-weight: 500;
 }
 
-/* [GLOBAL] Responsive Design */
-
-/* Mobile (under 768px) */
-@media (max-width: 767px) {
-    .banner {
-        min-height: 250px;
-    }
-
-    .banner-text {
-        padding: 40px 20px;
-    }
-
-    .content-section {
-        padding: 40px 15px;
-    }
-
-    .authors-section {
-        padding: 40px 15px;
-    }
-
-    .imagecontainer-wrapper {
-        padding: 40px 15px;
-        gap: 20px;
-    }
-
+/* Responsive Design */
+@media (max-width: 768px) {
     #header-container {
-        padding: 12px 15px;
-    }
-
-    #nav ul {
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-
-    nav a {
-        font-size: 12px;
-        padding: 5px 10px;
-    }
-
-    .activities-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .activity-card {
-        padding: 20px;
-    }
-
-    #logo img {
-        height: 40px;
-    }
-
-    .authors-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .author-photo-wrap {
-        width: 120px;
-        height: 120px;
-    }
-
-    .author-card {
-        padding: 15px;
-    }
-
-    .slideshow {
         flex-direction: column;
         gap: 15px;
-    }
-
-    .slideshow button {
-        padding: 8px 12px;
-        font-size: 16px;
-    }
-
-    .slide-img {
-        width: clamp(200px, 90vw, 350px);
-        height: clamp(200px, 90vw, 350px);
-    }
-
-    #footer {
-        padding: 20px;
-    }
-}
-
-/* Tablets (768px and up) */
-@media (min-width: 768px) {
-    .content-section {
-        padding: 60px 40px;
-    }
-
-    .authors-section {
-        padding: 60px 40px;
-    }
-
-    .imagecontainer-wrapper {
-        padding: 60px 40px;
-    }
-
-    #header-container {
-        padding: 20px 40px;
-    }
-
-    #nav ul {
-        gap: 40px;
-    }
-}
-
-/* Desktop (1024px and up) */
-@media (min-width: 1024px) {
-    .banner {
-        min-height: 500px;
-    }
-
-    .activities-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .authors-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .content-section {
-        text-align: left;
-    }
-    
-    #footer {
-        text-align: left;
-        padding: 20px 40px;
+        padding: 15px 0;
     }
 }
