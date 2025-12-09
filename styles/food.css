@@ -4,7 +4,7 @@
     /* Kathy Baik - Meet NYC */
     --verdant: #dae080;
     /* Chloe Dahan - The Art */
-    --raspberry: #D14C18;
+    --ketchup: #D14C18;
     /* Sabrina Guzman - What's Good? */
     --peppermint: #f8e8fa;
     /* Rachel S. Khmelnitsky - Day & Nightlife */
@@ -121,7 +121,7 @@ nav a.art:hover {
 
 /* Sabrina - What's Good? */
 nav a.food:hover {
-    background-color: var(--raspberry);
+    background-color: var(--ketchup);
     color: var(--dusk);
 }
 
@@ -133,7 +133,7 @@ nav a.life:hover {
 
 /* Active page - Switch to your page color or hover nav color */
 nav a.active-page {
-    background-color: var(--verdant);
+    background-color: var(--ketchup);
     color: var(--dusk);
     border: 2px solid var(--dusk);
 }
