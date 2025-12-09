@@ -1,84 +1,111 @@
-/* Life page style */
-
 :root {
-    --vanilla: #fffef2;
-    --raspberry: #a7162c;
+    --vanilla: #FFFEF2;
+    --blueberry: #7C9DD2;
+    /* Kathy Baik - Meet NYC */
+    --verdant: #dae080;
+    /* Chloe Dahan - The Art */
+    --ketchup: #D14C18;
+    /* Sabrina Guzman - What's Good? */
     --peppermint: #f8e8fa;
+    /* Rachel S. Khmelnitsky - Day & Nightlife */
+    --sunbeam: #eeb570;
+    /* Blog color */
+    --sunbeam: #eeb570;
     --sunshine: #f4d68c;
-    --navy: #052a37;
+    --moss: #4b4e01;
+    --lilac: #efaee4;
     --dusk: #250f12;
 }
-/* Header */
+
+/* Main body styles - sets the default font, colors, and background */
+body {
+    background-color: var(--vanilla);
+    color: var(--dusk);
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+/* [GLOBAL] Skip link appears when focused - helps with keyboard navigation */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--dusk);
+    color: var(--vanilla);
+    padding: 8px;
+    z-index: 1000;
+    text-decoration: none;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* [GLOBAL] header*/
 #header {
     width: 100%;
     background-color: var(--vanilla);
     position: sticky;
     top: 0;
     z-index: 100;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
+
+/* [GLOBAL] Logo container - keeps logo centered with good spacing that adapts to screen size */
 #logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 15px 20px;
     width: 100%;
+    height: auto;
+    overflow: hidden;
     box-sizing: border-box;
 }
 
 #logo a {
     text-decoration: none;
     color: var(--dusk);
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: opacity 0.3s ease;
+    width: 100%;
+    min-width: 0;
 }
 
 #logo img {
-    height: 48px;
-    width: auto;
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    display: block;
 }
-Body {
-    background-size: cover;
-    background-color: var(--vanilla);
-    color: #250f12;
-    position: relative;
-    justify-content: space-evenly;
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: large;
-    transition:
-        background-color 0.3s,
-        color 0.3s;
-}
-h1 {
-    font-family: "Pinyon Script", cursive;
-    font-weight: 0;
-    font-size: 59px;
-}
-h2 {
-    font-family: "Libre Baskerville", serif;
-    font-weight: 400;
-    font-style: normal;
-}
+
 #header-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px;
     width: 100%;
     border-top: 2px solid var(--dusk);
     border-bottom: 2px solid var(--dusk);
+    box-sizing: border-box;
 }
-/* Navigation */
+
+/* [GLOBAL] Navigation */
 #nav ul {
     display: flex;
     gap: 30px;
     margin: 0;
     padding: 0;
     list-style: none;
-    width: auto;
-    height: auto;
+    flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #nav li {
@@ -92,453 +119,434 @@ nav a {
     font-size: 16px;
     font-weight: 400;
     text-decoration: none;
-    color: #250f12;
+    color: var(--dusk);
     padding: 8px 16px;
     border-radius: 6px;
     display: inline-block;
     transition: background-color 0.3s ease;
 }
 
+/* Hover colors by member */
+
+/* The Blog */
 nav a.blog:hover {
     background-color: var(--sunbeam);
     color: var(--dusk);
 }
 
+/* Kathy - Meet NYC */
 nav a.meetnyc:hover {
-    background-color: #7c9dd2;
+    background-color: var(--blueberry);
     color: var(--dusk);
 }
 
-nav a.food:hover {
-    background-color: #d14c18;
-    color: var(--dusk);
-}
+/* Chloe - The Art */
 nav a.art:hover {
-    background-color: #dae080;
-    color: var(--dusk);
-}
-nav a.life:hover {
-    background-color: #f8e8fa;
+    background-color: var(--verdant);
     color: var(--dusk);
 }
 
-/* Active page highlighting */
-nav a.active-page {
+/* Sabrina - What's Good? */
+nav a.food:hover {
+    background-color: var(--ketchup);
+    color: var(--dusk);
+}
+
+/* Rachel - Day & Nightlife */
+nav a.life:hover {
     background-color: var(--peppermint);
+    color: var(--dusk);
+}
+
+/* Active page - Switch to your page color or hover nav color */
+nav a.active-page {
+    background-color: var(--sunbeam);
     color: var(--dusk);
     border: 2px solid var(--dusk);
 }
 
-#homebody {
-    background-color: var(--vanilla);
-    background-image: url("../images/disco.jpg");
-    background-position: center center;
-    color: var(--vanilla);
-    padding: 40px;
+/* [GLOBAL] Banner */
+.banner {
     width: 100%;
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-#body1 {
-    background-color: #fffef2;
-    opacity: 0.8;
-    background-size: 20px 20px;
-    background-image: repeating-linear-gradient(to right, #052a37, #052a37 2px, #f8e8fa 1px, #f8e8fa);
-    color: var(--raspberry);
-    padding: 40px;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    overflow: auto;
-    position: relative;
-}
-#body2 {
-    background-color: var(--navy);
-    color: var(--peppermint);
-    padding: 40px;
-    width: 100%;
-    height: auto;
-    text-align: left;
-    overflow: auto;
-    position: relative;
-}
-#body3 {
-    background-color: #fffef2;
-    opacity: 0.8;
-    background-size: 20px 20px;
-    background-image: repeating-linear-gradient(to right, #052a37, #052a37 2px, #f4d68c 1px, #f4d68c);
-    color: var(--raspberry);
-    padding: 40px;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    overflow: clip;
-    position: relative;
-}
-
-#body4 {
-    background-color: var(--navy);
-    color: var(--sunshine);
-    padding: 40px;
-    width: 100%;
-    height: auto;
-    text-align: left;
-    overflow: hidden;
-    position: relative;
-    float: left;
-}
-/* accodion style starts here*/
-.accordion {
-    font-family: "Libre Baskerville", serif;
-    font-weight: 400;
-    font-size: x-large;
-    background-color: var(--navy);
-    color: var(--vanilla);
-    cursor: pointer;
-    padding: 20px;
-    width: 60%;
-    text-align: center;
-    border: solid;
-    border-width: thin;
-    border-color: transparent;
-    transition: 0.4s ease;
-}
-.active,
-.accordion:hover {
-    background-color: var(--raspberry);
-    color: var(--vanilla);
-}
-.panel {
-    font-size: x-large;
-    background-color: var(--raspberry);
-    color: var(--vanilla);
-    padding:18px;
-    margin: 0 auto;
-    width: 55.5%;
-    text-align-last: left;
-    overflow: hidden;
-    display: none;
-    float: none;
-    transition: max-height 0.2s ease-out;
-}
-
-/* card styles start here*/
-/*card text */
-.card-title {
-    font-size: 45px;
-    font-weight: bold;
-    color: var(--vanilla);
-    text-align: center;
-    margin: 20px 0 0 0;
-    z-index: 2;
-}
-/*activity label below image */
-#activityLabel {
-    font-size: 28px;
-    font-weight: bold;
-    color: black;
-    text-align: center;
-    margin: 10px 0 0 8;
-    z-index: 2;
-}
-
-#activityLabel.visible {
-    opacity: 1;
-}
-/* colors for my sections  */
-.color-section.peppermint {
-    background-color: var(--peppermint);
-}
-.color-section.sunshine {
-    background-color: var(--sunshine);
-}
-.color-section {
-    width: 300px;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    margin: 20px auto;
+    min-height: 400px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    transition: transform 0.2s;
-    color: var(--navy);
-}
-.color-section img {
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-.color-section p {
-    font-size: 18px;
-}
-
-.color-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
-    gap: 50px;
     justify-content: center;
-    /* margin: 0 auto;
-  max-width: 1000px; */
-    /* padding: 20px; */
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
-.card-wrapper {
-    display: block;
-    /* flex-direction: column;
-  align-items: center; */
-}
-
-.album {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    left: 0;
+.banner-img {
+    position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.album-content {
-    position: relative;
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    max-width: 1400px;
-    margin: 5% auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-}
-
-/* Single images in slides (big images) */
-.album-content .slide img {
-    width: 80%;
-    /* fills most of the slide */
-    max-width: 700px;
-    /* won’t get too wide on large screens */
-    height: auto;
-    border-radius: 10px;
+    object-fit: cover;
     display: block;
-    margin: 0 auto;
-    /* center the image */
 }
 
-.album-text {
+.banner-text {
+    position: relative;
+    z-index: 1;
     text-align: center;
+    color: var(--dusk);
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.banner-text h1 {
+    font-family: "Pinyon Script", cursive;
+    font-size: clamp(40px, 10vw, 100px);
+    font-weight: 400;
+    color: var(--dusk);
+    margin: 0 0 20px 0;
+}
+
+.banner-text p {
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(14px, 4vw, 18px);
+    font-weight: 300;
+    color: var(--dusk);
+    line-height: 1.8;
     max-width: 800px;
     margin: 0 auto;
 }
 
-.album-text p {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 20px;
-    line-height: 1.4;
+/* Main content sections */
+.content-section {
+    background-color: var(--dusk);
+    color: var(--vanilla);
+    padding: 60px 20px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* //collage imaghes side by side   */
-.album-content .slide .collage {
-    display: flex;
-    flex-wrap: wrap;
-    /* wrap to new lines if needed */
-    gap: 10px;
-    justify-content: center;
-    /* center the collage */
+.content-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
-.album-content .slide .collage img {
-    width: calc(33% - 10px);
-    /* 3 images per row */
-    max-width: 250px;
-    /* prevent images from being too big */
-    height: auto;
-    /* keep aspect ratio */
-    object-fit: cover;
+.content-section h2 {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    color: var(--vanilla);
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.content-section p {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--vanilla);
+    line-height: 1.8;
+    max-width: 900px;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.activity-card {
+    padding: 30px;
     border-radius: 10px;
-}
-
-#sport-album .collage {
+    border: 2px solid var(--dusk);
+    transition: transform 0.18s ease;
     display: flex;
-    gap: 10px;
-    justify-content: center;
-    /* center the collage */
+    flex-direction: column;
 }
 
-#sport-album .collage img {
-    width: 48%;
-    /* makes each image bigger than the default 33% */
-    max-width: 500px;
-    /* increase max size */
-    height: auto;
-    border-radius: 10px;
-}
-#parks-album .collage {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    /* center the collage */
+.activity-card:hover {
+    transform: translateY(-3px);
 }
 
-#parks-album .collage img {
-    width: 48%;
-    /* makes each image bigger than the default 33% */
-    max-width: 500px;
-    /* increase max size */
-    height: auto;
-    border-radius: 10px;
-}
-#tea-album .collage {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    /* center the collage */
-}
-#tea-album .collage img {
-    width: 48%;
-    /* makes each image bigger than the default 33% */
-    max-width: 500px;
-    /* increase max size */
-    height: auto;
-    border-radius: 10px;
-}
-#movie-album .collage {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    /* center the collage */
-}
-#movie-album .collage img {
-    width: 48%;
-    /* makes each image bigger than the default 33% */
-    max-width: 500px;
-    /* increase max size */
-    height: auto;
-    border-radius: 10px;
-}
-#adult-album .collage {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    /* center the collage */
-}
-#adult-album .collage img {
-    width: 48%;
-    /* makes each image bigger than the default 33% */
-    max-width: 500px;
-    /* increase max size */
-    height: auto;
-    border-radius: 10px;
-}
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    color: #f0eeee;
-    cursor: pointer;
-}
-
-.slider {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-}
-
-.slider img {
-    width: 300px;
-    border-radius: 10px;
-}
-
-.prev,
-.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    background: rgba(255, 255, 255, 0.7);
-    border: none;
-    cursor: pointer;
-    color: #333;
-    z-index: 10;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-/*end of code*/
-
-.image-section {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: left;
-    gap: 40px;
-    margin: 20px 0;
-}
-.location-info {
-    text-align: center; /* centers all text */
-    margin-bottom: 15px;
-    color: rgb(4, 4, 4); /* adjust if you want */
-}
-
-.location-title {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.address {
-    font-size: 18px;
-    margin-bottom: 16px;
-    line-height: 1.4;
-}
-
-.section-header {
-    font-size: 22px;
-    margin: 14px 0 6px;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.train-info,
-.review {
-    font-size: 18px;
+.activity-card h3 {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    color: var(--dusk);
+    margin-top: 0;
     margin-bottom: 12px;
 }
 
-.cover-image {
-    width: 520px;
-    height: 530px;
-    object-fit: cover;
-    border-radius: 10px;
+.activity-card p {
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--dusk);
+    line-height: 1.8;
+    max-width: none;
+    flex-grow: 1;
 }
 
-/* Footer */
+.activity-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 18px;
+    background: transparent;
+    color: var(--dusk);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 2px solid var(--dusk);
+    transition: box-shadow 0.12s ease, transform 0.12s ease;
+}
+
+.activity-card a:focus,
+.activity-card a:focus-visible {
+    background-color: var(--vanilla);
+    color: var(--dusk);
+    outline: 3px solid var(--dusk);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 6px rgba(37, 15, 18, 0.15);
+}
+
+.activity-card a:hover {
+    background-color: var(--vanilla);
+    color: var(--dusk);
+    transform: translateY(-1px);
+}
+
+/* Card-specific backgrounds */
+.card-meetnyc {
+    background-color: var(--blueberry);
+    color: var(--dusk);
+    border: 4px solid var(--dusk);
+}
+
+.card-art {
+    background-color: var(--verdant);
+    color: var(--dusk);
+    border: 4px solid var(--dusk);
+}
+
+.card-food {
+    background-color: var(--ketchup);
+    color: var(--dusk);
+    border: 4px solid var(--dusk);
+}
+
+.card-life {
+    background-color: var(--peppermint);
+    color: var(--dusk);
+    border: 4px solid var(--dusk);
+}
+
+.activity-card:focus-within {
+    outline: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Authors section */
+.authors-section {
+    background-color: var(--ketchup);
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.authors-section h2 {
+    font-family: "Libre Baskerville", serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--vanilla);
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.authors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1100px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.author-card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fffaf5;
+    border: 3px solid var(--dusk);
+}
+
+.author-card h3 {
+    font-family: "Libre Baskerville", serif;
+    font-size: clamp(16px, 4vw, 20px);
+    font-weight: 400;
+    color: var(--dusk);
+    margin: 15px 0 10px 0;
+}
+
+.author-card p {
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: #666;
+    line-height: 1.6;
+    max-width: none;
+}
+
+.author-photo-wrap {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid var(--dusk);
+}
+
+.author-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.sr-only {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+    border: 0;
+    padding: 0;
+    margin: -1px;
+}
+
+
+/* Slideshow section */
+#subhdr {
+    background-color: var(--moss);
+    color: var(--vanilla);
+    padding: 40px 20px;
+    font-family: "Libre Baskerville", serif;
+    font-size: clamp(24px, 6vw, 40px);
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#subhdr h2 {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    color: var(--vanilla);
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.imagecontainer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    padding: 60px 20px;
+    background-color: var(--moss);
+    color: var(--vanilla);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.fixed-text {
+    padding: 20px;
+}
+
+.fixed-text p {
+    margin: 0 0 15px 0;
+    line-height: 1.6;
+}
+
+.fixed-text p.p2 {
+    font-size: clamp(18px, 4vw, 24px);
+    font-weight: bold;
+    font-family: "Libre Baskerville", serif;
+}
+
+.fixed-text p.caption-text {
+    font-size: clamp(14px, 3vw, 16px);
+    font-weight: 300;
+    max-width: 600px;
+}
+
+/* Slideshow arrows */
+.slideshow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.slideshow button {
+    background-color: #f7a0cb;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: outline 0.2s ease, background-color 0.2s ease;
+}
+
+.slideshow button:hover {
+    background-color: #f08ab8;
+}
+
+.slideshow button:focus,
+.slideshow button:focus-visible {
+    outline: 3px solid var(--vanilla);
+    outline-offset: 2px;
+    background-color: #f08ab8;
+}
+
+/* Image in slideshow */
+.slide-img {
+    width: clamp(250px, 80vw, 450px);
+    height: clamp(250px, 80vw, 450px);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* [GLOBAL] footer*/
 #footer {
     width: 100%;
     background-color: var(--dusk);
     color: var(--vanilla);
-    padding: 30px 40px;
+    padding: 20px 0;
     border-top: 2px solid var(--dusk);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#footer {
+    text-align: center;
 }
 
 #footer p {
-    font-size: 14px;
+    font-size: clamp(12px, 2vw, 14px);
     font-weight: 300;
     margin: 5px 0;
 }
@@ -547,11 +555,135 @@ nav a.active-page {
     font-weight: 500;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* [GLOBAL] Responsive Design */
+
+/* Mobile (under 768px) */
+@media (max-width: 767px) {
+    .banner {
+        min-height: 250px;
+    }
+
+    .banner-text {
+        padding: 40px 20px;
+    }
+
+    .content-section {
+        padding: 40px 15px;
+    }
+
+    .authors-section {
+        padding: 40px 15px;
+    }
+
+    .imagecontainer-wrapper {
+        padding: 40px 15px;
+        gap: 20px;
+    }
+
     #header-container {
+        padding: 12px 15px;
+    }
+
+    #nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .activity-card {
+        padding: 20px;
+    }
+
+    #logo img {
+        height: 40px;
+    }
+
+    .authors-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .author-photo-wrap {
+        width: 120px;
+        height: 120px;
+    }
+
+    .author-card {
+        padding: 15px;
+    }
+
+    .slideshow {
         flex-direction: column;
         gap: 15px;
-        padding: 15px 0;
+    }
+
+    .slideshow button {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    .slide-img {
+        width: clamp(200px, 90vw, 350px);
+        height: clamp(200px, 90vw, 350px);
+    }
+
+    #footer {
+        padding: 20px;
+    }
+}
+
+/* Tablets (768px and up) */
+@media (min-width: 768px) {
+    .content-section {
+        padding: 60px 40px;
+    }
+
+    .authors-section {
+        padding: 60px 40px;
+    }
+
+    .imagecontainer-wrapper {
+        padding: 60px 40px;
+    }
+
+    #header-container {
+        padding: 20px 40px;
+    }
+
+    #nav ul {
+        gap: 40px;
+    }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+    .banner {
+        min-height: 500px;
+    }
+
+    .activities-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .authors-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .content-section {
+        text-align: left;
+    }
+    
+    #footer {
+        text-align: left;
+        padding: 20px 40px;
     }
 }
