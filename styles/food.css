@@ -69,6 +69,38 @@ body {
 
 /* Hover colors by member */
 
+#nav ul {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#nav li {
+    width: auto;
+    height: auto;
+    padding: 0;
+}
+
+nav a {
+    font-family: "Libre Baskerville", serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--dusk);
+    padding: 8px 16px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover colors by member */
+
 /* The Blog */
 nav a.blog:hover {
     background-color: var(--sunbeam);
@@ -101,11 +133,10 @@ nav a.life:hover {
 
 /* Active page - Switch to your page color or hover nav color */
 nav a.active-page {
-    background-color: var(--sunbeam);
+    background-color: var(--verdant);
     color: var(--dusk);
     border: 2px solid var(--dusk);
 }
-
 
 
 
