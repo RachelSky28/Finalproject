@@ -525,6 +525,12 @@ nav a.active-page {
 #footer p:first-child {
     font-weight: 500;
 }
+#footer{
+a:link { color: var(--peppermint); }
+a:visited { color: var(--sunshine); }
+a:hover { color: var(--vanilla); }
+a:active { color: var(--vanilla); }
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -532,5 +538,15 @@ nav a.active-page {
         flex-direction: column;
         gap: 15px;
         padding: 15px 0;
+    }
+}
+/* Tablets (768px and up) */
+@media (min-width: 768px) {
+    #header-container {
+        padding: 20px 40px;
+    }
+
+    #nav ul {
+        gap: 40px;
     }
 }
