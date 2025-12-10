@@ -689,6 +689,7 @@ section h2 {
     width: 1px;
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
     white-space: nowrap;
     border: 0;
     padding: 0;
