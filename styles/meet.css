@@ -13,6 +13,7 @@ body {
     color: #250f12;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -33,14 +34,23 @@ body {
     box-sizing: border-box;
 }
 
+
+#logo a {
+    text-decoration: none;
+    color: var(--dusk);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    min-width: 0;
+}
+
 #logo img {
     height: auto;
     width: 100%;
     max-width: 400px;
     display: block;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.3s ease;
 }
 
 #header-container {
@@ -126,6 +136,9 @@ nav a.active-page {
     background-size: cover; 
     background-position: center center;
     background-color: var(--whitechoco);
+    text-align:center;
+    margin-left:auto; 
+    margin-right:auto;
 }
 
 .hero-content {
@@ -375,17 +388,18 @@ nav a.active-page {
     max-width: 100%;
     margin: 0 auto;
 }
+
 .volunteer-card-container {
-  display: inline-flex;
-  align-items: flex-center;
+  display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 0px 72px;
+  margin: 0px auto;
+  padding: 0 20px;
 }
 
 .volunteer-card {
   width: 100%;
-  padding: 16px;
+  padding: 32px 16px;
   margin-top: 32px;
   margin-right: 48px;
   margin-left: 48px;
@@ -396,7 +410,7 @@ nav a.active-page {
     font-family: "Raleway", sans-serif;
     font-size: 14px;
     font-weight: 500;
-    padding: 12px 24px;
+    padding: 16px 24px;
     border-radius: 8px;
     border: 0px;
     background-color: var(--verdant);
@@ -426,7 +440,7 @@ nav a.active-page {
     font-weight: 400;
     color: var(--dusk);
     margin-top: 0;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
     max-width: 100%;
     line-height: 180%;
 }
@@ -434,7 +448,7 @@ nav a.active-page {
 
 /* Footer */
 #footer {
-    width: fill-container;
+    width: 100%;
     background-color: #250f12;
     color: #fef2ff;
     padding: 30px 40px;
@@ -453,7 +467,6 @@ nav a.active-page {
 #footer p:first-child {
     font-weight: 500;
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
