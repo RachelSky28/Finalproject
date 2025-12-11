@@ -25,16 +25,14 @@
     box-sizing: border-box;
 }
 
-#logo a {
-    text-decoration: none;
-    color: var(--dusk);
-    display: block;
-    transition: opacity 0.3s ease;
-}
-
 #logo img {
-    height: 48px;
-    width: auto;
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
 }
 Body {
     background-size: cover;
