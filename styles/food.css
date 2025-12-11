@@ -139,7 +139,7 @@ nav a.active-page {
 }
 
 
-
+/* MY CODE */
 #myhdr {
   width: 100%;
   text-align: center;
@@ -201,6 +201,7 @@ body {
   margin-bottom: 12px;
 }
 
+/* API STYLE*/
 .heart-card {
   width: 500px;
   /* bigger size */
@@ -303,7 +304,7 @@ body {
 .color-section:hover {
   transform: scale(1.05);
 }
-
+/* BOROUGH CARD NAMES*/
 .color-section.vanilla {
   background-color: rgb(239, 231, 211);
 }
@@ -351,7 +352,7 @@ body {
   gap: 40px;
   margin: 20px 0;
 }
-
+/*IMAGES BELOW subheader*/
 .pineapple,
 .passion,
 .bread {
@@ -432,7 +433,7 @@ h2 {
   /* flex-direction: column;
   align-items: center; */
 }
-
+/* album photos and content*/
 .album {
   display: none;
   position: fixed;
@@ -505,7 +506,7 @@ h2 {
   object-fit: cover;
   border-radius: 10px;
 }
-
+/* this is for resturants with 3 photos*/
 #queens-album .large-collage {
   display: flex;
   gap: 10px;
@@ -580,6 +581,7 @@ h2 {
   height: auto;
   border-radius: 10px;
 }
+/* end of images in slide style */
 
 .close-btn {
   position: absolute;
@@ -621,7 +623,9 @@ h2 {
 .next {
   right: 10px;
 }
+/* the card arrow style*/
 
+/* footer*/
 .insta {
   width: 250px;
   height: 250px;
